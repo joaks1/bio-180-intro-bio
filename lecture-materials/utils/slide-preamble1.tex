@@ -1,0 +1,40 @@
+% \documentclass[table]{beamer}
+\documentclass[table,handout]{beamer}
+\usepackage{varwidth}
+
+\newif\ifhide
+\newif\ifpost
+
+\hidetrue
+\posttrue
+
+\ifhide%
+    \newcommand{\hmask}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
+\else%
+    \newcommand{\hmask}[1]{#1}%
+\fi
+
+\ifhide%
+    \newcommand{\hignore}[1]{}%
+\else%
+    \newcommand{\hignore}[1]{#1}%
+\fi
+
+\ifpost%
+    \newcommand{\nopost}[1]{}%
+\else%
+    \newcommand{\nopost}[1]{#1}%
+\fi
+
+\ifhide%
+    \newcommand{\hidebox}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
+\else%
+    \newcommand{\hidebox}[1]{\fbox{\parbox{\linewidth}{#1}}}%
+\fi
+
+\ifhide%
+    \newcommand{\clickeranswer}[1]{#1}%
+\else%
+    \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
+\fi
+
