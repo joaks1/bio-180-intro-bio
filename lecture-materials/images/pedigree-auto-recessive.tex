@@ -1,0 +1,90 @@
+\documentclass[table]{beamer}
+\usepackage{beamerthemesplit}
+\usetheme{default}
+\usecolortheme{default}
+\usepackage{ifthen}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue}
+\usepackage{tikz}
+\usetikzlibrary{trees,calc}
+
+\tikzstyle{centered} = [align=center, text centered, font=\sffamily\bfseries]
+\tikzstyle{skip} = [centered, inner sep=0pt, fill]
+\tikzstyle{empty} = [centered, inner sep=0pt]
+\tikzstyle{inode} = [centered, circle, minimum width=4pt, fill=black, inner sep=0pt]
+\tikzstyle{tnode} = [centered, circle, inner sep=1pt]
+\tikzset{
+  % edge styles
+  level distance=10mm,
+  mate/.style={edge from parent/.style={draw,distance=3pt}},
+  mleft/.style={grow=left, level distance=10mm, edge from parent path={(\tikzparentnode.west)--(\tikzchildnode.east)}},
+  mright/.style={grow=right, level distance=10mm, edge from parent path={(\tikzparentnode.east)--(\tikzchildnode.west)}},
+  % node styles
+  male/.style={rectangle,minimum size=4mm,fill=gray!80},
+  female/.style={circle,minimum size=4mm,fill=gray!80},
+  amale/.style={male,fill=red},
+  afemale/.style={female,fill=red},
+}
+
+% define formatting for footer
+\newcommand{\myfootline}{%
+    {\it
+    \insertshorttitle
+    \hspace*{\fill} 
+    \insertshortauthor, \insertshortinstitute
+    % \ifx\insertsubtitle\@empty\else, \insertshortsubtitle\fi
+    \hspace*{\fill}
+    \insertframenumber/\inserttotalframenumber}}
+
+% set up footer
+\setbeamertemplate{footline}{}
+
+% remove navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\begin{document}
+
+\begin{frame}
+    \begin{centering}
+    \begin{tikzpicture}[font=\footnotesize]
+        % 1st Gen
+        \node(G1M)[male,label=left: {Unaffected male}]{} 
+            child[mright,mate]{coordinate(G1X1) child{node(G1F)[afemale,label=right: {Affected female}]{}}}
+        ;
+        % 2nd Generation
+        \node at(G1X1){}
+            [edge from parent fork down,sibling distance=10mm, level distance=15mm]
+            child{node[female]{}
+                child[mate,mleft]{coordinate(G2X1) child{node[male]{}}}
+            }
+            child{node[male]{}}
+            child{node[female]{}}
+            child{node[male]{}}
+            child{node[male]{}
+                child[mate,mright]{coordinate(G2X2) child{node(G2F3)[female,label=right: {Jane Doe}]{}}}
+            }
+        ;
+        % 3rd Generation
+        \node at(G2X1){}
+            [edge from parent fork down, sibling distance=10mm, level distance=15mm]
+            child{node[male]{}}
+            child{node[female]{}}
+            child{node[male]{}}
+            child{node[female]{}}
+        ;
+        \node at(G2X2){}
+            [edge from parent fork down, sibling distance=10mm, level distance=15mm]
+            child{node[amale]{}}
+            child{node[female]{}}
+            child{node[male]{}}
+        ;
+    \end{tikzpicture}
+    \end{centering}
+\end{frame}
+
+\end{document}
+
