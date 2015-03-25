@@ -1,0 +1,269 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+% \bibliography{../bib/references}
+\bibliography{references}
+\input{../utils/title-info.tex}
+
+\title[Intro \& Experimental Design]{Course Introduction \& Experimental Design}
+% \date{\today}
+\date{March 30, 2015}
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+% \nopost{
+% \begin{noheadline}
+% \begin{frame}[c]
+%     \vspace{-3mm}
+%     \begin{center} 
+%         \includegraphics[height=1.1\textheight]{../images/seating-chart.pdf}
+%     \end{center}
+% \end{frame}
+% \end{noheadline}
+% }
+
+% The people
+\begin{noheadline}
+\begin{frame}
+\frametitle{Welcome to Biology 180!}
+
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l l }
+            \textbf{Instructor} & \\
+            Jamie Oaks & \href{mailto:joaks1@uw.edu}{joaks1@uw.edu} \\[1.5ex]
+            \textbf{Staff} & \\
+            John Parks, Course Coordinator & \href{mailto:jwparks@uw.edu}{jwparks@uw.edu} \\
+            Celese Spencer, Field Trips & \href{mailto:celese@uw.edu}{celese@uw.edu} \\[1.5ex]
+            \textbf{Teaching Assistants} \\
+        \end{tabular}
+    \end{table}
+
+\end{frame}
+\end{noheadline}
+
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-2em}
+\includegraphics<1| handout:0>[page=1,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<2| handout:0>[page=2,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<3| handout:0>[page=3,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<4| handout:1>[page=4,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<5| handout:0>[page=5,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<6| handout:2>[page=6,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<7| handout:0>[page=7,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<8| handout:0>[page=8,width=\paperwidth]{./johns-slides.pdf}
+\includegraphics<9| handout:3>[page=9,width=\paperwidth]{./johns-slides.pdf}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+\blankslide
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Welcome to Biology 180!}
+\tableofcontents[subsectionstyle=hide]
+\end{frame}
+\end{noheadline}
+
+\section{What are the course goals?}
+
+\begin{noheadline}
+\begin{frame}[t]
+    \frametitle{What are the course goals?}
+
+    \vspace{-5mm}
+    \begin{center}
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.95\textwidth]{pnas-pages.png}};
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            % \draw[red,ultra thick,rounded corners] (0.62,0.65) rectangle (0.78,0.75);
+            \onslide<2->{\draw[->,red,ultra thick] (0.52, 0.52) -- (0.52, 0.46);}
+            \onslide<3->{\draw[->,red,ultra thick] (0.71, 0.72) -- (0.71, 0.66);}
+            \onslide<4->{\draw[->,red,ultra thick] (0.785, 0.85) -- (0.785, 0.79);}
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+
+    \vspace{-3mm}
+    \uncover<5->{\textbf{What conclusions can you draw from this graph?} \\}
+\end{frame}
+\end{noheadline}
+
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-2em}
+    \vspace{-2cm}
+\includegraphics<1| handout:0>[page=28,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<2| handout:0>[page=29,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<3| handout:0>[page=30,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<4| handout:0>[page=31,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<5| handout:0>[page=32,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<6| handout:0>[page=33,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<7| handout:0>[page=34,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<8| handout:0>[page=35,width=\paperwidth]{./adams-slides.pdf}
+\includegraphics<9| handout:1>[page=36,width=\paperwidth]{./adams-slides.pdf}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+
+\begin{noheadline}
+\begin{frame}
+    \frametitle{What are the course goals?}
+    \begin{adjustwidth}{-1em}{-1em}
+    \begin{center}
+        \textbf{Our job: Prepare you to succeed in Biology 200, upper level
+            courses \ldots and possibly a career related to biology.} \\
+
+        \vspace{5mm}
+        \uncover<2->{Criteria for Medical School Recommendations:}
+    \end{center}
+    \end{adjustwidth}
+
+    \begin{adjustwidth}{-2em}{-2em}
+    \begin{multicols}{2}
+        \begin{itemize}
+                \small
+            \item<3-> \highlight{Motivation} for training in research
+            \item<4-> Intellectual potential \& \highlight{curiosity}
+            \item<5-> Ability to \highlight{analyze/problem-solve}
+            \item<6-> \highlight{Creativity} and imagination
+            \item<7-> \highlight{Oral} communication skills
+            \item<8-> \highlight{Written} communication skills
+            \item<9-> Ability to \highlight{work with others}
+            \item<10-> \highlight{Maturity}
+            \item<11-> \highlight{Emotional stability}
+            \item<12-> Industrious \& \highlight{persistent}
+            \item<13-> Planning \& \highlight{organizational skills}
+            \item<14-> Ethics \& \highlight{integrity}
+        \end{itemize}
+    \end{multicols}
+
+    \begin{uncoverenv}<15->
+    \begin{center}
+        \textbf{\#1 goal: Teach you how to think like a biologist.}
+    \end{center}
+    \end{uncoverenv}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+
+\section{How does this course work?}
+
+% THERE WILL BE A SEATING CHART; WE WILL E-MAIL TO YOU AFTER LECTURE TODAY
+
+\begin{noheadline}
+\begin{frame}
+    \frametitle{How does this class work?}
+
+    \begin{adjustwidth}{-1.5em}{-1em}
+    \begin{columns}
+
+        \column{0.4\linewidth}
+
+        \begin{itemize}
+            \item<1-> Cell phones are not allowed in Bio 180
+            \item<2-> Why?
+            \begin{itemize}
+                \item<3-> Professional development
+                \item<4-> Student performance
+            \end{itemize}
+        \end{itemize}
+
+        \column{0.6\linewidth}
+
+        \begin{uncoverenv}<4->
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=1\textwidth]{cell-phone-data.png}
+            \caption{\tiny \shortfullcite{Duncan2012}}
+            \end{center}
+        \end{figure}
+        \end{uncoverenv}
+
+    \end{columns}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+\begin{noheadline}
+\begin{frame}[t]
+    \frametitle{How does this class work?}
+
+        \vspace{-5mm}
+        \begin{itemize}
+            \item<1-> Reading quizzes
+                \vspace{14mm}
+            \item<2-> Clickers
+                \vspace{14mm}
+            \item<3-> Practic exams
+                \vspace{14mm}
+            \item<4-> Exams
+        \end{itemize}
+\end{frame}
+\end{noheadline}
+
+\begin{noheadline}
+\begin{frame}
+    \frametitle{How does this class work?}
+
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l | c c }
+            & Old-school & High-structure \\
+            Grade & (2002-2003) & (2007-) \\
+            \hline
+            $< 1.5$ & 17\% & 3.4\% \\
+            $\geq 3.5$ & 14.5\% & 24.3\% \\
+        \end{tabular}
+    \end{table}
+
+\end{frame}
+\end{noheadline}
+
+% slide with clicker qs, practice exams, exams
+
+\section{How does science work?}
+
+\begin{noheadline}
+\begin{frame}
+    \frametitle{Experimental Design Module}
+
+    \begin{columns}
+
+        \column{0.7\linewidth}
+
+        \vspace{-1cm}
+        \begin{minipage}[c][\textheight][c]{\linewidth}
+        \begin{itemize}
+            % \item Interpreting data and designing experiments
+            \item Work in groups of 3; middle person is the scribe
+            \item Be sure your names are legible
+            \item We're here to answer questions
+            \item Give the worksheet to any TA before leaving
+        \end{itemize}
+        \end{minipage}
+
+        \column{0.3\linewidth}
+
+        \vspace{-1cm}
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=1.25\textwidth]{../images/xkcd-cartoon.png}
+            \caption{\tiny \href{https://xkcd.com/242/}{https://xkcd.com/242/}}
+            \end{center}
+        \end{figure}
+    \end{columns}
+\end{frame}
+\end{noheadline}
+
+\end{document}
+
+
