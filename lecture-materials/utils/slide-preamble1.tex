@@ -1,5 +1,8 @@
 \documentclass[table]{beamer}
 % \documentclass[table,handout]{beamer}
+% \setbeameroption{show notes}
+% \setbeameroption{hide notes}
+% \setbeameroption{show only notes}
 \usepackage{varwidth}
 
 \newif\ifhide
@@ -12,7 +15,7 @@
 
 \newcommand{\whiteout}[1]{\textcolor{white}{#1}}
 \newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
-\newcommand{\notebox}[1]{\fcolorbox{black}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
+\newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
 
 \ifhide%
     \newcommand{\hmask}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
