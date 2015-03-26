@@ -116,14 +116,27 @@
 \makeatother
 
 \newcounter{clickerQuestionCounter}
+\ifhideclicker%
+\newenvironment{clickerquestion}
+{ \stepcounter{clickerQuestionCounter}
+  \begin{enumerate}[Q \arabic{clickerQuestionCounter}:]\color{white} }
+{ \end{enumerate} }
+\else%
 \newenvironment{clickerquestion}
 { \stepcounter{clickerQuestionCounter}
   \begin{enumerate}[Q \arabic{clickerQuestionCounter}:] }
 { \end{enumerate} }
+\fi
 
+\ifhideclicker%
+\newenvironment{clickeroptions}
+{ \begin{enumerate}[\begingroup\color{white} 1)\endgroup]\color{white} }
+{ \end{enumerate} }
+\else%
 \newenvironment{clickeroptions}
 { \begin{enumerate}[\begingroup\color{red} 1)\endgroup] }
 { \end{enumerate} }
+\fi
 
 \tikzstyle{centered} = [align=center, text centered, font=\sffamily\bfseries]
 \tikzstyle{skip} = [centered, inner sep=0pt, fill]

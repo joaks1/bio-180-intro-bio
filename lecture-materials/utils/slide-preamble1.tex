@@ -1,12 +1,18 @@
-% \documentclass[table]{beamer}
-\documentclass[table,handout]{beamer}
+\documentclass[table]{beamer}
+% \documentclass[table,handout]{beamer}
 \usepackage{varwidth}
 
 \newif\ifhide
 \newif\ifpost
+\newif\ifhideclicker
 
 \hidetrue
-\posttrue
+% \hideclickertrue
+% \posttrue
+
+\newcommand{\whiteout}[1]{\textcolor{white}{#1}}
+\newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
+\newcommand{\notebox}[1]{\fcolorbox{black}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
 
 \ifhide%
     \newcommand{\hmask}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
@@ -33,8 +39,23 @@
 \fi
 
 \ifhide%
-    \newcommand{\clickeranswer}[1]{#1}%
+    \newcommand{\wbox}[1]{\whiteoutbox{#1}}%
 \else%
-    \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
+    \newcommand{\wbox}[1]{\notebox{#1}}%
 \fi
 
+% \ifhide%
+%     \newcommand{\clickeranswer}[1]{#1}%
+% \else%
+%     \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
+% \fi
+
+\ifhideclicker%
+    \newcommand{\clickeranswer}[1]{#1}%
+\else%
+    \ifhide%
+        \newcommand{\clickeranswer}[1]{#1}%
+    \else%
+        \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
+    \fi
+\fi
