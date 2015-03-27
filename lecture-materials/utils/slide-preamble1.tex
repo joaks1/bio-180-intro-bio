@@ -9,16 +9,20 @@
 \newif\ifpost
 \newif\ifhideclicker
 
-% \hidetrue
-% \hideclickertrue
+\hidetrue
+\hideclickertrue
 \posttrue
 
 \newcommand{\whiteout}[1]{\textcolor{white}{#1}}
-\newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
-\newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
+% \newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
+% \newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
+\newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\linewidth}{#1}}}
+\newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\linewidth}{#1}}}
+\newcommand{\blankbox}[1]{\phantom{\varwidth{\linewidth}\whiteoutbox{#1}\endvarwidth}}
+\newcommand{\blank}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}
 
 \ifhide%
-    \newcommand{\hmask}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
+    \newcommand{\hmask}[1]{\blank{#1}}%
 \else%
     \newcommand{\hmask}[1]{#1}%
 \fi
@@ -36,9 +40,9 @@
 \fi
 
 \ifhide%
-    \newcommand{\hidebox}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}%
+    \newcommand{\hidebox}[1]{\blank{#1}}%
 \else%
-    \newcommand{\hidebox}[1]{\fbox{\parbox{\linewidth}{#1}}}%
+    \newcommand{\hidebox}[1]{\notebox{#1}}%
 \fi
 
 \ifhide%
@@ -47,11 +51,11 @@
     \newcommand{\wbox}[1]{\notebox{#1}}%
 \fi
 
-% \ifhide%
-%     \newcommand{\clickeranswer}[1]{#1}%
-% \else%
-%     \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
-% \fi
+\ifhide%
+    \newcommand{\nbox}[1]{\blankbox{#1}}%
+\else%
+    \newcommand{\nbox}[1]{\notebox{#1}}%
+\fi
 
 \ifhideclicker%
     \newcommand{\clickeranswer}[1]{#1}%
