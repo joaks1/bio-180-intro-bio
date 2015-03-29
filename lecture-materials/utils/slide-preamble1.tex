@@ -9,9 +9,9 @@
 \newif\ifpost
 \newif\ifhideclicker
 
-\hidetrue
-\hideclickertrue
-\posttrue
+% \hidetrue
+% \hideclickertrue
+% \posttrue
 
 \newcommand{\whiteout}[1]{\textcolor{white}{#1}}
 % \newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
@@ -25,6 +25,12 @@
     \newcommand{\hmask}[1]{\blank{#1}}%
 \else%
     \newcommand{\hmask}[1]{#1}%
+\fi
+
+\ifhide%
+    \newcommand{\wout}[1]{\whiteout{#1}}%
+\else%
+    \newcommand{\wout}[1]{#1}%
 \fi
 
 \ifhide%

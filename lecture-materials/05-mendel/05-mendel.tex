@@ -64,7 +64,7 @@
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
-\tableofcontents
+\tableofcontents[subsectionstyle=hide]
 \end{frame}
 \end{noheadline}
 
@@ -183,7 +183,7 @@
     \frametitle{Analyzing a monohybrid cross---tall vs dwarf growth habit}
 
     \begin{itemize}[<+->]
-        \item Mendel's  protocal:
+        \item Mendel's  protocol:
             \begin{enumerate}
                 \item Cross pure-line parentals to yield $F_1$ offspring
                 \item Allow $F_1$s to self-fertilize to produce $F_2$ offspring
@@ -225,11 +225,11 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Terminology}
+    \frametitle{Terminology (for now)}
     \begin{description}
-        \item[Gene] \uncover<2->{Material that influences the phenotype for a
+        \item[Gene] \uncover<2->{A factor that influences the phenotype for a
                 particular trait, and is passed on to offspring.}
-        \item[Allele] \uncover<3->{\ldots}
+        \item[Allele] \uncover<2->{A particular form of a gene.}
     \end{description}
 \end{frame}
 
@@ -254,8 +254,9 @@
 \begin{frame}
     \frametitle{Mendel's model---A series of hypotheses to explain his results}
     \begin{enumerate}[<+->]
+        \addtocounter{enumi}{3}
         \item Some alleles are dominant to others; some alleles are recessive
-            \begin{enumerate}[NOTE]
+            \begin{enumerate}[\begingroup\color{red} NOTE \arabic{enumii}:\endgroup]
                 \item Dominance and recessiveness are defined \highlight{ONLY}
                     in terms of the appearance of heterozygotes.
                 \item Most alleles are not dominant or recessive
@@ -273,6 +274,7 @@
 \begin{frame}
     \frametitle{Mendel's model---A series of hypotheses to explain his results}
     \begin{enumerate}[<+->]
+        \addtocounter{enumi}{4}
         \item During gamete formation in a parent, pairs of alleles segregate
             (separate) and go into different gametes (each gamete contains one
             allele of each gene)
@@ -281,19 +283,24 @@
                 \item What are the \highlight{gamete} genotypes produced
                     by parents with the following genotypes?
                     \begin{itemize}
-                        \item $PP$ \hmask{$P \quad / \quad P$}
-                        \item $Pp$ \hmask{$P \quad / \quad p$}
-                        \item $A_{1}A_{2}$ \hmask{$A_{1} \quad / \quad A_{2}$}
-                        \item $X^{R}X^{r}$ \hmask{$X^{R} \quad / \quad X^{r}$}
-                            \nbox{NOTE: all are in equal proportions (i.e., 1:1)}
+                        \item $PP$ \hspace{9mm}\hmask{\highlight{$\frac{1}{2}P:\frac{1}{2}P$ (or simply $P$)}}
+                            \vspace{3mm}
+                        \item $Pp$ \hspace{10mm}\hmask{\highlight{$\frac{1}{2}P:\frac{1}{2}p$}}
+                            \vspace{3mm}
+                        \item $A_{1}A_{2}$ \hspace{6mm}\hmask{\highlight{$\frac{1}{2}A_1:\frac{1}{2}A_2$}}
+                            \vspace{3mm}
+                        \item $X^{R}X^{r}$ \hspace{5mm}\hmask{\highlight{$\frac{1}{2}X^{R} : \frac{1}{2}X^{r}$}}
                     \end{itemize}
             \end{itemize}
     \end{enumerate}
+    \note[item]{TAs: walk around and check the students gamete genotypes and
+        help if needed}
 \end{frame}
 
 \begin{frame}
     \frametitle{Mendel's model---A series of hypotheses to explain his results}
     \begin{enumerate}[<+->]
+        \addtocounter{enumi}{5}
         \item Male and female gametes fuse to form a zygote
             \begin{itemize}
                 \item Each offspring has two alleles
@@ -304,9 +311,125 @@
 
 \subsection{Does Mendel's model work?}
 
-\begin{frame}
+\begin{frame}[t]
     \frametitle{Interpreting a monohybrid cross}
+    \uncover<2->{
+    $TT \,\textrm{\male} \times tt \,\textrm{\female}$ \hspace{4mm} (Crossing
+    tall male with dwarf female) \\
+    }
+    \uncover<3->{
+    Gamete genotypes: \hmask{\highlight{All $T$ for male; All $t$ for female}} \\
+    \f{1} genotypes: \hmask{\highlight{All $Tt$}} \\
+    }
+    \uncover<4->{
+    \textbf{What happens when an \f{1} offspring self-fertilizes?} \\
+    Genotypes of \f{1} cross: \hspace{4mm}\hmask{\highlight{$Tt$}} $\times$ \hmask{\highlight{$Tt$}} \\
+    \f{1} gamete genotypes: \hmask{\highlight{$\frac{1}{2}T$ and $\frac{1}{2}t$ for both parents}} \\
+    Punnett square:
+    }
+
+    \uncover<4->{
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l | l l }
+            & \hmask{\highlight{$T$}} & \hmask{\highlight{$t$}} \\
+            \hline
+            \hmask{\highlight{$T$}} & \hmask{\highlight{$TT$}} & \hmask{\highlight{$Tt$}} \\
+            \hmask{\highlight{$t$}} & \hmask{\highlight{$Tt$}} & \hmask{\highlight{$tt$}} \\
+        \end{tabular}
+    \end{table}
+    }
+    \uncover<4->{
+    Ratio of \f{2} \highlight{geno}types: \hmask{\highlight{1 $TT$: 2 $Tt$: 1 $tt$}} \\
+    Ratio of \f{2} \highlight{pheno}types: \hmask{\highlight{3 tall: 1 dwarf}} \\
+    }
+
+    \note[item]{Introduce Punnett squares as an efficient way to predict
+        offspring genotypes and their expected frequencies}
+    \note[item]{Does Mendel's model explain his results?}
 \end{frame}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item Which of the following statements about Punnett squares is always
+            correct?
+        \begin{clickeroptions}
+            \item In the offspring, the genotype ratios and the phenotype
+                ratios are equivalent.
+            \item \clickeranswer{You only have to include each unique gamete
+                    genotype.}
+            \item When you are keeping track of 1 gene, you get a 3:1 ratio of
+                offspring phenotypes.
+            \item When you are keeping track of 1 gene, you get a 3:1 ratio of
+                offspring genotypes.
+            \item The female gametes should be across the top; the male gametes
+                should be along the side.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What about two traits?}
+    \begin{itemize}[<+->]
+        \item Mendel's question: are the alleles for different genes
+            transmitted together or independently?
+            \begin{itemize}
+                \item The experimental cross: Purple-flowered tall ($PPTT$)
+                    $\times$ white-flowered dwarf ($pptt$)
+                    \begin{itemize}
+                        \item \textbf{Hypothesis 1}: Alleles from different
+                            genes are transmitted together (e.g., $P$ and $P$
+                            segregate, but $P$ and $T$ from one parent stay
+                            together)
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+    \note[item]{Draw this as particles}
+\end{frame}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[t]
+    \frametitle{Interpreting a dihybrid cross}
+    \vspace{-3mm}
+    \begin{clickerquestion}
+        \item Predict results of this cross, \highlight{\uppercase{assuming the alleles of
+                different genes stay together}}
+    \end{clickerquestion}
+
+    \vspace{-2mm}
+    \begin{center}
+        $PPTT \,\textrm{\male} \times pptt \,\textrm{\female}$
+    \end{center}
+    \vspace{-2mm}
+    Gamete genotypes: \hmask{\highlight{all $\underline{PT}$ for male, and all $\underline{pt}$ for female}} \\
+    \f{1} genotypes: \hmask{\highlight{All $\underline{PT} \; \underline{pt}$ (can also write as $PT//pt$)}} \\
+    % What happens when an \f{1} offspring self-fertilizes? \\
+    % \f{1} parental genotypes: \hmask{\highlight{$PT//pt \times PT//pt$}} \\
+    \f{1} gamete genotypes: \hmask{\highlight{$\frac{1}{2}\underline{PT}$ and $\frac{1}{2}\underline{pt}$}} \\
+    Punnett square (\f{1} $\times$ \f{1}):
+
+    \vspace{-2mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l | l l }
+            & \hmask{\highlight{$PT$}} & \hmask{\highlight{$pt$}} \\
+            \hline
+            \hmask{\highlight{$PT$}} & \hmask{\highlight{$\underline{PT}\;\underline{PT}$}} & \hmask{\highlight{$\underline{PT}\;\underline{pt}$}} \\
+            \hmask{\highlight{$pt$}} & \hmask{\highlight{$\underline{PT}\;\underline{pt}$}} & \hmask{\highlight{$\underline{pt}\;\underline{pt}$}} \\
+        \end{tabular}
+    \end{table}
+
+    Ratio of \f{2} \highlight{geno}types: \hmask{\highlight{1 $\underline{PT}\;\underline{PT}$: 2 $\underline{PT}\;\underline{pt}$: 1 $\underline{pt}\;\underline{pt}$}} \\
+    Ratio of \f{2} \highlight{pheno}types:
+    \begin{clickeroptions}
+        \item \clickeranswer{3 purple/tall: 1 white/dwarf}
+        \item 1 purple/tall: 1 white/dwarf
+        \item 9 purple/tall: 3 purple/dwarf: 3 white/tall: 1 white/dwarf
+    \end{clickeroptions}
+\end{frame}
+\end{noheadline}
+}
 
 
 \end{document}
