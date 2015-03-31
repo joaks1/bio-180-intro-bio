@@ -29,10 +29,75 @@
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
-\tableofcontents[subsectionstyle=hide]
+% \tableofcontents[subsectionstyle=hide]
+\begin{enumerate}
+    \item How are alleles from different genes transmitted to offspring
+        (together, or independently of each other?
+    \item What is the physical basis of Mendel's rules?
+        \begin{enumerate}
+            \item Mitosis: How cells divide during asexual reproduction and
+                during growth
+            \item Meiosis: How cells divide prior to formation of eggs and
+                sperm (sexual reproduction)
+        \end{enumerate}
+\end{enumerate}
 \end{frame}
 \end{noheadline}
 
+\section{Transmission of alleles from different genes}
+
+\begin{noheadline}
+\begin{frame}[t]
+    \frametitle{Interpreting a dihybrid cross}
+    \vspace{-3mm}
+    \begin{clickerquestion}
+        \item Predict results of this cross, \highlight{\uppercase{assuming the alleles of
+                different genes do not stay together}}
+    \end{clickerquestion}
+
+    \vspace{-2mm}
+    \begin{center}
+        $PPTT \,\textrm{\male} \times pptt \,\textrm{\female}$
+    \end{center}
+    \vspace{-2mm}
+    Gamete genotypes: \hmask{\highlight{$\frac{1}{2}P : \frac{1}{2}T}$ for male, and $\frac{1}{2}p : \frac{1}{2}t}$ for female}} \\
+    \f{1} genotypes: \hmask{\highlight{All $PpTt$}} \\
+    % What happens when an \f{1} offspring self-fertilizes? \\
+    % \f{1} parental genotypes: \hmask{\highlight{$PT//pt \times PT//pt$}} \\
+    \f{1} gamete genotypes: \hmask{\highlight{$\frac{1}{4}PT: \frac{1}{4}Pt : \frac{1}{4}pT : \frac{1}{4}pt$}} \\
+    Punnett square (\f{1} $\times$ \f{1}):
+
+    \vspace{-2mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l | l l l l}
+            & \hmask{\highlight{$PT$}} & \hmask{\highlight{$Pt$}} & \hmask{\highlight{$pT$}} & \hmask{\highlight{$pt$}} \\
+            \hline
+            \hmask{\highlight{$PT$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
+            \hmask{\highlight{$Pt$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
+            \hmask{\highlight{$pT$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
+            \hmask{\highlight{$pt$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
+        \end{tabular}
+    \end{table}
+
+    Ratio of \f{2} \highlight{geno}types: \hmask{\highlight{1 $\underline{PT}\;\underline{PT}$: 2 $\underline{PT}\;\underline{pt}$: 1 $\underline{pt}\;\underline{pt}$}} \\
+    Ratio of \f{2} \highlight{pheno}types:
+    \begin{clickeroptions}
+        \item \clickeranswer{3 purple/tall: 1 white/dwarf}
+        \item 1 purple/tall: 1 white/dwarf
+        \item 9 purple/tall: 3 purple/dwarf: 3 white/tall: 1 white/dwarf
+    \end{clickeroptions}
+\end{frame}
+\end{noheadline}
+
+\begin{frame}
+    \frametitle{Mendel's actual results}
+
+\section{The physical basis of Mendel's rules}
+
+\subsection{Mitosis}
+
+\subsection{Meiosis}
 
 
 \end{document}
