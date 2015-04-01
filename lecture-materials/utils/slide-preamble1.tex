@@ -1,6 +1,6 @@
 % \documentclass[table]{beamer}
 \documentclass[table,handout]{beamer}
-% \setbeameroption{show notes}
+\setbeameroption{show notes}
 % \setbeameroption{hide notes}
 % \setbeameroption{show only notes}
 \usepackage{varwidth}
@@ -43,6 +43,15 @@
     \newcommand{\nopost}[1]{}%
 \else%
     \newcommand{\nopost}[1]{#1}%
+\fi
+
+\ifhideclicker%
+    \newcommand{\clickerslide}[1]{\stepcounter{clickerQuestionCounter}%
+        \begin{frame}[t]
+            \textcolor{blue}{Q \arabic{clickerQuestionCounter}:}
+        \end{frame}}
+\else%
+    \newcommand{\clickerslide}[1]{#1}%
 \fi
 
 \ifhide%

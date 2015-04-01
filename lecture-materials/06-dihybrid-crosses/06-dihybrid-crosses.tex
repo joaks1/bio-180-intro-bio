@@ -49,18 +49,18 @@
 \begin{noheadline}
 \begin{frame}[t]
     \frametitle{Interpreting a dihybrid cross}
-    \vspace{-3mm}
+    \vspace{-5mm}
     \begin{clickerquestion}
-        \item Predict results of this cross, \highlight{\uppercase{assuming the alleles of
-                different genes do not stay together}}
+        \item Predict results of this cross, \uppercase{assuming the alleles of
+                different genes do \highlight{not} stay together}
     \end{clickerquestion}
 
     \vspace{-2mm}
     \begin{center}
         $PPTT \,\textrm{\male} \times pptt \,\textrm{\female}$
     \end{center}
-    \vspace{-2mm}
-    Gamete genotypes: \hmask{\highlight{$\frac{1}{2}P : \frac{1}{2}T}$ for male, and $\frac{1}{2}p : \frac{1}{2}t}$ for female}} \\
+    \vspace{-3mm}
+    Gamete genotypes: \hmask{\highlight{All $PT$ for male, and all $pt$ for female}} \\
     \f{1} genotypes: \hmask{\highlight{All $PpTt$}} \\
     % What happens when an \f{1} offspring self-fertilizes? \\
     % \f{1} parental genotypes: \hmask{\highlight{$PT//pt \times PT//pt$}} \\
@@ -74,26 +74,133 @@
             & \hmask{\highlight{$PT$}} & \hmask{\highlight{$Pt$}} & \hmask{\highlight{$pT$}} & \hmask{\highlight{$pt$}} \\
             \hline
             \hmask{\highlight{$PT$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
-            \hmask{\highlight{$Pt$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
-            \hmask{\highlight{$pT$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
-            \hmask{\highlight{$pt$}} & \hmask{\highlight{$PPTT$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} \\
+            \hmask{\highlight{$Pt$}} & \hmask{\highlight{$PPTt$}} & \hmask{\highlight{$PPtt$}} & \hmask{\highlight{$PpTt$}} & \hmask{\highlight{$Pptt$}} \\
+            \hmask{\highlight{$pT$}} & \hmask{\highlight{$PpTT$}} & \hmask{\highlight{$PpTt$}} & \hmask{\highlight{$ppTT$}} & \hmask{\highlight{$ppTt$}} \\
+            \hmask{\highlight{$pt$}} & \hmask{\highlight{$PpTt$}} & \hmask{\highlight{$Pptt$}} & \hmask{\highlight{$ppTt$}} & \hmask{\highlight{$pptt$}} \\
         \end{tabular}
     \end{table}
+    \vspace{-2mm}
 
-    Ratio of \f{2} \highlight{geno}types: \hmask{\highlight{1 $\underline{PT}\;\underline{PT}$: 2 $\underline{PT}\;\underline{pt}$: 1 $\underline{pt}\;\underline{pt}$}} \\
-    Ratio of \f{2} \highlight{pheno}types:
+    Ratio of \f{2} phenotypes:
     \begin{clickeroptions}
-        \item \clickeranswer{3 purple/tall: 1 white/dwarf}
+        \item 3 purple/tall: 1 white/dwarf
         \item 1 purple/tall: 1 white/dwarf
-        \item 9 purple/tall: 3 purple/dwarf: 3 white/tall: 1 white/dwarf
+        \item 9 purple/tall: 1 purple/dwarf: 1 white/tall: 1 white/dwarf
+        \item \clickeranswer{9 purple/tall: 3 purple/dwarf: 3 white/tall: 1 white/dwarf}
     \end{clickeroptions}
 \end{frame}
 \end{noheadline}
 
+\begin{frame}[t]
+    \frametitle{Mendel's actual results}
+    \vspace{-6mm}
+    \begin{center}
+        $YYRR  \times yyrr$
+    \end{center}
+    \vspace{-4mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{l l}
+            $Y$ = yellow & $R$ = round \\
+            $y$ = green & $r$ = wrinkled \\
+        \end{tabular}
+    \end{table}
+
+    \vspace{-2mm}
+    \uncover<2->{
+    All \f{1}s had yellow and round seeds ($YyRr$) \\
+    }
+
+    \vspace{2mm}
+    \uncover<3->{
+    When \f{1}s self-fertilized, phenotypes of \f{2} offspring were:
+    \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{l l}
+            yellow-round & 315 \\
+            green-round & 108 \\
+            yellow-wrinkled & 101 \\
+            green-wrinkled & 32 \\
+            TOTAL & 556 \\
+        \end{tabular}
+    \end{table}
+    }
+
+    \vspace{-3mm}
+    \uncover<4->{
+    \begin{clickerquestion}
+        \item What are the \highlight{frequencies} of the observed phenotypes?
+            What hypothesis does this experiment support?
+        \begin{clickeroptions}
+            \item 9 y-r: 3 g-r: 3 y-w: 1 g-w; independent assortment
+            \item 9 y-r: 3 g-r: 3 y-w: 1 g-w; dependent assortment
+            \item \clickeranswer{0.57 y-r, 0.19 g-r, 0.18 y-w, 0.06 g-w; independent assortment}
+            \item 0.57 y-r, 0.19 g-r, 0.18 y-w, 0.06 g-w; dependent assortment
+        \end{clickeroptions}
+    \end{clickerquestion}
+    }
+\end{frame}
+
 \begin{frame}
     \frametitle{Mendel's actual results}
+    \begin{itemize}[<+->]
+        \item \highlight{Note:} Other combinations of two traits behaved the
+            same way.
+        \item Mendel's conclusion: The segregation of alleles of different
+            genes occurs independently of each other.
+            \begin{itemize}
+                \item \textbf{This is the principle of independent assortment}
+            \end{itemize}
+        \item \highlight{Note:} The principle of independent assortment is
+            misleading.
+    \end{itemize}
+
+    \note[item]{Do the ``sometimes principle'' and Cookie Monster}
+\end{frame}
+
 
 \section{The physical basis of Mendel's rules}
+
+\begin{frame}
+    \begin{itemize}
+        \item To understand the physical basis of Mendel's rules and how
+            genetic variation is generated in populations, we need to examine
+            two types of cell division that were first described in the late
+            1800s. 
+        \item I. Mitosis: The process responsible for asexual reproduction and
+            growth in multicellular organisms. 
+
+        \item How does it happen? 
+        \item What are chromosomes (``colored bodies'')?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Chromosomes come in different types, distinguished by size and
+            shape (morphology). Draw 5:
+        \vspace{2.5cm}
+        \item In many organisms, there are 2 of each type of chromosome
+            present. Draw the second of each type (above).
+        \item Pairs of each type are said to be homologous (they are homologs).
+            Circle the 5 pairs of homologs.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Key notation:}
+    \begin{itemize}
+        \item Use $n$ to indicate the \highlight{number of different types} of
+            chromosomes found in a species
+        \item Use a numeral before the $n$ to indicate \highlight{the number of
+                each type} present
+        \item Which is the ploidy? \nbox{number before $n$; e.g., $\highlight{2}n=46$}
+        \item Which is the haploid number? \nbox{$n$}; e.g., $2\highlight{n}=46$, $\highlight{n=23}$}
+        \item What's the difference between a chromosome and a chromatid?
+    \end{itemize}
+\end{frame}
+
 
 \subsection{Mitosis}
 
