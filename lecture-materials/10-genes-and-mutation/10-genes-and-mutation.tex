@@ -47,114 +47,116 @@
 
 \tikzstyle{nuc} = [
     minimum width=2.3ex, minimum height=2.3ex, node distance=2.3ex]
-\tikzstyle{space} = []
+\tikzstyle{space} = [
     minimum width=2.3ex, minimum height=1ex, node distance=1ex]
 
 \begin{frame}[t]
     \frametitle{What are genes made of?}
     \begin{adjustwidth}{-1.5em}{-1.5em}
+    \vspace{-2mm}
     \centering{
         \includegraphics[width=0.5\linewidth]{dna-crop.png}
     }
     \begin{center}
     \begin{tikzpicture}[font=\sffamily]
-        \node[visible on=<2->, name=tn1, nuc] {A};
-        \node[visible on=<2->, name=tn2, nuc, right of=tn1] {T};
-        \node[visible on=<2->, name=tn3, nuc, right of=tn2] {G};
-        \node[visible on=<2->, name=tn4, nuc, right of=tn3] {T};
-        \node[visible on=<2->, name=tn5, nuc, right of=tn4] {T};
-        \node[visible on=<2->, name=tn6, nuc, right of=tn5] {A};
-        \node[visible on=<2->, name=tn7, nuc, right of=tn6] {A};
-        \node[visible on=<2->, name=tn8, nuc, right of=tn7] {G};
-        \node[visible on=<2->, name=tn9, nuc, right of=tn8] {T};
-        \node[visible on=<2->, name=tn10, nuc, right of=tn9] {G};
-        \node[visible on=<2->, name=tn11, nuc, right of=tn10] {A};
-        \node[visible on=<2->, name=tn12, nuc, right of=tn11] {G};
-        \node[visible on=<2->, name=tn13, nuc, right of=tn12] {G};
-        \node[visible on=<2->, name=tn14, nuc, right of=tn13] {C};
-        \node[visible on=<2->, name=tn15, nuc, right of=tn14] {T};
-        \node[visible on=<2->, name=tn16, nuc, right of=tn15] {A};
-        \node[visible on=<2->, name=tn17, nuc, right of=tn16] {A};
-        \node[visible on=<2->, name=tn18, nuc, right of=tn17] {T};
-        \node[visible on=<2->, name=tn19, nuc, right of=tn18] {A};
-        \node[visible on=<2->, name=tn20, nuc, right of=tn19] {G};
+        \node[visible on=<1->, name=tn1, nuc] {A};
+        \node[visible on=<1->, name=tn2, nuc, right of=tn1] {T};
+        \node[visible on=<1->, name=tn3, nuc, right of=tn2] {G};
+        \node[visible on=<1->, name=tn4, nuc, right of=tn3] {T};
+        \node[visible on=<1->, name=tn5, nuc, right of=tn4] {T};
+        \node[visible on=<1->, name=tn6, nuc, right of=tn5] {A};
+        \node[visible on=<1->, name=tn7, nuc, right of=tn6] {A};
+        \node[visible on=<1->, name=tn8, nuc, right of=tn7] {G};
+        \node[visible on=<1->, name=tn9, nuc, right of=tn8] {T};
+        \node[visible on=<1->, name=tn10, nuc, right of=tn9] {G};
+        \node[visible on=<1->, name=tn11, nuc, right of=tn10] {A};
+        \node[visible on=<1->, name=tn12, nuc, right of=tn11] {G};
+        \node[visible on=<1->, name=tn13, nuc, right of=tn12] {G};
+        \node[visible on=<1->, name=tn14, nuc, right of=tn13] {C};
+        \node[visible on=<1->, name=tn15, nuc, right of=tn14] {T};
+        \node[visible on=<1->, name=tn16, nuc, right of=tn15] {A};
+        \node[visible on=<1->, name=tn17, nuc, right of=tn16] {A};
+        \node[visible on=<1->, name=tn18, nuc, right of=tn17] {T};
+        \node[visible on=<1->, name=tn19, nuc, right of=tn18] {A};
+        \node[visible on=<1->, name=tn20, nuc, right of=tn19] {G};
 
-        \node[visible on=<2->, name=sn1, nuc, below of=tn1] {};
-        \node[visible on=<2->, name=sn2, nuc, below of=tn2] {};
-        \node[visible on=<2->, name=sn3, nuc, below of=tn3] {};
-        \node[visible on=<2->, name=sn4, nuc, below of=tn4] {};
-        \node[visible on=<2->, name=sn5, nuc, below of=tn5] {};
-        \node[visible on=<2->, name=sn6, nuc, below of=tn6] {};
-        \node[visible on=<2->, name=sn7, nuc, below of=tn7] {};
-        \node[visible on=<2->, name=sn8, nuc, below of=tn8] {};
-        \node[visible on=<2->, name=sn9, nuc, below of=tn9] {};
-        \node[visible on=<2->, name=sn10, nuc, below of=tn10] {};
-        \node[visible on=<2->, name=sn11, nuc, below of=tn11] {};
-        \node[visible on=<2->, name=sn12, nuc, below of=tn12] {};
-        \node[visible on=<2->, name=sn13, nuc, below of=tn13] {};
-        \node[visible on=<2->, name=sn14, nuc, below of=tn14] {};
-        \node[visible on=<2->, name=sn15, nuc, below of=tn15] {};
-        \node[visible on=<2->, name=sn16, nuc, below of=tn16] {};
-        \node[visible on=<2->, name=sn17, nuc, below of=tn17] {};
-        \node[visible on=<2->, name=sn18, nuc, below of=tn18] {};
-        \node[visible on=<2->, name=sn19, nuc, below of=tn19] {};
-        \node[visible on=<2->, name=sn20, nuc, below of=tn20] {};
+        \node[visible on=<1->, name=sn1, nuc, below of=tn1] {};
+        \node[visible on=<1->, name=sn2, nuc, below of=tn2] {};
+        \node[visible on=<1->, name=sn3, nuc, below of=tn3] {};
+        \node[visible on=<1->, name=sn4, nuc, below of=tn4] {};
+        \node[visible on=<1->, name=sn5, nuc, below of=tn5] {};
+        \node[visible on=<1->, name=sn6, nuc, below of=tn6] {};
+        \node[visible on=<1->, name=sn7, nuc, below of=tn7] {};
+        \node[visible on=<1->, name=sn8, nuc, below of=tn8] {};
+        \node[visible on=<1->, name=sn9, nuc, below of=tn9] {};
+        \node[visible on=<1->, name=sn10, nuc, below of=tn10] {};
+        \node[visible on=<1->, name=sn11, nuc, below of=tn11] {};
+        \node[visible on=<1->, name=sn12, nuc, below of=tn12] {};
+        \node[visible on=<1->, name=sn13, nuc, below of=tn13] {};
+        \node[visible on=<1->, name=sn14, nuc, below of=tn14] {};
+        \node[visible on=<1->, name=sn15, nuc, below of=tn15] {};
+        \node[visible on=<1->, name=sn16, nuc, below of=tn16] {};
+        \node[visible on=<1->, name=sn17, nuc, below of=tn17] {};
+        \node[visible on=<1->, name=sn18, nuc, below of=tn18] {};
+        \node[visible on=<1->, name=sn19, nuc, below of=tn19] {};
+        \node[visible on=<1->, name=sn20, nuc, below of=tn20] {};
 
-        \node[visible on=<2->, name=bn1, nuc, below of=sn1] {T};
-        \node[visible on=<2->, name=bn2, nuc, below of=sn2] {A};
-        \node[visible on=<2->, name=bn3, nuc, below of=sn3] {C};
-        \node[visible on=<2->, name=bn4, nuc, below of=sn4] {A};
-        \node[visible on=<2->, name=bn5, nuc, below of=sn5] {A};
-        \node[visible on=<2->, name=bn6, nuc, below of=sn6] {T};
-        \node[visible on=<2->, name=bn7, nuc, below of=sn7] {T};
-        \node[visible on=<2->, name=bn8, nuc, below of=sn8] {C};
-        \node[visible on=<2->, name=bn9, nuc, below of=sn9] {A};
-        \node[visible on=<2->, name=bn10, nuc, below of=sn10] {C};
-        \node[visible on=<2->, name=bn11, nuc, below of=sn11] {T};
-        \node[visible on=<2->, name=bn12, nuc, below of=sn12] {C};
-        \node[visible on=<2->, name=bn13, nuc, below of=sn13] {C};
-        \node[visible on=<2->, name=bn14, nuc, below of=sn14] {G};
-        \node[visible on=<2->, name=bn15, nuc, below of=sn15] {A};
-        \node[visible on=<2->, name=bn16, nuc, below of=sn16] {T};
-        \node[visible on=<2->, name=bn17, nuc, below of=sn17] {T};
-        \node[visible on=<2->, name=bn18, nuc, below of=sn18] {A};
-        \node[visible on=<2->, name=bn19, nuc, below of=sn19] {T};
-        \node[visible on=<2->, name=bn20, nuc, below of=sn20] {C};
+        \node[visible on=<1->, name=bn1, nuc, below of=sn1] {T};
+        \node[visible on=<1->, name=bn2, nuc, below of=sn2] {A};
+        \node[visible on=<1->, name=bn3, nuc, below of=sn3] {C};
+        \node[visible on=<1->, name=bn4, nuc, below of=sn4] {A};
+        \node[visible on=<1->, name=bn5, nuc, below of=sn5] {A};
+        \node[visible on=<1->, name=bn6, nuc, below of=sn6] {T};
+        \node[visible on=<1->, name=bn7, nuc, below of=sn7] {T};
+        \node[visible on=<1->, name=bn8, nuc, below of=sn8] {C};
+        \node[visible on=<1->, name=bn9, nuc, below of=sn9] {A};
+        \node[visible on=<1->, name=bn10, nuc, below of=sn10] {C};
+        \node[visible on=<1->, name=bn11, nuc, below of=sn11] {T};
+        \node[visible on=<1->, name=bn12, nuc, below of=sn12] {C};
+        \node[visible on=<1->, name=bn13, nuc, below of=sn13] {C};
+        \node[visible on=<1->, name=bn14, nuc, below of=sn14] {G};
+        \node[visible on=<1->, name=bn15, nuc, below of=sn15] {A};
+        \node[visible on=<1->, name=bn16, nuc, below of=sn16] {T};
+        \node[visible on=<1->, name=bn17, nuc, below of=sn17] {T};
+        \node[visible on=<1->, name=bn18, nuc, below of=sn18] {A};
+        \node[visible on=<1->, name=bn19, nuc, below of=sn19] {T};
+        \node[visible on=<1->, name=bn20, nuc, below of=sn20] {C};
 
-        \path[-] (tn1) edge [visible on=<2->, thick] (bn1);
-        \path[-] (tn2) edge [visible on=<2->, thick] (bn2);
-        \path[-] (tn3) edge [visible on=<2->, thick] (bn3);
-        \path[-] (tn4) edge [visible on=<2->, thick] (bn4);
-        \path[-] (tn5) edge [visible on=<2->, thick] (bn5);
-        \path[-] (tn6) edge [visible on=<2->, thick] (bn6);
-        \path[-] (tn7) edge [visible on=<2->, thick] (bn7);
-        \path[-] (tn8) edge [visible on=<2->, thick] (bn8);
-        \path[-] (tn9) edge [visible on=<2->, thick] (bn9);
-        \path[-] (tn10) edge [visible on=<2->, thick] (bn10);
-        \path[-] (tn11) edge [visible on=<2->, thick] (bn11);
-        \path[-] (tn12) edge [visible on=<2->, thick] (bn12);
-        \path[-] (tn13) edge [visible on=<2->, thick] (bn13);
-        \path[-] (tn14) edge [visible on=<2->, thick] (bn14);
-        \path[-] (tn15) edge [visible on=<2->, thick] (bn15);
-        \path[-] (tn16) edge [visible on=<2->, thick] (bn16);
-        \path[-] (tn17) edge [visible on=<2->, thick] (bn17);
-        \path[-] (tn18) edge [visible on=<2->, thick] (bn18);
-        \path[-] (tn19) edge [visible on=<2->, thick] (bn19);
-        \path[-] (tn20) edge [visible on=<2->, thick] (bn20);
+        \path[-] (tn1) edge [visible on=<1->, thick] (bn1);
+        \path[-] (tn2) edge [visible on=<1->, thick] (bn2);
+        \path[-] (tn3) edge [visible on=<1->, thick] (bn3);
+        \path[-] (tn4) edge [visible on=<1->, thick] (bn4);
+        \path[-] (tn5) edge [visible on=<1->, thick] (bn5);
+        \path[-] (tn6) edge [visible on=<1->, thick] (bn6);
+        \path[-] (tn7) edge [visible on=<1->, thick] (bn7);
+        \path[-] (tn8) edge [visible on=<1->, thick] (bn8);
+        \path[-] (tn9) edge [visible on=<1->, thick] (bn9);
+        \path[-] (tn10) edge [visible on=<1->, thick] (bn10);
+        \path[-] (tn11) edge [visible on=<1->, thick] (bn11);
+        \path[-] (tn12) edge [visible on=<1->, thick] (bn12);
+        \path[-] (tn13) edge [visible on=<1->, thick] (bn13);
+        \path[-] (tn14) edge [visible on=<1->, thick] (bn14);
+        \path[-] (tn15) edge [visible on=<1->, thick] (bn15);
+        \path[-] (tn16) edge [visible on=<1->, thick] (bn16);
+        \path[-] (tn17) edge [visible on=<1->, thick] (bn17);
+        \path[-] (tn18) edge [visible on=<1->, thick] (bn18);
+        \path[-] (tn19) edge [visible on=<1->, thick] (bn19);
+        \path[-] (tn20) edge [visible on=<1->, thick] (bn20);
     \end{tikzpicture}
     \end{center}
+    \vspace{-2mm}
     \begin{itemize}
-        \item What do the ``bars'' in the cartoon, and the letters below
+        \item What do the ``bars'' in the cartoon, and the letters below it
             represent?
-            \nbox{The bars and letters both represent nucleotides (or
+            \nbox{\small The bars and letters both represent nucleotides (or
                 bases)---the building block of DNA}
 
         \item Do you notice any patterns in the 2 rows of letters?
-            \nbox{A's pair with T's; G's pair with C's (= complementary base
+            \nbox{\small A's pair with T's; G's pair with C's (= complementary base
                 pairing)}
 
         \item What does a chromosome consist of?
-            \nbox{One long DNA molecule (a ``double helix'') (in some species,
+            \nbox{\small One long DNA molecule (a ``double helix'') (in some species,
                 like eukaryotes, it is wrapped around proteins)}
     \end{itemize}
 
@@ -277,8 +279,224 @@
     \end{adjustwidth}
 \end{frame}
 
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item What happens to the genotype and phenotype if there is a
+                change in the sequence of bases in the \highlight{coding
+                    region} of a gene?
+
+                \nbox{Genotype changes, because now there is a new allele.
+                    Phenotype may change, \highlight{if} the changed sequence
+                    affects the structure or function of the gene product.}
+
+                \vspace{8mm}
+            \item What happens to the genotype and phenotype if there is a
+                change in the sequence of bases in the \highlight{regulatory
+                    regions} of a gene?
+
+                \nbox{Genotype changes, because now there is a new allele.
+                    Phenotype may change, \highlight{if} the changed sequence
+                    affects the expression of the gene product.}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+
 \section{The molecular nature of mutation}
 
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item When chromosomes replicate, DNA is copied by enzymes
+
+            \vspace{5mm}
+            \item The enzymes make mistakes, at random
+                \begin{itemize}
+                    \item What does random mean?
+
+                        \nbox{During replication mistakes are random with
+                            respect to location (which base gets changed), and
+                            random with respect to type (which base it changes
+                            to)}
+                \end{itemize}
+
+            \vspace{5mm}
+            \item What are the consequences of these mistakes, for the genotype?
+
+                \nbox{It changes the genotype by creating a new allele}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item Some copying errors not only change the DNA base sequence,
+                but also the RNA or protein product
+
+                \begin{itemize}
+                    \item How do these errors affect the phenotype?
+
+                        \nbox{It will cause a change, if the new RNA or protein
+                            functions differently}
+
+                    \vspace{2mm}
+                    \item Doe these errors create new alleles?
+
+                        \nbox{Yes}
+                \end{itemize}
+
+            \vspace{2mm}
+            \item Some copying errors change the DNA base sequence, but do
+                \highlight{NOT} change the protein product
+
+                \begin{itemize}
+                    \item How do these errors affect the phenotype?
+
+                        \nbox{They don't; no change}
+
+                    \vspace{2mm}
+                    \item Do these errors create new alleles?
+
+                        \nbox{Yes. It is still a unique version of the gene.}
+                \end{itemize}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item Mistakes in meiosis can lead to a doubling of the number of
+                chromosomes or other changes in chromosome number (e.g., if the
+                homologs fail to pull apart).
+
+                \begin{itemize}
+                    \item Do these errors affect the genotype?
+
+                        \nbox{Yes, it will change the genotype of every gene on
+                            the chromosomes in question. There are now more
+                            copies of each gene.}
+
+                    \vspace{7mm}
+                    \item Do these errors affect the phenotype?
+
+                        \nbox{Maybe; for some genes there can be differences in
+                            expression}
+                \end{itemize}
+
+        \end{itemize}
+        \vspace{5mm}
+        \begin{flushright}
+            \includegraphics[height=0.28\textheight]{strawberry-ploidy.png}
+        \end{flushright}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item Damage from ultraviolet radiation or toxic chemicals can
+                break chromosomes.
+
+                \begin{itemize}
+                    \item Do these breaks affect the genotype?
+
+                        \nbox{It depends on where the break occurs. If the
+                            break occurs within a gene (coding or regulatory
+                            regions), then yes it will. It will result in a
+                            new, broken (not expressed) allele}
+
+                        \vspace{1cm}
+                    \item Do these breaks affect the phenotype?
+
+                        \nbox{It depends on where the break occurs. If the
+                            break occurs within a gene (coding or regulatory
+                            regions), then it probably will. The gene product
+                            will no longer be produced}
+                \end{itemize}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item Key definition: A \highlight{mutation} is any change in an
+                organism's DNA.
+
+                \begin{itemize}
+                    \item Why doesn't Lamarckian inheritance (acquired
+                        characters) work?
+
+                        \nbox{Two reasons: (1) Changes in phenotype during an
+                            individual's lifetime is almost always due to
+                            changes in gene expression, NOT a new mutation! (2)
+                            Even if a mutation occurred in an individual and
+                            changed its phenotype (e.g., cancer), it couldn't
+                            be passed on because the mutation is not in the
+                            germ line!}
+
+                \end{itemize}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Mutation is a random process, at the physical level. At the
+            evolutionary level, it is random with respect to what?
+        \begin{clickeroptions}
+            \item Gender
+            \item Cell type
+            \item Developmental stage
+            \item \clickeranswer{Fitness}
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Why is mutation constant?
+        \begin{clickeroptions}
+            \item \clickeranswer{It can happen in males or females, in any type
+                    of cell, and during mitosis or meiosis.}
+            \item Mutation rates can increase under certain environmental
+                conditions (e.g., presence of carcinogens, high UV light).
+            \item Because evolution is random.
+            \item The errors that occur in meiosis and mitosis are not directed
+                with respect to fitness.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item  How does mutation create \emph{heritable} variation?
+        \begin{clickeroptions}
+            \item Because mutation can occur during either mitosis or
+                meiosis---anytime that DNA is copied.
+            \item Because they are random, most changes in DNA are not
+                advantageous.
+            \item Because otherwise, evolution would ``grind to a halt'' (there
+                would be no genetic variation) 
+            \item \clickeranswer{Changes in DNA that occur prior to meiosis (in
+                    germ cells) are passed on to the next generation.}
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
 
 \end{document}
 
