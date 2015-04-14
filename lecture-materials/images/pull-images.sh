@@ -21,3 +21,4 @@ curl -o gire-et-al-2014-ebola-fig3.jpg http://www.sciencemag.org/content/345/620
 curl -o ichthyosaur-nobu-tamura-cc-by-25.jpg http://upload.wikimedia.org/wikipedia/commons/f/f3/Stenopterygius_BW.jpg
 curl -o dolphin-noaa-cc-by-sa-30.jpg http://upload.wikimedia.org/wikipedia/commons/f/f0/Spotteddolphin1.jpg
 curl -o xkcd-cartoon.png http://imgs.xkcd.com/comics/the_difference.png
+curl -o us-worker-task-plot.png http://dangerouslyirrelevant.org/wp-content/uploads/2014/09/2013AutorPrice2.png
