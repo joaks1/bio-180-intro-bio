@@ -60,7 +60,7 @@
         \node at(G1X1){}
             [edge from parent fork down,sibling distance=10mm, level distance=15mm]
             child{node[female]{}
-                child[mate,mleft]{coordinate(G2X1) child{node[male]{}}}
+                child[mate,mleft]{coordinate(G2X1) child{node[male,label=left: {John Doe}]{}}}
             }
             child{node[female]{}}
             child{node[female]{}}
@@ -106,7 +106,7 @@
             child{node[female]{}}
             child{node[female]{}}
             child{node[female]{}
-                child[mate,mright]{coordinate(G2X2) child{node(G2F3)[male]{}}}
+                child[mate,mright]{coordinate(G2X2) child{node(G2F3)[male,label=right: {John Doe}]{}}}
             }
         ;
         % 3rd Generation
