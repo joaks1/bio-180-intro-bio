@@ -1,0 +1,360 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+% \bibliography{../bib/references}
+\bibliography{references}
+\input{../utils/title-info.tex}
+
+\newcommand{\Y}{{\tikz\draw[black,fill=yellow] (0,0) circle (1ex);}\xspace}
+\newcommand{\G}{{\tikz\draw[black,fill=green] (0,0) circle (1ex);}\xspace}
+
+\title[Statistics]{Data Analysis and Statistics}
+% \date{\today}
+\date{April 20, 2015}
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-1.3cm}
+    \begin{center} 
+        \includegraphics[height=1.3\textheight]{../images/seating-chart.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\tableofcontents
+\end{frame}
+\end{noheadline}
+
+\section{Basics of probability}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item If I flip a fair coin and roll a fair 6-sided die, what is the
+            probability that I get a heads and a 1 \textit{\textbf{OR}} a tails
+            and a 6?
+        \begin{clickeroptions}
+            \item 1/12
+            \item 1/144
+            \item 4/9
+            \item \clickeranswer{1/6}
+            \item 0.25
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item What is the probability of getting at least two heads in three
+            flips of a fair coin?
+        \begin{clickeroptions}
+            \item \clickeranswer{0.5}
+            \item 0.25
+            \item 1/8
+            \item 3/8
+            \item 0.75
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\section{Frequentist inference: hypothesis testing}
+
+\begin{frame}
+    \begin{itemize}[<+->]
+        \item We find a species of plant in which some individuals have yellow
+            seeds and others have green seeds.
+        \item This species of plant is closely related to the garden peas that
+            Mendel used.
+        \item Luckily enough, some plant breeders have already bred pure lines
+            for each seed color.
+        \item We cross individuals from yellow-seeded and green-seeded pure
+            lines, and all of the \f{1} progeny have yellow seeds.
+        \item The plant breeders tell us that when they cross \f{1}s with
+            pure-line green-seeded individuals, they sometimes see more yellow
+            seeds than they expect.
+        \item The breeders hypothesize that heterozygotes produce more gametes
+            with the yellow allele than the green allele.
+
+    \end{itemize}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item
+            Based on Mendel's work, what is a good \highlight{null} hypothesis
+            for how this trait is inherited?
+        \begin{clickeroptions}
+            \item Seed color is controlled by a single gene with two alleles
+                that assort independently during meiosis.
+            \item Seed color is controlled by a two genes that segregate during
+                meiosis.
+            \item Seed color is controlled by a two genes that assort
+                independently during meiosis.
+            \item \clickeranswer{Seed color is controlled by a single gene with
+                    two alleles that segregate during meiosis.}
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item
+            If we cross an \f{1} male to a female from the green-seeded pure
+            line, what ratio of yellow-seeded to green-seeded progeny do we
+            expect to find if our null hypothesis is correct?
+        \begin{clickeroptions}
+            \item 3:1
+            \item \clickeranswer{1:1}
+            \item 1:3
+            \item 9:3:3:1
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{frame}
+    \begin{itemize}
+        \item<1-> We cross an \f{1} male to a female from the green-seeded pure
+            line, and we get 3 yellow-seeded and 1 green-seeded offspring
+
+            \vspace{0.5cm}
+        \item<2-> Our null hypothesis predicted a 1:1 ratio, and we found a 3:1
+            ratio.  What should we do? Is the null wrong?
+
+            \vspace{0.5cm}
+        \item<3-> How likely were we to get our results due to chance?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    We need to figure out the probability of outcomes under the null
+    hypothesis.
+
+    \vspace{1cm}
+    Was our null hypothesis a good null hypothesis?
+    \nbox{Yes---It makes precise predictions, which allow us to calculate
+        the probability of all possible outcomes of our experiment.}
+\end{frame}
+
+\begin{frame}
+    \frametitle{All possible results}
+    \begin{columns}
+        \column{0.33\textwidth}
+        \Y,\Y,\Y,\Y
+
+        \vspace{0.5cm}
+        \Y,\Y,\Y,\G \\
+        \Y,\Y,\G,\Y \\
+        \Y,\G,\Y,\Y \\
+        \G,\Y,\Y,\Y
+
+        \column{0.33\textwidth}
+        \Y,\Y,\G,\G \\
+        \Y,\G,\Y,\G \\
+        \Y,\G,\G,\Y \\
+        \G,\Y,\G,\Y \\
+        \G,\G,\Y,\Y \\
+        \G,\Y,\Y,\G
+
+        \column{0.33\textwidth}
+        \Y,\G,\G,\G \\
+        \G,\Y,\G,\G \\
+        \G,\G,\Y,\G \\
+        \G,\G,\G,\Y
+
+        \vspace{0.5cm}
+        \G,\G,\G,\G
+    \end{columns}
+
+    \vspace{1cm}
+    \uncover<2->{Which results are as ``weird'' as the results we found (3
+        yellow: 1 green)?  What's the total probability of these unexpected
+        results?}
+
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item What does the probability 0.625 (10/16) represent regarding our
+            experiment?
+        \begin{clickeroptions}
+            \item The probability of getting results as weird as what we
+                actually observed, assuming the null hypothesis is incorrect.
+            \item The probability of the null hypothesis.
+            \item \clickeranswer{The probability of getting results as weird as
+                    what we actually observed, under the null hypothesis (i.e.,
+                    assuming the null hypothesis is correct).}
+            \item The probability that the null hypothesis is incorrect.
+        \end{clickeroptions}
+    \end{clickerquestion}
+
+    \vspace{1cm}
+    What do we call this probability?
+
+    \nbox{The p-value}
+\end{frame}
+}
+
+\begin{frame}
+    \frametitle{All possible results}
+    \begin{columns}
+        \column{0.33\textwidth}
+        \Y,\Y,\Y,\Y
+
+        \vspace{0.5cm}
+        \Y,\Y,\Y,\G \\
+        \Y,\Y,\G,\Y \\
+        \Y,\G,\Y,\Y \\
+        \G,\Y,\Y,\Y
+
+        \column{0.33\textwidth}
+        \Y,\Y,\G,\G \\
+        \Y,\G,\Y,\G \\
+        \Y,\G,\G,\Y \\
+        \G,\Y,\G,\Y \\
+        \G,\G,\Y,\Y \\
+        \G,\Y,\Y,\G
+
+        \column{0.33\textwidth}
+        \Y,\G,\G,\G \\
+        \G,\Y,\G,\G \\
+        \G,\G,\Y,\G \\
+        \G,\G,\G,\Y
+
+        \vspace{0.5cm}
+        \G,\G,\G,\G
+    \end{columns}
+
+    \vspace{1cm}
+    \uncover<1->{If we consider a p-value of 0.05 or less as significant, what
+        was wrong with our experiment?}
+
+    \nbox{Our sample size is too small to ever get a significant result}
+
+    \uncover<1->{What can we do?}
+
+    \nbox{Increase our sample size or perform more replicates.}
+
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item We repeat our experiment and get the same ratio (3 yellow: 1
+            green), but this time we sampled 20 progeny. What will happen to
+            our p-value relative to our previous result?
+        \begin{clickeroptions}
+            \item \clickeranswer{It will decrease.}
+            \item It will stay the same.
+            \item It will increase.
+            \item It will prove the null hypothesis is wrong.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{frame}
+    \uncover<1->{
+        The probability of getting a result as weird as 15 yellow: 5 green,
+        assuming the null hypothesis is correct, is 0.041.}
+
+        \vspace{4mm}
+    \uncover<1->{
+        What do we do?
+            \nbox{Given our results are so unlikely under the null hypothesis,
+                we can assume it is not a good explanation of what is going on
+                (we ``reject'' the null hypothesis).}}
+
+        \vspace{0.3cm}
+    \uncover<1->{
+        What is the probability of the null hypothesis?
+        \nbox{We don't know; in frequentist statistical tests, we can only make
+            probability statements about the data (or summary statistics
+            calculated from the data), \highlight{NOT} the hypotheses.}}
+    \uncover<1->{
+        What is the probability of our results under the ``alternative''
+        hypothesis?
+        \nbox{We don't know; statistical tests always test the null hypothesis.
+            If we reject the null, we can often conclude our alternative
+            hypothesis is a better explanation. However, we usually cannot
+            quantify how well it explains the data.}}
+\end{frame}
+
+\begin{frame}[t]
+    We were able to reject the null hypothesis of simple Mendelian
+    inheritance. So, what now? \\
+
+    \vspace{8mm}
+    Our alternative hypothesis was that heterozygotes produce more gametes with
+    the yellow allele than the green allele. \\
+
+    \vspace{8mm}
+    What is the next step? How do we continue to advance science? \\
+
+    \nbox{We need to come up with a \highlight{mechanism} for the alternative
+        hypothesis that allows us to make precise predictions about the data we
+        should see if it is correct. This would make the alternative hypothesis
+        into a good null hypothesis that we can test quantitatively.} 
+\end{frame}
+
+% \section{Bayesian inference teaser}
+
+% \begin{frame}[t]
+%     \begin{itemize}
+%         \item<1->The proportion of people in the USA with HIV is 0.003 (3/1000). 
+%         \item<2->The test for HIV is very accurate:
+%             \begin{itemize}
+%                 \item<3-> The probability of a positive test if a person has
+%                     HIV is 0.998.
+%                 \item<4-> The probability of a positive test if a person is
+%                     healthy is 0.015.
+%             \end{itemize}
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}[t]
+%     \begin{itemize}
+%         \item The proportion of people in the USA with HIV is 0.003 (3/1000). 
+%         \item The test for HIV is very accurate:
+%             \begin{itemize}
+%                 \item The probability of a positive test if a person has
+%                     HIV is 0.998.
+%                 \item The probability of a positive test if a person is
+%                     healthy is 0.015.
+%             \end{itemize}
+%     \end{itemize}
+
+%     \begin{clickerquestion}
+%         \item If we randomly sample someone from the population, test them, and
+%             find a positive result, what is the probability this individual has
+%             HIV?
+%         \begin{clickeroptions}
+%             \item 0.998
+%             \item 0.985
+%             \item \clickeranswer{0.167}
+%             \item 0.881
+%         \end{clickeroptions}
+%     \end{clickerquestion}
+% \end{frame}
+
+\end{document}
+
