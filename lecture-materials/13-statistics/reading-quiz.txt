@@ -1,0 +1,98 @@
+1) Which of the following is the best practice for graphing data?
+
+A. The response variable should be plotted along the x-axis, and the dependent variable should be plotted along the y-axis.
+
+B. The independent variable should be plotted along the x-axis, and the y-axis is the abscissa.
+
+C. The predictor variable should be plotted along the x-axis, and the independent variable should be plotted along the y-axis.
+
+*D. The independent variable should be plotted along the x-axis, and the dependent variable should be plotted along the y-axis.
+
+
+2) If we want to plot the distribution of scores on Exam 1, we should use a
+
+A. Scatterplot
+
+B. Bar chart
+
+*C. Histogram
+
+D. Box-and-whisker plot
+
+
+3) If we want to compare scores on Exam 1 between 1st-year and 2nd-year students, and we want to be able to see where most of the scores fall for each group of students, we should use
+
+A. a bar chart
+
+B. a scatterplot
+
+*C. Side-by-side box-and-whisker plots
+
+D. a histogram
+
+
+4) If we want to compare the scores of 1st-year and 2nd-year students using a statistical test, our null hypothesis will be
+
+*A. There is no difference in exam performance between students in year 1 and 2.
+
+B. Students in year 2 perform better on exams than students in year 1.
+
+C. There is a difference in exam performance between students in year 1 and 2.
+
+D. Whether a student is in year 1 or 2 has an effect on exam performance.
+
+
+5) On average, 1st-year students score 4.3 points higher than 2nd-year students. What do we use to decide if this difference is significant?
+
+A. The probability of getting a difference of 4.3 points, or greater, if exam performance is affected by year in school.
+
+B. The probability that exam performance is not affected by year in school.
+
+*C. The probability of getting a difference 4.3 points, or greater, if exam performance is not affected by year in school.
+
+D. The probability that exam performance is affected by year in school.
+
+
+
+6) In the test above, what was our test statistic?
+
+A. The average exam score of 1st year students.
+
+B. The exam scores of all 1st and 2nd-year students.
+
+*C. The average difference in exam score between 1st and 2nd-year students.
+
+
+7) If I flip a fair coin and roll a fair six-sided die, what is the probability that I get a heads and a 2?
+
+A. 4/6
+B. 1/6
+*C. 1/12
+D. 0.2
+
+8) If I roll a fair six-sided die, what is the probability that I get a 1 or a 6?
+
+A. 1/12
+*B. 1/3
+C. 1/4
+D. 1/6
+
+
+9) In a population of diploid organisms, the frequencies of alleles for a gene are 0.1 "A", and 0.9 "a". If mating is random, and the alleles are neutral (they have no affect on fitness), what is the probability of two individuals mating and producing an offspring that is heterozygous (Aa)?
+
+A. 0.01
+B. 0.09
+*C. 0.18
+D. 0.81
+
+
+10) In a statistical test, by increasing the sample size
+
+*A. You can detect a smaller departure from the null hypothesis.
+
+B. You are more likely to show the null hypothesis is correct.
+
+C. You can detect a smaller departure from the alternative hypothesis.
+
+D. You are less likely to reject the null hypothesis if it is true.
+
