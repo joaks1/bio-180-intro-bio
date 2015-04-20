@@ -1,0 +1,375 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+% \bibliography{../bib/references}
+\bibliography{references}
+\input{../utils/title-info.tex}
+
+\title[Mutation \& Drift]{Mutation and Drift}
+% \date{\today}
+\date{April 27, 2015}
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-6mm}
+    \begin{center} 
+        \includegraphics[height=1.2\textheight]{../images/seating-chart.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{clickerquestion}
+        \item
+            In the media, people are talking about how the Ebola virus will
+            evolve airborne transmission in order to spread to new hosts more
+            efficiently. What is wrong with this reasoning?
+
+        \begin{clickeroptions}
+            \item Evolution by natural selection is not progressive; it is
+                random.
+            \item Adaptations are favored because they ensure the survival of
+                the species.
+            \item \clickeranswer{Natural selection can only act on existing
+                    heritable variation, and mutations are random with respect
+                    to fitness.}
+            \item Nothing; airborne transmission would increase fitness, and so
+                natural selection will cause it to evolve.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+\end{noheadline}
+}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\tableofcontents[subsectionstyle=hide]
+\end{frame}
+\end{noheadline}
+
+\section{How does mutation cause changes in allele frequencies?}
+
+\subsection{How often do mutations occur?}
+
+\begin{frame}
+    \frametitle{Data from \textit{Arabidopsis thaliensis}}
+    \begin{itemize}
+        \item<1-> \textit{A. thaliensis} is a diploid mustard that can self.
+
+        \item<2-> Experimental design: Start with 1 individual; let it grow in
+            optimum conditions (soil, light, moisture, space) and
+            self-fertilize.
+
+        \item<3-> Choose 1 seed at random to be the next generation \ldots let
+            it grow, choose 1 seed at random etc. \ldots total of 30
+            generations \ldots 5 lines (replicates)
+
+        \item<4-> Sequence the entire genome at generations 1 and 30
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Data from \textit{Arabidopsis thaliensis}}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \vspace{-3mm}
+    \begin{itemize}
+        \item<1-> Estimated an average of  $7 \times 10^{-9}$ mutations per base
+            per generation
+
+        \item<2-> Haploid genome size is $\approx 1.35 \times 10^8$ bases
+
+        \item<3-> Average gene size is $\approx 3000$ bases
+    \end{itemize}
+
+    \begin{enumerate}
+        \item<4-> What is the average number of mutations per haploid genome per
+            generation?
+
+            \nbox{$0.95 = (7 \times 10^{-9} mutations/base/generation)(1.35 x
+                10^8 bases)$}
+
+            \vspace{3mm}
+        \item<4-> What is average number of mutations per seed per generation?
+
+            \nbox{$0.95 \times 2$}
+
+            \vspace{3mm}
+        \item<4-> What is the average number of mutations per gene copy per
+            generation?
+
+            \nbox{\scriptsize $2.1 \times 10^{-5} mutations/gene = (7 \times 10^{-9}
+                mutations/base/generation)(3000 bases)$}
+    \end{enumerate}
+    \note[item]{Similar experiment with \textit{C.\ elegans}; rate is
+        $\approx$2.5x higher}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Data from \textit{Arabidopsis thaliensis}}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+    \begin{itemize}
+        \item You expect $2.1 \times 10^{-3} \%$ of gene copies to be a new
+            allele each generation.
+
+        \item How many generations would it take to expect a 1\% change in
+            allele frequency for a given gene?
+            
+            \nbox{$476 generations \approx 0.01 / 2.1 \times 10^{-5}$}
+    \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+    Take-home messages:
+
+    \begin{itemize}[<+->]
+        \item By itself (i.e., all other HW conditions are satisfied), mutation
+            does not change allele frequencies very much.
+
+        \item However, mutation constantly creates heritable variation in all
+            populations in every generation.
+    
+        \item It is the source of variation on which selection, drift, and
+            migration can act.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item Mutation is sometimes called the ultimate source of genetic
+            variation. Why is this accurate?
+        \begin{clickeroptions}
+            \item Mutation is random with respect to fitness.
+            \item \clickeranswer{Meiosis creates new genotypes, but only
+                    mutation creates new alleles.}
+            \item Mutations do not blend together (genes are particulate).
+            \item It creates new genotypic variation.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+
+\section{How do mutations affect fitness?}
+
+\begin{frame}
+    \frametitle{Experiment on \emph{C. elegans}}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+
+    Suzanne Estes and colleagues maintained lines of \emph{C. elegans} for many
+    generations in the lab:
+
+    \begin{description}
+        \item[Control lines] Large populaions; allowed for selection.
+        \item[Experimental lines] Prevented selection; mutations accumulate.
+    \end{description}
+
+    \begin{center}
+    \begin{tikzpicture}
+    [scale=0.38,auto=left,every node/.style={circle}]%,fill=blue!20}]
+      \node [skip](xy) at (0,0) {};
+      \node [empty](x) at (14,0) {};
+      \node [empty](y) at (0,10) {};
+      \node [empty, label=below: {\sffamily Time}](xl) at (7.5,0.5) {};
+      \node [empty, label=left: {\sffamily Lifespan}](yl) at (0,5) {};
+      \node [empty](k1l) at (-16, 8) {};
+      \node [empty, label=right: {\sffamily Control lines}](k1r) at (-14, 8) {};
+      \node [empty](k2l) at (-16, 3) {};
+      \node [empty, label=right: {\sffamily Experimental lines}](k2r) at (-14, 3) {};
+    
+      \foreach \from/\to in {xy/x,xy/y,k1l/k1r}
+        \draw [thick] (\from) -- (\to);
+      \foreach \from/\to in {k2l/k2r}
+        \draw[thick,dashed] (\from) -- (\to);
+    
+    \end{tikzpicture}
+    \end{center}
+    \end{adjustwidth}
+    \note[item]{\textit{C.\ elegans} reproduce throughout lifetime, so lifespan
+        is a good measure of fitness}
+\end{frame}
+
+\section{How does genetic drift change allele frequencies?}
+
+\begin{frame}[t]
+    ``Drift happens'': Chance variation in reproductive success (i.e., sampling
+    error or ``luck'').
+    
+    \vspace{0.5cm}
+    Experiment 1: Starting population size = 2
+
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{2.5cm} p{2cm} p{2.5cm} }
+             Mom: $A_{H}A_{T}$ & & Dad: $A_{H}A_{T}$ \\
+             & & \\
+             $fr(A_{H})=$ & & $fr(A_{T})=$ \\
+              & & \\
+             Kids & & \\
+             1: & & 2: \\
+             3: & & 4: \\
+             5: & & 6: \\
+             & & \\
+             $fr(A_{H})=$ & & $fr(A_{T})=$ \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    Experiment 2: Starting population size $\approx 800$
+
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{2.5cm} p{2cm} p{2.5cm} }
+             Mom: $A_{H}A_{T}$ & & Dad: $A_{H}A_{T}$ \\
+             $fr(A_{H})=$ & & $fr(A_{T})=$ \\
+        \end{tabular}
+    \end{table}
+
+    Flip a coin or use 2 little pieces of paper (one with ``H'' and one with
+    ``T'') to make your offspring!
+
+    \vspace{0.5cm}
+    Clickers:
+    \begin{enumerate}
+        \item $A_{H}A_{H}$
+        \item $A_{H}A_{T}$
+        \item $A_{T}A_{T}$
+    \end{enumerate}
+
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{2.5cm} p{2cm} p{2.5cm} }
+             $fr(A_{H})=$ & & $fr(A_{T})=$ \\
+        \end{tabular}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}
+    Punchlines:
+
+    \begin{itemize}
+        \item Does drift have a stronger affect on allele frequencies in small
+            or large populations?
+            \nbox{Small populations; sampling fewer gametes each generation
+                and so will have larger changes in allele frequencies due to
+                chance.}
+
+        \item What happens when drift continues, generation after generation
+            (especially in small populations)?
+            \nbox{alleles will drift to fixation or loss}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Many events can cause drift
+
+    \begin{itemize}
+        \item Airplanes crash
+
+            \nbox{Bad luck \ldots alleles don't get passed on}
+
+        \item When the Grants were working in the Galapagos, they observed a
+            small group of \emph{Geospiza magnirostris} arrive on Daphne Major
+            and start a new population
+
+            \nbox{Only a few individuals---likely dramatic shifts in allele
+                frequencies compared to source population}
+
+        \item When Europeans brought smallpox and measles to North America, up
+            to 90\% of Native Americans in some communities died
+
+            \nbox{Alleles of immune system genes under intense selection,
+                but alleles for independent genes change dramatically in
+                frequency just due to chance}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item
+            Many mutations do not change the phenotype (e.g., a change from AAT
+            to AAC in DNA still means a leucine will be in the gene product).
+            But many mutations like this have increased to fixation in human
+            and other populations. How?
+
+        \begin{clickeroptions}
+            \item Mutation---the same AAT-AAC mutation occurred in many individuals.
+            \item Selection---leucine is favored.
+            \item \clickeranswer{Drift---the ``AAC allele'' got lucky.}
+            \item Gene flow---individuals with the AAC allele moved in;
+                individuals with the AAT allele moved out.
+            \item Nonrandom mating---individuals with high leucine content tend
+                to mate together.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item
+            Consider the following experiment: 100 fruit fly populations in the
+            lab, each consisting of 4 females and 4 males. In each starting
+            population, alleles $A_1$ and $A_2$ are at frequency 0.5.
+ 
+        \begin{itemize}
+            \item Randomly pick 4 female and 4 male offspring to breed and form
+                the next generation in each population. Note: this is a VERY
+                TINY population. 
+
+            \item Repeat for a total of 16 generations, in each of the 100
+                populations.
+
+            \item Plot the number of populations (total of 100) that have
+                allele $A_1$ at various frequencies, from 0 (lost) to 1.0
+                (fixed). 
+
+            \item Which of the following graphs predicts the result correctly? 
+        \end{itemize}
+
+    \end{clickerquestion}
+\end{frame}
+
+\begin{frame}
+    \centering{
+        \includegraphics[width=0.95\textwidth]{../images/allele-freq-clicker-histograms.pdf}}
+
+    \nbox{\scriptsize Correct answer is 1}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Consequences of genetic drift}
+    \begin{enumerate}
+        \item With respect to fitness, drift \ldots
+
+            \nbox{is random}
+
+            \vspace{1cm}
+        \item With respect to genetic varition, drift \ldots
+
+            \nbox{will reduce genetic varition over time}
+
+            \vspace{1cm}
+        \item Why is drift a concern for endangered species?
+
+            \nbox{Drift is pronounced in small populations and can reduce
+                genetic varition}
+    \end{enumerate}
+\end{frame}
+
+
+\end{document}
+
+
