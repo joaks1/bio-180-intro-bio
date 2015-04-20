@@ -14,6 +14,46 @@
 \maketitle
 \end{noheadline}
 
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+    \begin{clickerquestion}
+        \item Assume that mutations occur at a rate of 0.0001 per gene per
+            generation. On average, how long would it take mutation alone to
+            create a 1\% change in allele frequencies at a gene in \textit{C.\
+                elegans}, with a generation time of 4 days, and \textit{E.\
+                coli}, with a generation time of 20 minutes? 
+    \end{clickerquestion}
+    \begin{table}%[htbp]
+        % \addtolength{\tabcolsep}{-0.09cm}
+        \centering
+        \begin{tabular}{ l c c }
+             & \textit{C.\ elegans} & \textit{E.\ coli} \\
+            \hline
+            \textcolor{red}{1)} & 4 days & 20 minutes \\ 
+            \textcolor{red}{2)} & 40 days & 200 minutes \\ 
+            \textcolor{red}{3)} & \clickeranswer{$\approx$1.1 years} &
+            \clickeranswer{$\approx$33 hours} \\ 
+            \textcolor{red}{4)} & $\approx$11 years & $\approx$14 days \\ 
+            \textcolor{red}{5)} & \multicolumn{2}{l}{It depends on the number of genes in the genome} \\ 
+        \end{tabular}
+    \end{table}
+
+    \nbox{$\frac{0.01 \,\textrm{mutations/gene}}{0.0001
+            \,\textrm{mutations/gene/generation}} = 100 \,\textrm{generations}$
+        \\
+        \textit{C.\ elegans}: $100 \,\textrm{generations} \times 4
+        \,\textrm{days/generation} = 400 \,\textrm{days} \approx 1.1
+        \,\textrm{years}$ \\
+        \textit{E.\ coli}: $100 \,\textrm{generations} \times 20
+        \,\textrm{hours/generation} = 2000 \,\textrm{minutes} \approx 33
+        \,\textrm{hours}$}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+}
+
 \nopost{
 \begin{noheadline}
 \begin{frame}[c]
@@ -32,6 +72,50 @@
 \tableofcontents[subsectionstyle=hide]
 \end{frame}
 \end{noheadline}
+
+\section[How does gene flow cause changes in allele frequencies?]{How gene flow changes allele frequencies}
+
+\begin{frame}[t]
+    \frametitle{Gene flow: The one-island model}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \vspace{-4mm}
+        Model: One-way movement of individuals (and their alleles) from a large
+        population on a continent to a small population on an island.
+
+        \uncover<2->{
+        \vspace{2mm}
+        Suppose that allele $A_1$ is at frequency 1.0 on an island with 400
+        individuals.
+        }
+
+        \uncover<3->{
+        \vspace{1mm}
+        Suppose that allele $A_2$ is at frequency 1.0 on the continent.
+        }
+
+        \uncover<4->{
+        \vspace{1mm}
+        If 100 individuals from the continent migrate to the island, the
+        frequencies of alleles in the island populations are now (the species
+        is diploid):
+        }
+
+        \nbox{$fr(A_2) = \frac{100 \times 2}{1000} = 0.2$ \\
+              $fr(A_1) = \frac{400 \times 2}{1000} = 0.8$} 
+
+    
+        \uncover<5->{
+        \vspace{2cm}
+        Punchline: Evolution has occurred because of gene flow!
+        }
+
+    \end{adjustwidth}
+\end{frame}
+\section[How do inbreeding and other forms of non-random mating cause changes in genotype frequencies?]{How non-random mating changes genotype frequencies}
+
+\section[How do inbreeding and the 4 evolutionary forces affect endangered species?]{Population genetics of endangered species}
+
+
 
 
 \end{document}
