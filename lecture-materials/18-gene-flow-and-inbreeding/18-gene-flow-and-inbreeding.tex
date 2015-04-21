@@ -14,6 +14,17 @@
 \maketitle
 \end{noheadline}
 
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-6mm}
+    \begin{center} 
+        \includegraphics[height=1.2\textheight]{../images/seating-chart.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
 \clickerslide{
 \begin{noheadline}
 \begin{frame}
@@ -54,17 +65,6 @@
 \end{noheadline}
 }
 
-\nopost{
-\begin{noheadline}
-\begin{frame}[c]
-    \vspace{-6mm}
-    \begin{center} 
-        \includegraphics[height=1.2\textheight]{../images/seating-chart.pdf}
-    \end{center}
-\end{frame}
-\end{noheadline}
-}
-
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
@@ -73,7 +73,8 @@
 \end{frame}
 \end{noheadline}
 
-\section[How does gene flow cause changes in allele frequencies?]{How gene flow changes allele frequencies}
+\section[How gene flow changes allele frequencies]{How does gene flow cause
+    changes in allele frequencies?}
 
 \begin{frame}[t]
     \frametitle{Gene flow: The one-island model}
@@ -82,38 +83,280 @@
         Model: One-way movement of individuals (and their alleles) from a large
         population on a continent to a small population on an island.
 
-        \uncover<2->{
-        \vspace{2mm}
-        Suppose that allele $A_1$ is at frequency 1.0 on an island with 400
-        individuals.
-        }
+        \begin{itemize}
+            \item<2-> Suppose that allele $A_1$ is at frequency 1.0 on an
+                island with 400 individuals.
 
-        \uncover<3->{
-        \vspace{1mm}
-        Suppose that allele $A_2$ is at frequency 1.0 on the continent.
-        }
+            % \vspace{1mm}
+            \item<3-> Suppose that allele $A_2$ is at frequency 1.0 on the
+                continent.
 
-        \uncover<4->{
-        \vspace{1mm}
-        If 100 individuals from the continent migrate to the island, the
-        frequencies of alleles in the island populations are now (the species
-        is diploid):
-        }
+            % \vspace{1mm}
+            \item<4-> If 100 individuals from the continent migrate to the
+                island, the frequencies of alleles in the island populations
+                are now (the species is diploid):
+        \end{itemize}
 
         \nbox{$fr(A_2) = \frac{100 \times 2}{1000} = 0.2$ \\
               $fr(A_1) = \frac{400 \times 2}{1000} = 0.8$} 
 
     
         \uncover<5->{
-        \vspace{2cm}
-        Punchline: Evolution has occurred because of gene flow!
+        \vspace{1.7cm}
+        \textbf{Punchline:} Evolution has occurred because of gene flow!
         }
 
     \end{adjustwidth}
 \end{frame}
-\section[How do inbreeding and other forms of non-random mating cause changes in genotype frequencies?]{How non-random mating changes genotype frequencies}
 
-\section[How do inbreeding and the 4 evolutionary forces affect endangered species?]{Population genetics of endangered species}
+\begin{frame}[t]
+    \frametitle{What are the evolutionary consequences of gene flow?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+        \vspace{-4mm}
+            \item Genetically, does it make populations more alike, more
+                dissimilar, or no impact?
+
+                \nbox{More alike. For example, on the last slide, the island
+                    population is more similar to the continent population
+                    after migration occurred.}
+
+                \vspace{1cm}
+            \item In the recipient population, does it increase fitness,
+                decrease fitness, or no impact?
+
+                \nbox{You can't tell---it depends on the alleles that
+                    arrive and the environment}
+
+                \vspace{1cm}
+            \item How is gene flow affecting human populations?
+
+                \nbox{It is homogenizing populations}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item How do founder effects and gene flow differ?
+        \begin{clickeroptions}
+            \item Compared to a founder effect, less genetic drift occurs
+                during gene flow.
+            \item Gene flow is much more common; founder effects usually only
+                occur on islands. 
+            \item \clickeranswer{Founder effects don't add alleles to an
+                    existing population.}
+            \item They are two sides to the same coin (have similar or
+                identical effects). 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Deforestation and suburbanization are forcing wild populations
+            into isolated fragments of habitat. How will these isolated
+            populations change over time relative to each other, due to REDUCED
+            gene flow? 
+
+        \begin{clickeroptions}
+            \item Less distinct: mutation, selection, and drift would make
+                allele frequencies converge (become more similar). 
+            \item No (or little) change: mutation, selection, and drift in the
+                various populations would balance out. 
+            \item The result is not predictable---it depends on the
+                environment. 
+            \item \clickeranswer{More distinct: mutation, selection, and drift
+                    would act independently in each.}
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\section[How non-random mating changes genotype frequencies]{How do inbreeding
+    and other forms of non-random mating cause changes in genotype
+    frequencies?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \textcolor{blue}{\bf How do inbreeding and other forms of non-random
+            mating cause changes in genotype frequencies?}
+
+        \vspace{2mm}
+        Consider selfing---an extreme form of inbreeding
+
+        \begin{table}
+            \centering
+            \begin{tabular}{l l c r }
+                Generation & & & \\
+                0 & $A_1A_1$ & $A_1A_2$ & $A_2A_2$ \\[1ex]
+                1 & & \wout{$\;\;\;\; \leftarrow \frac{1}{4}A_1A_1; \frac{1}{2}A_1A_2;
+                 \frac{1}{4}A_2A_2 \rightarrow \;\;\;\;$} & \\[1ex]
+                2 & & \wout{$\;\;\;\; \leftarrow \frac{1}{4}A_1A_1; \frac{1}{2}A_1A_2;
+                 \frac{1}{4}A_2A_2 \rightarrow \;\;\;\;$} & \\[1ex]
+                3 & & \wout{$\;\;\;\; \leftarrow \frac{1}{4}A_1A_1; \frac{1}{2}A_1A_2;
+                 \frac{1}{4}A_2A_2 \rightarrow \;\;\;\;$} & \\
+                 & & & \\
+            \end{tabular}
+        \end{table}
+
+        \begin{enumerate}
+            \item How does inbreeding affect allele frequencies?
+
+                \nbox{Inbreeding alone does NOT affect allele frequencies}
+
+            \item How does inbreeding affect genotype frequencies?
+
+                \nbox{Inbreeding increases the frequency of homozygotes and
+                    decreases the frequency of heterozygotes}
+        \end{enumerate}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        Why does inbreeding depression occur?
+
+        \begin{itemize}
+            \item Deleterious recessive alleles are usually at low frequency, so most
+                are found in \ldots
+
+                \nbox{If an allele is rare, it is unlikely for an individual to
+                    inherit two copies by chance alone, and so it will most
+                    likely be found in heterozygotes. Also, given the allele is
+                    deleterious and recessive, it is even less likely to find
+                    an individuals with two copies, due to selection; the
+                    allele will tend to ``hide out'' from selection in
+                    heterozygotes}  
+
+            \item BUT, inbreeding increases the proportion of homozygous
+                recessive individuals, so \ldots
+
+                \nbox{When there is inbreeding, more individuals will have two
+                    copies of the deleterious recessive. Thus, more individuals
+                    will exhibit low-fitness phenotypes when there is
+                    inbreeding. I.e., inbreeding can decrease average fitness.}
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Why do small populations become inbred?
+
+        \begin{clickeroptions}
+            \item They are usually stable or declining in size. 
+            \item \clickeranswer{Eventually, all individuals in small
+                    populations are closely related.}
+            \item Founder events establish populations in new, previously
+                unoccupied habitats.
+            \item Population bottlenecks cause large changes in allele
+                frequencies.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item In some species, inbreeding via self-fertilization occurs
+            routinely, but no inbreeding depression is observed. How is this
+            possible? 
+
+        \begin{clickeroptions}
+            \item \clickeranswer{Deleterious recessives have been eliminated
+                    via intense selection in the past.}
+            \item The observed phenotypic variation is due to gene $\times$
+                environment interactions.
+            \item The traits involved are polygenic.
+            \item Most individuals in the population are heterozygous.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \textbf{Punchline:} Inbreeding does not change allele frequencies by
+        itself, but it makes selection (against deleterious recessives) more
+        efficient---meaning that selection can changes allele frequencies
+        faster when there is inbreeding.
+
+        \vspace{4mm}
+        Explain what this statement means, and why it is correct.
+
+        \nbox{Inbreeding decreases the relative number of heterozygotes, while
+            increasing the relative number of homozygotes. As a result, more
+            individuals will exhibit the homozygous recessive phenotype and
+            ``expose'' the deleterious alleles to selection. This increases the
+            rate at which selection can act on these alleles, which increases
+            the rate of evolution}
+    \end{adjustwidth}
+\end{frame}
+
+\section[Population genetics of endangered species]{How do inbreeding and the 4
+    evolutionary forces affect endangered species?}
+
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \vspace{-3mm}
+        \textcolor{blue}{\bf How do inbreeding and the 4 evolutionary forces
+            affect endangered species?}
+
+        \begin{itemize}
+            \item Amur leopards: a distinct subspecies adapted to cold climate
+                of the Amur River (large-bodied, light color in winter, heavy
+                coat)
+        \end{itemize}
+        \begin{center}
+            \includegraphics[width=0.7\linewidth]{amur-leopard.png}
+        \end{center}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        Hunting and habitat destruction have reduced Amur leopards to
+        $\approx$20 individuals in the wild. Mutation, drift, and inbreeding
+        may be reducing average fitness. 
+
+        \begin{itemize}
+            \item<2-> Genetically, captive populations in Japan and elsewhere
+                are a m\'{e}lange of different source populations/subspecies. 
+            \item<3-> Phenotypically, the captive populations are distinct from
+                the Amur population (smaller, less-dense fur).
+            \item<4-> Climate change may be impacting the current range of Amur
+                leopards.
+            \item<5-> Should offspring from captive populations be
+                re-introduced to the wild, to augment the Amur population? 
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        Pros:
+
+        \nbox{New alleles from captive captive population could increase
+            heterozygosity at immune-system genes and genes with deleterious
+            recessive alleles; this would increase average fitness.}
+
+        \vspace{2cm}
+        Cons:
+
+        \nbox{New alleles from the captive population could be maladaptive for
+            the Amur River environment (e.g., the alleles might be beneficial
+            for warmer environments, but confer poor fitness in a cold
+            environment}
+    \end{adjustwidth}
+\end{frame}
 
 
 
