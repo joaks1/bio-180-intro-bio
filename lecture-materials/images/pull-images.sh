@@ -22,3 +22,10 @@ curl -o ichthyosaur-nobu-tamura-cc-by-25.jpg http://upload.wikimedia.org/wikiped
 curl -o dolphin-noaa-cc-by-sa-30.jpg http://upload.wikimedia.org/wikipedia/commons/f/f0/Spotteddolphin1.jpg
 curl -o xkcd-cartoon.png http://imgs.xkcd.com/comics/the_difference.png
 curl -o us-worker-task-plot.png http://dangerouslyirrelevant.org/wp-content/uploads/2014/09/2013AutorPrice2.png
+
+curl -o Homo-sapiens.png http://phylopic.org/assets/images/submissions/b042f8d5-d2c3-4659-8b2a-60b26d096f0c.256.png
+curl -o Rattus.png http://phylopic.org/assets/images/submissions/828a8d15-6aa9-41ab-85a3-e9e06c0f1945.256.png
+curl -o Alces.png http://phylopic.org/assets/images/submissions/1a20a65d-1342-4833-a9dd-1611b9fb383c.256.png
+curl -o Loxodonta.png http://phylopic.org/assets/images/submissions/62398ac0-f0c3-48f8-8455-53512a05fbc4.256.png
+curl -o Phascolarctos.png http://phylopic.org/assets/images/submissions/8a06d489-024f-4505-8ccb-f86e84e00e75.256.png
+curl -o Macropus.png http://phylopic.org/assets/images/submissions/c306572a-fae1-41e3-8208-c2bce972e0ef.256.png
