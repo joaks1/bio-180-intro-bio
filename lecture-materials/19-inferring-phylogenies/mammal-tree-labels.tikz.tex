@@ -1,0 +1,88 @@
+%% This is a tikz file
+\begin{tikzpicture}[scale=1.4,very thick,inner sep=0.1cm]
+%        +---3:\hspace{11mm}\includegraphics[height=6.5mm,resolution=150]{../images/Alces.png}
+%     +--2
+%     |  | +--5:\hspace{11mm}\includegraphics[width=12mm,resolution=150]{../images/Rattus.png}
+%     |  +-4
+%   +-1    +--6:\hspace{11mm}\includegraphics[height=6.5mm,resolution=150]{../images/Homo-sapiens.png}
+%   | |
+% 1:0 +------7:\hspace{11mm}\includegraphics[height=6.5mm,resolution=150]{../images/Loxodonta.png}
+%   |
+%   |      +-9:\hspace{11mm}\includegraphics[height=6.5mm,resolution=150]{../images/Phascolarctos.png}
+%   +------8
+%          +-10:\hspace{11mm}\includegraphics[height=6.5mm,resolution=150]{../images/Macropus.png}
+
+% The scale is 0.960000, and the yScale is 0.800000
+
+%% Coordinates of nodes.
+\coordinate (nr) at (-0.4,1.450);
+\coordinate (n0) at (0.000,1.450);
+\coordinate (n0ae) at (-0.05,1.4);
+\coordinate (n0as) at (-0.4,1.1);
+\coordinate (n1) at (0.960,2.500);
+\coordinate (n1p) at (0.000,2.500);
+\coordinate (n2) at (1.920,3.400);
+\coordinate (n2ae) at (1.860,3.450);
+\coordinate (n2as) at (1.420,3.750);
+\coordinate (n2p) at (0.960,3.400);
+\coordinate (n3) at (3.840,4.000);
+\coordinate (n3ae) at (3.8,4.06);
+\coordinate (n3as) at (3.5,4.4);
+\coordinate (n3p) at (1.920,4.000);
+\coordinate (n4) at (2.880,2.800);
+\coordinate (n4p) at (1.920,2.800);
+\coordinate (n5) at (3.840,3.200);
+\coordinate (n5p) at (2.880,3.200);
+\coordinate (n6) at (3.840,2.400);
+\coordinate (n6p) at (2.880,2.400);
+\coordinate (n7) at (3.840,1.600);
+\coordinate (n7p) at (0.960,1.600);
+\coordinate (n8) at (2.880,0.400);
+\coordinate (n8ae) at (1.440,0.350);
+\coordinate (n8as) at (1.040,0.000);
+\coordinate (n8p) at (0.000,0.400);
+\coordinate (n9) at (3.840,0.800);
+\coordinate (n9p) at (2.880,0.800);
+\coordinate (n10) at (3.840,0.000);
+\coordinate (n10p) at (2.880,0.000);
+
+%% horizontal lines
+\draw (n1p) -- (n1);
+\draw (n2p) -- (n2);
+\draw (n3p) -- (n3);
+\draw (n4p) -- (n4);
+\draw (n5p) -- (n5);
+\draw (n6p) -- (n6);
+\draw (n7p) -- (n7);
+\draw (n8p) -- (n8);
+\draw (n9p) -- (n9);
+\draw (n10p) -- (n10);
+\draw (n0) -- (nr);
+
+%% vertical lines
+\draw [line cap=rect] (n1p) -- (n8p);
+\draw [line cap=rect] (n2p) -- (n7p);
+\draw [line cap=rect] (n3p) -- (n4p);
+\draw [line cap=rect] (n5p) -- (n6p);
+\draw [line cap=rect] (n9p) -- (n10p);
+
+%% arrows
+\draw [thick, <-, color=red] (n0ae) -- (n0as) node[align=left, left]{\hmask{\sffamily Root node}};
+\draw [thick, <-, color=red] (n3ae) -- (n3as) node[align=left, left]{\hmask{\sffamily Terminal node \\(or leaf, tip)}};
+\draw [thick, <-, color=red] (n2ae) -- (n2as) node[align=left, left]{\hmask{\sffamily Internal node}};
+\draw [thick, <-, color=red] (n8ae) -- (n8as) node[align=right, left]{\hmask{\sffamily Branch}};
+
+%% leaf labels
+\node at (n3)  {\hspace{13mm}\includegraphics[height=8.5mm,resolution=150]{../images/Alces.png}};
+\node at (n5)  {\hspace{13mm}\includegraphics[width=14mm,resolution=150]{../images/Rattus.png}};
+\node at (n6)  {\hspace{13mm}\includegraphics[height=8.5mm,resolution=150]{../images/Homo-sapiens.png}};
+\node at (n7)  {\hspace{13mm}\includegraphics[height=8.5mm,resolution=150]{../images/Loxodonta.png}};
+\node at (n9)  {\hspace{13mm}\includegraphics[height=8.5mm,resolution=150]{../images/Phascolarctos.png}};
+\node at (n10) {\hspace{13mm}\includegraphics[height=8.5mm,resolution=150]{../images/Macropus.png}};
+
+%% root label
+\node [root] at (nr) {};
+
+% internal node labels (doSmartLabels is True)
+
+\end{tikzpicture}

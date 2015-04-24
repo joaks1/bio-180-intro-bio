@@ -56,28 +56,6 @@
 \end{frame}
 \end{noheadline}
 
-% \begin{frame}
-%     \frametitle{Acknowledgements}
-%     Some of the slides and images were stolen (with permission) from Dr.\ Mark Holder.
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{What is phylogenetics?}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}
-%     \frametitle{What is phylogenetics?}
-%     \begin{description}
-%         \item[Systematics] The science devoted to the study of the diversity of
-%             organisms, and the relationships among them.
-%         \item[Classification] The ordering of organisms into named groups on
-%             the basis of their relationships.
-%         \item[Phylogenetics] The science of inferring the genealogical
-%             relationships between species.
-%     \end{description}
-% \end{frame}
-% Classification before phylogeny -- been classifying stuff since hg days -> tends to form hiearchies
-% Linneaus formalized this
-% Evolution gave the framework behind why hiearchies were intuitive
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Why is phylogenetics important?}
@@ -106,7 +84,7 @@
 %     - Society of Systematic Biologists
 % \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
     % \frametitle{Why is phylogenetics important?}
     \begin{adjustwidth}{-1.5em}{-1.5em}
     We cannot understand biodiversity without its blueprint: the tree of life.
@@ -114,7 +92,7 @@
 
         \column{0.5\linewidth}
 
-        \begin{itemize}
+        \begin{itemize}[<+->]
             \item Every field of biology studies organisms.
             \item These organisms are \textbf{not} independent.
             \item To analyze biological data correctly we need to account for
@@ -124,7 +102,7 @@
         \column{0.5\linewidth}
         \begin{figure}
             \begin{center}
-            \includegraphics[width=0.55\textwidth]{../images/treeoflife.jpg}
+            \includegraphics[width=0.95\textwidth]{../images/treeoflife.jpg}
             \caption{\tiny \copyright~2007 Tree of Life Web Project \href{http://tolweb.org/tree/}{tolweb.org}}
             \end{center}
         \end{figure}
@@ -164,584 +142,139 @@
 \subsection{Tree basics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\input{mammal-tree.tikzset.tex}
 \begin{frame}
     \frametitle{Tree terminology}
-    \begin{center}
-        \vspace{-0.5cm}
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-            \node [inode](bc) at (4, 5)  {};
-            \node [inode](ef) at (10, 5)  {};
-            \node [inode, color=red](abc) at (3, 3)  {};
-            \node [inode] (abcd) at (4, 1)  {};
-            \node [inode, color=red](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,ef/e,ef/f}
-                \draw [very thick] (\from) -- (\to);
-            \draw[very thick, color=red] (r) -- (ef);
-            
-            \draw [thick, <-, color=red] (2.9, 2.9) -- (2.4, 2.4) node[align=right, left]{};%{\sffamily internal node};
-            \draw [thick, <-, color=red] (8.1, 0.9) -- (8.6, 0.4) node[align=left, right]{};%{\sffamily branch};
-            \draw [thick, <-, color=red] (11.1, 6.9) -- (11.6, 6.4) node[align=left, right]{};%{\sffamily terminal node \\(or leaf, tip)};
-            \draw [thick, <-, color=red] (5.9, -3.1) -- (5.4, -3.6) node[align=right, left]{};%{\sffamily root node};
-        
-        \end{tikzpicture}
-    \end{center}
+
+        \input{mammal-tree-labels.tikz.tex}
+
 \end{frame}
 
 \input{mammal-tree-clicker-question.tex}
 
+\begin{noheadline}
 \begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+    \textbf{Monophyletic group} =  A group that consists of an ancestor and all
+    of its descendants. Circle a monophyletic group on this tree:
+
+    \begin{center}
+        \input{mammal-tree.tikz.tex}
+    \end{center}
+
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \vspace{-3.5mm}
     \begin{clickerquestion}
-        \item Three of these trees describe the same relationships. Which one
-            is dfferent?
-    \end{clickerquestion}
-    \vspace{-0.5cm}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \begin{center}
-            \begin{tikzpicture}
-            [xscale=0.35,yscale=0.2,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-              \node [inode](bc) at (4, 5)  {};
-              \node [inode](ef) at (10, 5)  {};
-              \node [inode](abc) at (3, 3)  {};
-              \node [inode] (abcd) at (4, 1)  {};
-              \node [inode, label=below: {\textcolor{red}{1}}](r) at (6, -3)  {};
-            
-              \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-              
-            \end{tikzpicture}
-        \end{center}
-        \vspace{-1cm}
-        \begin{center}
-            \begin{tikzpicture}
-            [xscale=0.35,yscale=0.2,auto=left,every node/.style={circle}]%,fill=blue!20}]
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (7, 7) {};
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (1, 7) {};
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](e) at (9, 7) {};
-                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](f) at (11, 7) {};
-                \node [inode](bc) at (4, 5)  {};
-                \node [inode](ef) at (10, 5)  {};
-                \node [inode](abc) at (5, 3)  {};
-                \node [inode] (abcd) at (4, 1)  {};
-                \node [inode, label=below: {\textcolor{red}{3}}](r) at (6, -3)  {};
-              
-                \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-                    \draw [ultra thick] (\from) -- (\to);
-              
-            \end{tikzpicture}
-        \end{center}
-        \column{0.5\textwidth}
-        \begin{center}
-            \begin{tikzpicture}
-            [xscale=0.35,yscale=0.2,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (7, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (11, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (9, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (5, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (1, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (3, 7) {};
-              \node [inode](bc) at (10, 5)  {};
-              \node [inode](ef) at (2, 5)  {};
-              \node [inode](abc) at (9, 3)  {};
-              \node [inode] (abcd) at (8, 1)  {};
-              \node [inode, label=below: {\textcolor{red}{2}}](r) at (6, -3)  {};
-            
-              \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-              
-            \end{tikzpicture}
-        \end{center}
-        \vspace{-1cm}
-        \begin{center}
-            \begin{tikzpicture}
-            [xscale=0.35,yscale=0.2,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-              \node [inode](bc) at (4, 5)  {};
-              \node [inode](ef) at (10, 5)  {};
-              \node [inode](abc) at (5, 3)  {};
-              \node [inode] (abcd) at (4, 1)  {};
-              \node [inode, label=below: {\textcolor{red}{4}}](r) at (6, -3)  {};
-            
-              \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-              
-            \end{tikzpicture}
-        \end{center}
-    \end{columns}
-    \hidebox{Correct answer = 4}
-\end{frame}
-
-
-% \begin{frame}
-%     \frametitle{Style of presentation varies a lot}
-%     \begin{center}
-%         \includegraphics[width=0.8\textwidth]{../images/crocodylia-species-tree-cladogram.pdf}
-%     \end{center}
-% \end{frame}
-
-\begin{frame}
-    \frametitle{Style of presentation varies a lot}
-    \begin{center}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-species-tree-cladogram.pdf}
-        \hspace{2mm}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-ml.pdf}
-        \hspace{2mm}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-species-tree-square.pdf}
-
-        \vspace{0.5cm}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-species-tree-round.pdf}
-        \hspace{2mm}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-species-tree-triangle.pdf}
-        \hspace{2mm}
-        \includegraphics[width=0.3\textwidth]{../images/crocodylia-species-tree-circle.pdf}
-    \end{center}
-\end{frame}
-
-% \begin{frame}
-%     \frametitle{Interpreting rooted vs unrooted trees}
-%     \vspace{-0.5cm}
-%     \begin{columns}[c]
-%         \column{.4\textwidth}
-%         \begin{center}
-%             \begin{tikzpicture}
-%             [xscale=0.35,yscale=0.4,auto=left,every node/.style={circle}]%,fill=blue!20}]
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
-%                 \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-%                 \node [inode](bc) at (4, 5)  {};
-%                 \node [inode](ef) at (10, 5)  {};
-%                 \node [inode](abc) at (3, 3)  {};
-%                 \node [inode] (abcd) at (4, 1)  {};
-%                 \node [inode](r) at (6, -3)  {};
-              
-%                 \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-%                     \draw [very thick] (\from) -- (\to);
-
-              
-%             \end{tikzpicture}
-%         \end{center}
-%         \column{.6\textwidth}
-%         \begin{center}
-%             \uncover<2->{Where should the root go?}
-%             \begin{tikzpicture}
-%             [xscale=0.35, yscale=0.6, auto=left,every node/.style={circle}]%,fill=blue!20}]
-%                 \node [tnode](d) at (1,10.5) {C};
-%                 \node [tnode](a) at (3,11) {B};
-%                 \node [tnode](c) at (3,6) {A};
-%                 \node [tnode](e) at (13,10) {E};
-%                 \node [tnode](f) at (16,7) {F};
-%                 \node [tnode](b) at (14,2) {D};
-%                 \node [inode](ef) at (13,9) {};
-%                 \node [inode](efb) at (12, 8) {};
-%                 \node [inode](adc) at (4,7) {};
-%                 \node [inode](ad) at (2, 10) {};
-              
-%                 \foreach \from/\to in {efb/ef,efb/b,adc/c,adc/efb,ad/a,ad/d,ad/adc,ef/e,ef/f}
-%                     \draw [very thick] (\from) -- (\to);
-%                 \uncover<2->{
-%                 \draw [very thick, <-] (2.7,8.5) -- (0.5, 8.5) node[align=right, left]{\textcolor{red}{1}};
-%                 \draw [very thick, <-] (8,7.2) -- (8, 5.5) node[align=right, below]{\textcolor{red}{2}};
-%                 \draw [very thick, <-] (12.2, 8.7) -- (10.0, 9.6) node[align=left, left]{\textcolor{red}{3}};
-%                 \draw [very thick, <-] (12.7,5) -- (11.5, 3.5) node[align=left, below]{\textcolor{red}{4}};
-%                 \draw [very thick, <-] (14.5,8.2) -- (14.8, 9.5) node[align=left, above]{\textcolor{red}{5}};
-%             }
-
-%             \end{tikzpicture}
-%         \end{center}
-%     \end{columns}
-%     \hidebox{Correct answer = 3}
-% \end{frame}
-
-% \begin{frame}
-%     \begin{clickerquestion}
-%         \item
-%             In reference to the unrooted phylogeny, which of the
-%             following statements are always correct?
-%         \begin{clickeroptions}
-%             \item A and D are sister species.
-%             \item Species A, D, and C are monophyletic.
-%             \item Species D is more closely related to A than  B.
-%             \item All of the above.
-%             \item \clickeranswer{None of the above.}
-%         \end{clickeroptions}
-%     \end{clickerquestion}
-
-%     \begin{center}
-%     \begin{tikzpicture}
-%     [xscale=0.55,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-%       \node [tnode](d) at (1,10.5) {D};
-%       \node [tnode](a) at (3,11) {A};
-%       \node [tnode](c) at (3,6) {C};
-%       \node [tnode](e) at (13,10) {E};
-%       \node [tnode](f) at (16,7) {F};
-%       \node [tnode](b) at (14,2) {B};
-%       \node [inode](ef) at (13,9) {};
-%       \node [inode](efb) at (12, 8) {};
-%       \node [inode](adc) at (4,7) {};
-%       \node [inode](ad) at (2, 10) {};
-%       \node [empty](l) at (8,6) {};
-    
-%       \foreach \from/\to in {efb/ef,efb/b,adc/c,adc/efb,ad/a,ad/d,ad/adc,ef/e,ef/f}
-%         \draw[very thick] (\from) -- (\to);
-    
-%     \end{tikzpicture}
-%     \end{center}
-% \end{frame}
-
-                
-\begin{frame}[b]
-    \frametitle{Classification---the good, the bad, \& the ugly}
-    \begin{description}
-        \item<2->[Monophyletic group] A group that consists of an ancestor and all
-            of its descendants. Also called a clade or ``natural'' group. The
-            basis of phylogenetic classification. Good!
-    \end{description}
-    \vspace{-0.45cm}
-    \begin{center}
-        \begin{onlyenv}<1-2>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{A}}](a) at (1, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{B}}](b) at (3, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{C}}](c) at (5, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
-            \node [inode, color=green](bc) at (4, 5)  {};
-            \node [inode](ef) at (10, 5)  {};
-            \node [inode, color=green](abc) at (3, 3)  {};
-            \node [inode] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a}
-                \draw [ultra thick, color=green] (\from) -- (\to);
-            \foreach \from/\to in {abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-
-    \begin{center}
-        \begin{onlyenv}<3>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{A}}](a) at (1, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{B}}](b) at (3, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{C}}](c) at (5, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{D}}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
-            \node [inode, color=green](bc) at (4, 5)  {};
-            \node [inode](ef) at (10, 5)  {};
-            \node [inode, color=green](abc) at (3, 3)  {};
-            \node [inode, color=green] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d}
-                \draw [ultra thick, color=green] (\from) -- (\to);
-            \foreach \from/\to in {r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-
-    \begin{center}
-        \begin{onlyenv}<4>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries B}](b) at (3, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries C}](c) at (5, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{E}}](e) at (9, 7) {};
-            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{F}}](f) at (11, 7) {};
-            \node [inode](bc) at (4, 5)  {};
-            \node [inode, color=green](ef) at (10, 5)  {};
-            \node [inode](abc) at (3, 3)  {};
-            \node [inode] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef}
-                \draw [ultra thick] (\from) -- (\to);
-            \foreach \from/\to in {ef/e,ef/f}
-                \draw [ultra thick, color=green] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-\end{frame}
-
-\begin{frame}[b]
-    \frametitle{Classification---the good, the bad, \& the ugly}
-    \begin{description}
-        \item<2->[Paraphyletic group] A group that consists of an ancestor and
-            some, but not all, of its descendants. Need to add one clade or tip
-            to get monophyly. An ``unnatural'' group. Bad!
-    \end{description}
-    \vspace{-0.25cm}
-    \begin{center}
-        \begin{onlyenv}<1-2>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{D}}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
-            \node [inode, color=red](bc) at (4, 5)  {};
-            \node [inode](ef) at (10, 5)  {};
-            \node [inode, color=red](abc) at (3, 3)  {};
-            \node [inode, color=red] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
-                \draw [ultra thick, color=red] (\from) -- (\to);
-            \foreach \from/\to in {r/abcd,r/ef,ef/e,ef/f,abc/a}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-
-    \begin{center}
-        \begin{onlyenv}<3>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{A}}](a) at (1, 7) {};
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries B}](b) at (3, 7) {};
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries C}](c) at (5, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{D}}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
-            \node [inode](bc) at (4, 5)  {};
-            \node [inode](ef) at (10, 5)  {};
-            \node [inode, color=red](abc) at (3, 3)  {};
-            \node [inode, color=red] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {abc/a,abcd/abc,abcd/d}
-                \draw [ultra thick, color=red] (\from) -- (\to);
-            \foreach \from/\to in {abc/bc,bc/b,bc/c,r/abcd,r/ef,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-\end{frame}
-
-\begin{frame}[b]
-    \frametitle{Classification---the good, the bad, \& the ugly}
-    \begin{description}
-        \item<2->[Polyphyletic group] A group that consists of unrelated tips. Need
-            to add more than one clade or tip to get monophyly. An
-            ``unnatural'' group. Ugly!
-    \end{description}
-    \vspace{-0.25cm}
-    \begin{center}
-        \begin{onlyenv}<1-2>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
-            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
-            \node [inode, color=red](bc) at (4, 5)  {};
-            \node [inode, color=red](ef) at (10, 5)  {};
-            \node [inode](abc) at (3, 3)  {};
-            \node [inode] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {bc/b,bc/c,ef/e,ef/f}
-                \draw [ultra thick, color=red] (\from) -- (\to);
-            \foreach \from/\to in {r/abcd,r/ef,abc/a,abc/bc,abcd/abc,abcd/d}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-\end{frame}
-
-% \begin{frame}[b]
-%     \frametitle{Other terms}
-%     \begin{description}
-%         \item[Ingroup] The clade (monophyletic group) of taxa that is the
-%             focus of a study (e.g., A, B, and C below).
-%         \item[Outgroup] All other taxa outside of the ingroup clade (e.g., D,
-%             E, and F below).
-%     \end{description}
-%     \vspace{-0.5cm}
-%     \begin{center}
-%         \begin{onlyenv}<1>
-%         \begin{tikzpicture}
-%         [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-%             \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{A}}](a) at (1, 7) {};
-%             \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
-%             \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
-%             \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
-%             \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{E}}](e) at (9, 7) {};
-%             \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{F}}](f) at (11, 7) {};
-%             \node [inode, color=red](bc) at (4, 5)  {};
-%             \node [inode, color=black](ef) at (10, 5)  {};
-%             \node [inode, color=red](abc) at (3, 3)  {};
-%             \node [inode] (abcd) at (4, 1)  {};
-%             \node [inode](r) at (6, -3)  {};
-          
-%             \foreach \from/\to in {abc/a,abc/bc,bc/b,bc/c}
-%                 \draw [ultra thick, color=red] (\from) -- (\to);
-%             \foreach \from/\to in {r/abcd,r/ef,abcd/abc,abcd/d,ef/e,ef/f}
-%                 \draw [ultra thick] (\from) -- (\to);
-            
-%         \end{tikzpicture}
-%         \end{onlyenv}
-%     \end{center}
-% \end{frame}
-
-\begin{frame}[b]
-    \frametitle{Other terms}
-    \begin{description}
-        \small
-        \item[Sister group] The next most closely related tip or clade; always
-            reciprocal.
-    \end{description}
-    \vspace{-0.5cm}
-    \begin{center}
-        \begin{onlyenv}<1>
-        \begin{tikzpicture}
-        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{A}}](a) at (1, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{B}}](b) at (3, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{C}}](c) at (5, 7) {};
-            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{E}}](e) at (9, 7) {};
-            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{F}}](f) at (11, 7) {};
-            \node [inode, color=black](bc) at (4, 5)  {};
-            \node [inode, color=black](ef) at (10, 5)  {};
-            \node [inode, color=black](abc) at (3, 3)  {};
-            \node [inode] (abcd) at (4, 1)  {};
-            \node [inode](r) at (6, -3)  {};
-          
-            \foreach \from/\to in {abc/a,abc/bc,bc/b,bc/c}
-                \draw [ultra thick, color=black] (\from) -- (\to);
-            \foreach \from/\to in {r/abcd,r/ef,abcd/abc,abcd/d,ef/e,ef/f}
-                \draw [ultra thick] (\from) -- (\to);
-            
-        \end{tikzpicture}
-        \end{onlyenv}
-    \end{center}
-\end{frame}
-
-\begin{frame}
-    \begin{clickerquestion}
-        \item In reference to the rooted phylogeny below, which of the
-            following statements are correct?
+        \item In reference to the phylogeny below, which of the following
+            statements are correct?
+            \vspace{-0.5mm}
         \begin{clickeroptions}
-            \item A and B are sister species.
-            \item Species B, C, and D are monophyletic.
-            \item Species A, B, and C are paraphyletic.
-            \item \clickeranswer{Species D is more closely related to A than E.}
+            % \begin{columns}
+                \small
+                % \column{0.82\linewidth}
+            \item Elephants, humans, and rats are NOT monophyletic.
+            \item Moose, humans, and rats are monophyletic.
+            \item Elephants are more closely related to moose
+                    than koalas.
+            \item Moose are more closely related to humans than elephants.
+                % \column{0.2\linewidth}
+            \item None of the above.
+            \item \clickeranswer{Answers 1, 2, 3 \& 4.}
+            % \end{columns}
         \end{clickeroptions}
     \end{clickerquestion}
 
+    \vspace{-8mm}
     \begin{center}
-    \begin{tikzpicture}
-    [xscale=0.55,yscale=0.4,auto=left,every node/.style={circle}]%,fill=blue!20}]
-      \node [tnode](a) at (1, 7) {A};
-      \node [tnode](b) at (3, 7) {B};
-      \node [tnode](c) at (5, 7) {C};
-      \node [tnode](d) at (7, 7) {D};
-      \node [tnode](e) at (9, 7) {E};
-      \node [tnode](f) at (11, 7) {F};
-      \node [inode](bc) at (4, 5)  {};
-      \node [inode](ef) at (10, 5)  {};
-      \node [inode](abc) at (3, 3)  {};
-      \node [inode] (abcd) at (4, 1)  {};
-      \node [inode](r) at (6, -3)  {};
-    
-      \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
-        \draw[ultra thick] (\from) -- (\to);
-    
-    \end{tikzpicture}
+        \input{mammal-tree.tikz.tex}
     \end{center}
+
+    \end{adjustwidth}
 \end{frame}
+\end{noheadline}
+}
+
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{itemize}
+            \item Marsupials, like kangaroos and koalas, raise their young in a
+                pouch.  Draw on the tree below where pouches evolved.
+
+            \item Stegodons had trunks (highly modified noses); add stegodons
+                to the tree and label where trunks evolved.
+        \end{itemize}
+
+    \begin{center}
+        \input{mammal-tree.tikz.tex}
+    \end{center}
+
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Building trees tutorial}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-    Phylogenetic trees worksheet
+    \frametitle{Phylogenetic trees tutorial}
 
     \vspace{1cm}
     Work in teams of 3. Middle person as the scribe (does the writing). As you
     work through the questions, be sure to explain your logic to each other.
 
     \vspace{1cm}
+    When you finish the first page, please press "1" on your clickers.
+
+    \vspace{1cm}
     Please ask us for help, if you need it!
 \end{frame}
 
-\begin{frame}
-    \begin{enumerate}%[Q 1:]
-        \vspace{-1cm}
-        \begin{columns}
-            \small
-            \column{0.7\textwidth}
+% \begin{frame}[t]
+%     \begin{adjustwidth}{-1.5em}{-1.5em}
+%     \begin{enumerate}%[Q 1:]
+%         \vspace{-2mm}
+%         \begin{columns}
+%             \small
+%             \column{0.7\textwidth}
 
-            \column{0.3\textwidth}
-            Sharks and rays
+%             \column{0.3\textwidth}
+%             Sharks and rays
 
-            \vspace{0.3cm}
-            Lizards
+%             \vspace{0.6cm}
+%             Lizards
 
-            \vspace{0.3cm}
-            Snakes
+%             \vspace{0.6cm}
+%             Snakes
 
-            \vspace{0.3cm}
-            Mammals
+%             \vspace{0.6cm}
+%             Mammals
 
-            \vspace{0.3cm}
-            Amphibians
+%             \vspace{0.6cm}
+%             Amphibians
 
-            \vspace{0.3cm}
-            Ray-finned fish
-        \end{columns}
+%             \vspace{0.6cm}
+%             Ray-finned fish
+%         \end{columns}
 
-            \vspace{0.5cm}
-        \item[Q 5.] Are lizards or sharks more closely related to amphibians?
+%             \vspace{0.2cm}
+%         \item[Q 5.] Are lizards or sharks more closely related to amphibians?
 
-            \vspace{0.5cm}
-        \item[Q 6.] Are lizards or ray-finned fish more closely related to sharks?
+%             \vspace{0.5cm}
+%         \item[Q 6.] Are lizards or ray-finned fish more closely related to sharks?
         
-    \end{enumerate}
-\end{frame}
+%     \end{enumerate}
+%     \end{adjustwidth}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The problem of homoplasy}
