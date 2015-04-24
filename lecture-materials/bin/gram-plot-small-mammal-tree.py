@@ -9,7 +9,10 @@ from Gram import TreeGram
 var.punctuation = var.phylip_punctuation
 
 _mammal_trees = [
-        "(((Alces.png:2,(Rattus.png:1,Homo-sapiens.png:1):1):1,Loxodonta.png:3):1,(Phascolarctos.png:1,Macropus.png:1):3)root;",
+        "(((Alces.png:2,(Rattus.png:1,Homo-sapiens.png:1):1):1,Loxodonta.png:3):1,(Phascolarctos.png:1,Macropus.png:1):3)1;",
+        "((Phascolarctos.png:1,Macropus.png:1):3,(Loxodonta.png:3,(Alces.png:2,(Rattus.png:1,Homo-sapiens.png:1):1):1):1)2;",
+        "((Loxodonta.png:3,((Rattus.png:1,Homo-sapiens.png:1):1,Alces.png:2):1):1,(Macropus.png:1,Phascolarctos.png:1):3)3;",
+        "((Alces.png:3,((Rattus.png:1,Homo-sapiens.png:1):1,Loxodonta.png:2):1):1,(Phascolarctos.png:1,Macropus.png:1):3)4;",
         ]
 _wide_images = ['Rattus.png']
 
@@ -20,8 +23,6 @@ def plot_tree(tree, base_name = 'tree', dir_name = 'gram'):
     read(tree)
     t = var.trees[-1]
     for n in t.iterNodes():
-        if n.isRoot:
-            n.name = ""
         if n.isLeaf:
             try:
                 img = Image.open(get_image_path(n.name))
@@ -58,9 +59,10 @@ def main_cli():
     out_dir = os.path.join(os.path.pardir, 'mammal-trees')
     if not os.path.exists(out_dir):
         os.mkdir(out_dir)
-    plot_tree(_mammal_trees[0],
-            base_name = 'mammal-tree',
-            dir_name = out_dir)
+    for i, tree in enumerate(_mammal_trees):
+        plot_tree(tree,
+                base_name = 'mammal-tree-{0}'.format(i + 1),
+                dir_name = out_dir)
 
 if __name__ ==  '__main__':
     main_cli()
