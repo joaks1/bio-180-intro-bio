@@ -1,0 +1,256 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+\bibliography{../bib/references}
+\input{../utils/title-info.tex}
+
+\title[Speciation]{Speciation}
+% \date{\today}
+\date{April 30, 2015}
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-6mm}
+    \begin{center} 
+        \includegraphics[height=1.2\textheight]{../images/seating-chart.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Consider the wings of bats and birds; which of the following is
+            correct?
+        \begin{clickeroptions}
+            \item Wings are homologous; limbs are homoplastic.
+            \item Both have highly modified hand and finger bones; these
+                modifications are homologous.
+            \item \clickeranswer{Many genes for limb formation are homologous,
+                    but the different alleles/genes that give rise to wings in
+                    each are homoplastic.}
+            \item None of the above.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\vspace{5mm}
+% \tableofcontents[subsectionstyle=hide]
+\tableofcontents
+\end{frame}
+\end{noheadline}
+
+\section{How do biologists recognize species?}
+
+\begin{noheadline}
+\begin{frame}[t]
+    \frametitle{How do biologists recognize species?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        A species is a population, or group of populations, in which
+        evolutionary forces are acting independently.
+
+        \vspace{3mm}
+        Speciation is a splitting event:
+
+        \nbox{Note: because species can exist at large spatial scales, and the
+            process of speciation occurs over long temporal scales, it is often
+            difficult to delimit species in practice. I.e., species are easy to
+            define, but hard to identify.}
+        \vspace{2cm}
+        Species are genetically isolated from each other.
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        Speciation occurs via:
+
+        \begin{enumerate}
+            \item Genetic isolation (lack of gene flow), followed by \ldots
+            \item Genetic divergence (due to mutation, drift, and selection)
+        \end{enumerate}
+
+        \begin{itemize}
+            \item Why does genetic isolation lead to ``evolutionary independent
+                units?''
+                
+                \nbox{Once gene flow stops, the allele frequencies in each new
+                    species are independent of one another. I.e., they are
+                    ``free'' to evolve independently via mutation, drift, and
+                    selection.}
+
+                \vspace{5mm}
+            \item Why does genetic divergence create synapomorphies?
+
+                \nbox{Mutation will introduce new alleles (and traits) that are
+                    unique to each new species (i.e., there is no gene flow to
+                    ``share'' them). Thus, the descendants of each species will
+                    accumulate unique alleles and traits.}
+
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\subsection{Species criteria (``concepts'')}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+    \vspace{-3mm}
+    \textbf{Biological species concept:}
+    \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ L{3.7cm} | L{3.7cm} | L{3.7cm} }
+            Criterion for identifying species & Advantages & Disadvantages \\
+            \hline
+            \cmask{\mybullet Reproductive isolation (don't produce fertile offspring)} &
+            \cmask{\mybullet Sound theoretically (lack of gene flow = evolutionarily
+                independent))} &
+            \cmask{\mybullet Doesn't apply to asexual species} \\
+            \cmask{} &
+            \cmask{} &
+            \cmask{\mybullet Doesn't apply to fossils} \\
+            \cmask{} &
+            \cmask{} &
+            \cmask{\mybullet Can be difficult to test} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+    \vspace{-3mm}
+    \textbf{Morphospecies concept:}
+    \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ L{3.7cm} | L{3.7cm} | L{3.7cm} }
+            Criterion for identifying species & Advantages & Disadvantages \\
+            \hline
+            \cmask{\mybullet Distinct morphologically} &
+            \cmask{\mybullet Widely applicable (sexual, asexual, fossils)} &
+            \cmask{\mybullet Subjective (experts disagree what qualifies as
+                ``distinct''} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+        \end{tabular}
+    \end{table}
+
+    \vspace{2mm}
+    \textbf{Phylogenetic species concept:}
+    \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ L{3.7cm} | L{3.7cm} | L{3.7cm} }
+            Criterion for identifying species & Advantages & Disadvantages \\
+            \hline
+            \cmask{\mybullet Smallest monophyletic groups} &
+            \cmask{\mybullet Widely applicable (sexual, asexual, fossils)} &
+            \cmask{\mybullet Difficult to apply; need to collect data and estimate trees} \\
+            \cmask{} &
+            \cmask{\mybullet Objective and testable} &
+            \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+            \cmask{} & \cmask{} & \cmask{} \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{An example of applying species concepts}
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+        \begin{center} 
+            \includegraphics[width=0.8\linewidth]{elephant-tree-2-tips.png}
+        \end{center}
+
+        \begin{itemize}[<+->]
+            \item Under morphospecies concept, African elephants were
+                considered 1 species.
+            \item Biological species concept is difficult to test with
+                elephants!
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{An example of applying species concepts}
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+        \begin{center} 
+            \includegraphics[width=0.8\linewidth]{elephant-tree-3-tips.png}
+        \end{center}
+
+        \begin{itemize}[<+->]
+            \item DNA data revealed western and eastern populations had
+                distinct alleles (synapomorphies) and were each monophyletic
+                (statistical test rejected that they were not monophyletic).
+            \item So, they are separate species according to the phylogenetic
+                species concept!
+            \item NOTE: If there was gene flow between the east and west
+            populations, they would not be monophyletic (there would not be
+            synapomorphies).
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\section{How does speciation occur?}
+
+\subsection{Allopatric speciation}
+
+\subsubsection{Dispersal}
+
+\begin{frame}
+    \frametitle{}
+\end{frame}
+
+\subsubsection{Vicariance}
+
+\subsection{Sympatric speciation}
+
+\subsection[]{Mechanisms of isolation}
+
+\subsection[]{Mechanisms of divergence}
+
+
+\end{document}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item 
+        \begin{clickeroptions}
+            \item 
+            \item 
+            \item 
+            \item 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
