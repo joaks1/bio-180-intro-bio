@@ -102,8 +102,10 @@
         \column{0.5\linewidth}
         \begin{figure}
             \begin{center}
-            \includegraphics[width=0.95\textwidth]{../images/treeoflife.jpg}
-            \caption{\tiny \copyright~2007 Tree of Life Web Project \href{http://tolweb.org/tree/}{tolweb.org}}
+            % \includegraphics[width=0.95\textwidth]{../images/treeoflife.jpg}
+            % \caption{\tiny \copyright~2007 Tree of Life Web Project \href{http://tolweb.org/tree/}{tolweb.org}}
+            \includegraphics[width=0.95\textwidth]{../images/hillis-tree.pdf}
+            \caption{\tiny \href{http://www.zo.utexas.edu/faculty/antisense/downloadfilestol.html}{Hillis Lab}}
             \end{center}
         \end{figure}
     
@@ -123,12 +125,14 @@
 
 \begin{frame}
     \frametitle{Ebola}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
     \begin{figure}
         \begin{center}
-        \includegraphics[width=\textwidth]{../images/gire-et-al-2014-ebola-fig3.jpg}
+        \includegraphics[width=\linewidth]{../images/gire-et-al-2014-ebola-fig3.jpg}
         \caption{\tiny \shortfullcite{Gire2014}}
         \end{center}
     \end{figure}
+    \end{adjustwidth}
 \end{frame}
 
 
@@ -187,7 +191,7 @@
             \item Moose are more closely related to humans than elephants.
                 % \column{0.2\linewidth}
             \item None of the above.
-            \item \clickeranswer{Answers 1, 2, 3 \& 4.}
+            \item \clickeranswer{Answers 1, 2, 3, \& 4.}
             % \end{columns}
         \end{clickeroptions}
     \end{clickerquestion}
@@ -276,6 +280,144 @@
 %     \end{adjustwidth}
 % \end{frame}
 
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+
+            Phylogeny of mammals estimated from DNA sequence data
+
+            \column{0.75\linewidth}
+
+            \includegraphics[width=1.02\columnwidth]{mammal-tree.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+
+            \begin{clickerquestion}
+                \item From the common ancestor of all mammals, which have been
+                    evolving for a longer period of time?
+                \begin{clickeroptions}
+                    \item Today's monotremes
+                    \item Today's bats
+                    \item \clickeranswer{Neither (same)}
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.75\linewidth}
+
+            \includegraphics[width=1.02\columnwidth]{mammal-tree.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+}
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+
+            \begin{clickerquestion}
+                \item Which group is more closely related to apes?
+                \begin{clickeroptions}
+                    \item Anteaters
+                    \item \clickeranswer{Pangolin}
+                    \item Neither (same)
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.75\linewidth}
+
+            \includegraphics[width=1.02\columnwidth]{mammal-tree.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+
+    \note[item]{This is the same as asking which group has the most recent
+        common ancestor with apes}
+\end{frame}
+\end{noheadline}
+}
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+
+            \begin{clickerquestion}
+                \item Was the common ancestor of pangolins and apes a pangolin,
+                    or an ape?
+                \begin{clickeroptions}
+                    \item Ape 
+                    \item Pangolin
+                    \item \clickeranswer{Neither (different)}
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.75\linewidth}
+
+            \includegraphics[width=1.02\columnwidth]{mammal-tree.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+
+    \note[item]{Pangolins and apes are derived from a common ancestor that was
+        different from either of them.}
+\end{frame}
+\end{noheadline}
+}
+
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+
+            \begin{clickerquestion}
+                \item Which group is more closely related to anteaters?
+                \begin{clickeroptions}
+                    \item Apes
+                    \item Pangolin
+                    \item \clickeranswer{Neither (same)}
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.75\linewidth}
+
+            \includegraphics[width=1.02\columnwidth]{mammal-tree.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+
+    \note[item]{Both apes and pangolin share the same most recent common
+        ancestor with anteaters (point it out)}
+\end{frame}
+\end{noheadline}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The problem of homoplasy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -291,60 +433,11 @@
     \end{description}
 \end{frame}
 
-\begin{frame}[t]
-    \begin{center}
-    \begin{tikzpicture}
-    [xscale=0.65,yscale=0.25,auto=left,every node/.style={circle}]%,fill=blue!20}]
-        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{A}}](a) at (1, 7) {};
-        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
-        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
-        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
-        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
-        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
-        \node [inode, color=blue](bc) at (4, 5)  {};
-        \node [inode, color=red](ef) at (10, 5)  {};
-        \node [inode, color=blue](abc) at (3, 3)  {};
-        \node [inode, color=blue] (abcd) at (4, 1)  {};
-        \node [inode, color=blue](r) at (6, -3)  {};
-      
-        \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
-            \draw [ultra thick, color=blue] (\from) -- (\to);
-        \draw [ultra thick, color=blue] (abc) -- (2, 5);
-        \draw [ultra thick, color=red] (2, 5) -- (a);
-        \draw [ultra thick, color=blue] (r) -- (5, -1);
-        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
-        \draw [ultra thick, color=blue] (r) -- (8, 1);
-        \draw [ultra thick, color=red] (8, 1) -- (ef);
-        \foreach \from/\to in {ef/e,ef/f}
-            \draw [ultra thick, color=red] (\from) -- (\to);
-        
-    \end{tikzpicture}
-    \end{center}
-
-    \begin{clickerquestion}
-        \item \textcolor{blue}{Blue} = limbs; \textcolor{red}{Red} = limbless.
-            Which is correct?
-        \begin{clickeroptions}
-            \item Limbs are homoplastic for B, C, \& D;
-                lack of limbs is homoplastic for A, E, \& F;
-                lack of limbs is homologous for E \& F.
-            \item Species B, C, \& D are homologous;
-                species A, E, \& F are homoplastic;
-                species A \& F are homologous.
-            \item \clickeranswer{Limbs are homologous for B, C, \& D;
-                lack of limbs is homoplastic for A, E, \& F;
-                lack of limbs is homologous for E \& F.}
-            \item Limblessness is the ancestral character state.
-        \end{clickeroptions}
-    \end{clickerquestion}
-
-\end{frame}
-
 \begin{frame}
     \frametitle{Homology or homoplasy?}
     \begin{itemize}
         \item<1-> Body shape in dolphins and ichthyosaurs
-        \item<2-> Vertebrae in dolphins and ichthyosaurs
+        \item<1-> Vertebrae in dolphins and ichthyosaurs
     \end{itemize}
     \begin{figure}
         \includegraphics[height=2.5cm]{../images/ichthyosaur-nobu-tamura-cc-by-25.jpg}
@@ -360,58 +453,63 @@
     
 \begin{frame}
     \frametitle{Homology or homoplasy?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
     \begin{itemize}
-        \item Hair in chimps and humans
+        \item Hair of chimps and humans
 
-            \hidebox{Homology}
+            \nbox{Homology}
+
+            \vspace{3mm}
         \item Hair loss in whales and humans
 
-            \hidebox{Homoplasy}
+            \nbox{Homoplasy}
+
+            \vspace{3mm}
         \item Flippers in penguins, seals, and turtles
 
-            \hidebox{Homoplasy}
+            \nbox{Homoplasy}
+
+            \vspace{3mm}
         \item Bones of the forelimb in penguins, seals, and turtles
 
-            \hidebox{Homology}
-        \item Camera eye in octopus and vertebrates
+            \nbox{Homology}
+        % \item Camera eye in octopus and vertebrates
 
-            \hidebox{Homoplasy}
-        \item Multicellularity in octopus and vertebrates
+            % \hidebox{Homoplasy}
+        % \item Multicellularity in octopus and vertebrates
 
-            \hidebox{Homology}
+            % \hidebox{Homology}
+            \vspace{3mm}
+        \item What does the hypothesis of homoplasy predict about genetic and
+            developmental similarity?
+
+            \nbox{The shared traits are likely due to \highlight{different}
+                mutations in potentially different genes. Likely different
+                developmental pathways}
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \begin{clickerquestion}
-        \item Consider the wings of bats and birds; which of the following is
-            correct?
-        \begin{clickeroptions}
-            \item Wings are homologous; limbs are homoplastic.
-            \item \clickeranswer{Limbs are homologous; wings are homoplastic.}
-            \item Both have highly modified hand and finger bones; these
-                modifications are homologous.
-        \end{clickeroptions}
-    \end{clickerquestion}
+    \end{adjustwidth}
 \end{frame}
 
 \begin{frame}
     \frametitle{What causes homoplasy?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
     \begin{enumerate}
         \item In morphological traits (e.g., wings), convergent evolution is
-            due to \ldots
+            due to:
 
-            \hidebox{natural selection for similar traits in similar
+            \nbox{Natural selection for similar traits in similar
                 environments}
 
+            \vspace{2mm}
         \item Multiple mutations also cause homoplasy in DNA data
+            \vspace{-1.5cm}
             \begin{center}
             \begin{tikzpicture}
             [xscale=0.6,yscale=0.3,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [tnode](a) at (7, 1) {A};
-              \node [tnode](b) at (7, 3) {T};
-              \node [tnode](c) at (7, 5) {T};
-              \node [tnode](d) at (7, 7) {A};
+              \node [tnode, align=left, right](a) at (7, 1) {AGCAT (human)};
+              \node [tnode, align=left, right](b) at (7, 3) {TGCAT (chimp)};
+              \node [tnode, align=left, right](c) at (7, 5) {TGCAT (gorilla)};
+              \node [tnode, align=left, right](d) at (7, 7) {AGCAT (orangutan)};
               % \node [inode](ab) at (2, 5)  {};
               % \node [inode](abc) at (3, 3)  {};
               % \node [inode](r) at (4, 1)  {};
@@ -423,16 +521,34 @@
             \end{tikzpicture}
             \end{center}
 
+            \vspace{-1.3cm}
         \item Why is homoplasy problematic?
 
-            \hidebox{If we use convergent character states as if they are
-                shared due to ancestry, we will get the wrong tree}
+            \nbox{\scriptsize If we use convergent character states as if they
+                are shared due to ancestry, we will get the wrong tree}
+
         \item How do we know if a particular trait is due to homology?
 
-            \hidebox{Look at related extant taxa, fossils, or development to
-                see if the traits are shared due to ancestry or not.}
+            \nbox{\scriptsize Look at related extant taxa, fossils, development
+                pathways, or genes to see if the traits are shared due to
+                ancestry or convergence.}
     \end{enumerate}
+    \end{adjustwidth}
 \end{frame}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item Consider the wings of bats and birds; which of the following is
+            correct?
+        \begin{clickeroptions}
+            \item \clickeranswer{Limbs are homologous; wings are homoplastic.}
+            \item Wings are homologous; limbs are homoplastic.
+            \item Both have highly modified hand and finger bones; these
+                modifications are homologous.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+
 
 \end{document}
 
