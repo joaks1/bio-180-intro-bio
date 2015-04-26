@@ -43,12 +43,23 @@
 \end{frame}
 }
 
+\clickerpost{
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./vertebrate-tree-clicker-slide.pdf}}
+\begin{frame}[t,plain]
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+        \cmask{Answer: 5}
+    \end{adjustwidth}
+\end{frame}
+}
+}
+
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
 \vspace{5mm}
-% \tableofcontents[subsectionstyle=hide]
-\tableofcontents
+\tableofcontents[subsectionstyle=hide]
+% \tableofcontents
 \end{frame}
 \end{noheadline}
 
@@ -68,9 +79,14 @@
             process of speciation occurs over long temporal scales, it is often
             difficult to delimit species in practice. I.e., species are easy to
             define, but hard to identify.}
-        \vspace{2cm}
+
+        \vspace{4cm}
+        \uncover<2->{
         Species are genetically isolated from each other.
+        }
     \end{adjustwidth}
+    \note[item]{Draw ``branch'' as ``population changing over time''; ask class
+        to draw the splitting event.}
 \end{frame}
 \end{noheadline}
 
@@ -119,7 +135,7 @@
             \hline
             \cmask{\mybullet Reproductive isolation (don't produce fertile offspring)} &
             \cmask{\mybullet Sound theoretically (lack of gene flow = evolutionarily
-                independent))} &
+                independent)} &
             \cmask{\mybullet Doesn't apply to asexual species} \\
             \cmask{} &
             \cmask{} &
@@ -220,19 +236,245 @@
     \end{adjustwidth}
 \end{frame}
 
+\clickerslide{
+\begin{noheadline}
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-1.5em}
+    \begin{clickerquestion}
+        \item The phylogeny below shows the relationships among populations of
+            copepods called \textit{Eurytema affinis} (Go Dawgs!). How many
+            phylogenetic species of \textit{E.\ affinis} are there? (Note that
+            several populations exist at each tip.)
+    \end{clickerquestion}
+
+    \begin{columns}
+
+        \column{0.1\linewidth}
+
+        \begin{clickeroptions}
+            \item 1
+            \item 7
+            \item \clickeranswer{8}
+            \item 9
+        \end{clickeroptions}
+
+        \column{0.9\linewidth}
+
+        \includegraphics[width=1.0\columnwidth]{copepod-tree.png}
+
+    \end{columns}
+    \end{adjustwidth}
+\end{frame}
+\end{noheadline}
+}
+
 \section{How does speciation occur?}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\tableofcontents[currentsection,subsectionstyle=hide]
+\end{frame}
+\end{noheadline}
 
 \subsection{Allopatric speciation}
 
 \subsubsection{Dispersal}
 
-\begin{frame}
-    \frametitle{}
+\begin{frame}[t]
+    \frametitle{Allopatric (``different land'') Speciation}
+    \vspace{-4mm}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        If populations are separated geographically, then evolutionary forces
+        will act on them independently.
+        \begin{uncoverenv}<2->
+        \begin{enumerate}
+            \item \textbf{Dispersal} (recall that genetic drift is very strong during
+                founder events)
+                \begin{itemize}
+                    \item E.g., Iguanas of Anguilla
+                        (\href{http://www.nature.com/news/1998/981015/full/news981015-3.html}{link})
+                        \ldots Fiji, Galapagos, \ldots
+                \end{itemize}
+        \end{enumerate}
+        \end{uncoverenv}
+    \end{adjustwidth}
+
+    \note[item]{1995, Hurricane Luis passed through Lesser Antilles. A floating
+        mat of trees harbored 15 iguanas for more than 200 miles from
+        Guadeloupe to Anguilla.}
 \end{frame}
+
+\begin{noheadline}
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{columns}
+            \column{0.3\linewidth}
+            Hawaiian honeycreepers
+
+            \column{0.7\linewidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\columnwidth]{../images/honeycreepers-labeled.jpg}
+                    \caption{\tiny \copyright \href{http://www.hdouglaspratt.com/}{H.\ Douglas Pratt}}
+                \end{center}
+            \end{figure}
+        \end{columns}
+    \end{adjustwidth}
+    \note[item]{Diverse monophyletic group of Hawaiian birds whose closest
+        relatives are mainland finches}
+\end{frame}
+\end{noheadline}
+\begin{noheadline}
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+    {\small Is this phylogeny of Hawaiian honeycreepers consistent with dispersal hypothesis?}
+        \begin{figure}
+            \begin{center}
+                \includegraphics[width=\linewidth]{../images/honeycreeper-biogeography.jpg}
+                \caption{\shortfullcite{Bromham2003}}
+            \end{center}
+        \end{figure}
+    \end{adjustwidth}
+    \note[item]{Yes! Outgroups (orange) are mainland finches. Phylogeny
+        consistent with pattern of dispersal down island chain by age of island
+        emergence!}
+    \note[item]{Hawaiian silverswords and Drosophila show the same pattern}
+\end{frame}
+\end{noheadline}
 
 \subsubsection{Vicariance}
 
+\begin{frame}[t]
+    \frametitle{Allopatric (``different land'') Speciation}
+    \vspace{-4mm}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        If populations are separated geographically, then evolutionary forces
+        will act on them independently.
+        \begin{enumerate}
+            \item \textbf{Dispersal} (recall that genetic drift is very strong during
+                founder events)
+            \item \textbf{Vicariance:} Splitting an existing range into fragments
+                \begin{itemize}
+                    \item E.g., Death Valley pupfish
+                \end{itemize}
+        \end{enumerate}
+    \end{adjustwidth}
+
+    \note[item]{50,000 years ago Death Valley was rainy and had system of
+        rivers and lakes. As lakes and rivers shrank, pupfish became isolated
+        in tiny spring-fed oases. Each is now a distinct species.  Among rarest
+        and most narrowly distributed species!}
+\end{frame}
+
+
 \subsection{Sympatric speciation}
+
+\begin{frame}[t]
+    \frametitle{Sympatric (``same land'') Speciation}
+    \vspace{-4mm}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Can gene flow stop, or be reduced enough to initiate speciation, if
+        populations are in the same geographic area?
+        \begin{itemize}
+            \item E.g., \textit{Mimulus lewisii} and \textit{M.\ cardinalis}
+        \end{itemize}
+        \begin{enumerate}
+            \item \textbf{Mechanism of isolation:}
+
+                \nbox{Disruptive selection for opposite ``extremes'' of
+                    phenotype; hybrid individuals with intermediate trait
+                    values have low fitness. E.g., in \textit{Mimulus},
+                    selection for floral phenotypes that attract different
+                    pollinators cuts off gene flow.}
+
+                \vspace{5mm}
+            \item \textbf{Mechanism of divergence:}
+
+                \nbox{Once genetically isolated, evolutionary forces will be
+                    independent in each new species, and differences
+                    (synapomorphies) accumulate via mutation and continued
+                    selection for alleles associated with divergent phenotypes
+                    (drift too).}
+        \end{enumerate}
+    \end{adjustwidth}
+
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Sympatric (``same land'') Speciation}
+    \vspace{-4mm}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{itemize}
+            \item E.g., \textit{Rhagoletis pomonella} (apple and hawthorn flies)
+        \end{itemize}
+
+        \begin{columns}
+
+            \column{0.45\linewidth}
+
+            \begin{enumerate}
+                \item \textbf{Mechanism of isolation:}
+
+                    \nbox{\small Disruptive selection for mating (and larval
+                        feeding) on different fruit.}
+
+                    \vspace{8mm}
+                \item \textbf{Mechanism of divergence:}
+
+                    \nbox{\small Once reproductively isolated due to different
+                        mating sites, mutation and selection for feeding on
+                        different fruits will cause differences
+                        (synapomorphies) to accumulate (drift too).}
+            \end{enumerate}
+
+            \column{0.55\linewidth}
+            
+            \includegraphics[width=\columnwidth]{rhagoletis.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./tragopogon-slide.pdf}}
+\begin{frame}[plain]
+    \note[item]{Found tetraploid species of goatsbeard in North America that is
+        similar (intermediate) to two diploid species in the same area (both
+        introduced from Europe)}
+    \note[item]{Hypothesis: New species arose through hybridization.}
+    \note[item]{Experiment: Cross diploid species in the lab.}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \frametitle{Sympatric (``same land'') Speciation}
+    \vspace{-4mm}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{itemize}
+            \item E.g., \textit{Tragopogon mirus}
+        \end{itemize}
+        \begin{enumerate}
+            \item \textbf{Mechanism of isolation:}
+
+                \nbox{\textbf{Polypoloidy} genetically isolated
+                    \textit{Tragopogon mirus} from both diploid parental
+                    species (crosses result in sterile triploids).}
+
+                \vspace{9mm}
+            \item \textbf{Mechanism of divergence:}
+
+                \nbox{Mutation, selection, and drift will occur independently
+                    in new species \ldots synapomorphies accumulate.}
+        \end{enumerate}
+    \vspace{12mm}
+    Punchline: It is possible to study speciation (``macroevolution'')
+    experimentally!
+    \end{adjustwidth}
+
+\end{frame}
 
 \subsection[]{Mechanisms of isolation}
 

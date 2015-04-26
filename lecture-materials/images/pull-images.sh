@@ -30,3 +30,7 @@ curl -o Loxodonta.png http://phylopic.org/assets/images/submissions/62398ac0-f0c
 curl -o Phascolarctos.png http://phylopic.org/assets/images/submissions/8a06d489-024f-4505-8ccb-f86e84e00e75.256.png
 curl -o Macropus.png http://phylopic.org/assets/images/submissions/c306572a-fae1-41e3-8208-c2bce972e0ef.256.png
 curl -o hillis-tree.pdf http://www.zo.utexas.edu/faculty/antisense/tree.pdf
+
+wget -O honeycreeper-biogeography.jpg http://bioteaching.files.wordpress.com/2010/01/hawaii.jpg
+wget -O honeycreepers.jpg http://www.hdouglaspratt.com/Art_Gallery/HawaiianHoneycreepers/hawaiian_honeycreepers_evolution_radiation.jpg
+wget -O honeycreepers-labeled.jpg http://www.hoikecurriculum.org/wp-content/uploads/2012/07/AdRad-labels_eml-permission-Douglas-Pratt-and-Yale-U-Press.jpg

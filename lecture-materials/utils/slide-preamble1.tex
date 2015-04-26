@@ -9,7 +9,7 @@
 \newif\ifpost
 \newif\ifhideclicker
 
-% \hidetrue
+\hidetrue
 % \hideclickertrue
 % \posttrue
 
@@ -58,6 +58,15 @@
         \end{frame}}
 \else%
     \newcommand{\clickerslide}[1]{#1}%
+\fi
+
+\ifhideclicker%
+    \newcommand{\clickerpost}[1]{\stepcounter{clickerQuestionCounter}%
+        \begin{frame}[t]
+            \textcolor{blue}{Q \arabic{clickerQuestionCounter}:}
+        \end{frame}}
+\else%
+    \newcommand{\clickerpost}[1]{\stepcounter{clickerQuestionCounter}#1}%
 \fi
 
 \ifhide%
