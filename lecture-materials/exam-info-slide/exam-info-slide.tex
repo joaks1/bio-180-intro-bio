@@ -1,0 +1,88 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+% \bibliography{../bib/references}
+\bibliography{references}
+\input{../utils/title-info.tex}
+
+\usetheme{default}
+\usecolortheme{default}
+
+% remove footer
+\setbeamertemplate{footline}{}
+
+\newif\ifsectiona
+% \sectionatrue
+
+\newif\ifquant
+% \quanttrue
+
+\ifsectiona%
+    \newcommand{\sectionaonly}[1]{#1}%
+\else%
+    \newcommand{\sectionaonly}[1]{}%
+\fi
+
+\ifquant%
+    \newcommand{\quantonly}[1]{#1}%
+\else%
+    \newcommand{\quantonly}[1]{}%
+\fi
+
+\title[Exam Information]{Exam Information}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+    \begin{itemize}
+        \item Please clear your desks so we can pass out exams.
+% 1. Be sure that your cell phones are completely off
+        \item Cell phones completely off and put away.
+% 2. Please reserve left-handed desks for left-handed people
+        \item Please reserve left-handed desks for left-handed people.
+% 3. Please reserve the front row and seats on the aisle for people who are
+% learning English and may need to ask clarification questions.
+        \item Please reserve the front row and aisle seats for
+            non-native English speakers.
+% 4. Packs and other gear under your chairs, please, so we can get into your
+% row to answer questions.
+        \quantonly{\item Get your calculator out now. We have some in front, but you
+            cannot take them to your seat.}
+        \item Packs and other gear under your chairs, please.
+        \item We will post corrections or clarifications on the front screen.
+        \item We will update the time remaining every 5 minutes.
+        \item Baseball caps on backwards and hoodies down, please---we need to
+            see your smiling faces!
+        \item When I call time, you must stop \textbf{IMMEDIATELY}. You may not
+            write \textbf{AT ALL} after time is called.
+% 8. (Section A only) Remember to exit from the back when you're done with the
+% exam, so the next class can come in.
+        \sectionaonly{ \item Please exit from the back, so the next class can
+            come in.  }
+% 9. As soon as the room is quiet and desktops are empty, we're ready to pass
+% out the exams ... please take one, leave it face down, and pass the stack
+% along, face down. Put an exam face down on any empty desk. If you do this
+% quickly, we can start before the bell rings.
+        \item When we pass out exams, please take one, leave it face down, and
+            pass the stack along, face down. Put an exam face down on any empty
+            desk.
+% You can call the start as soon as everyone has an exam.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{center}
+        \vspace{0.5cm}
+        {\Huge Time remaining: 2}
+    \end{center}
+
+        \vspace{0.5cm}
+        \begin{enumerate}
+            \item[Q1] If Question 1 says ``yellow bands'' in first sentence,
+                part (f) should also say ``yellow bands.''
+        \end{enumerate}
+\end{frame}
+
+
+\end{document}
+
