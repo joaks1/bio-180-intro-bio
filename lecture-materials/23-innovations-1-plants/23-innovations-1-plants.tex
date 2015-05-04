@@ -8,6 +8,10 @@
 % \date{\today}
 \date{May 6, 2015}
 
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
 \begin{document}
 
 \begin{noheadline}
@@ -25,32 +29,32 @@
 \end{noheadline}
 }
 
-\clickerslide{
-\begin{frame}
-    \begin{clickerquestion}
-        \item Later in the quarter we'll analyze data supporting the hypothesis
-            that a 6th mass extinction is currently underway. Given that humans
-            are the agent, which characteristics are extinguished species most
-            likely to have? 
+% \clickerslide{
+% \begin{frame}
+%     \begin{clickerquestion}
+%         \item Later in the quarter we'll analyze data supporting the hypothesis
+%             that a 6th mass extinction is currently underway. Given that humans
+%             are the agent, which characteristics are extinguished species most
+%             likely to have? 
 
-        \begin{clickeroptions}
-            \item Survivors will simply be a random sample.
-            \item \clickeranswer{Large body size or limited range (small
-                    geographic area occupied).}
-            \item Lack ``charisma'' (not furry/fluffy/cute).
-            \item Human-associated species like rats, dandelions, house
-                sparrows, starlings.
-        \end{clickeroptions}
-    \end{clickerquestion}
-\end{frame}
-}
+%         \begin{clickeroptions}
+%             \item Survivors will simply be a random sample.
+%             \item \clickeranswer{Large body size or limited range (small
+%                     geographic area occupied).}
+%             \item Lack ``charisma'' (not furry/fluffy/cute).
+%             \item Human-associated species like rats, dandelions, house
+%                 sparrows, starlings.
+%         \end{clickeroptions}
+%     \end{clickerquestion}
+% \end{frame}
+% }
 
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
 \vspace{5mm}
-\tableofcontents[subsectionstyle=hide]
-% \tableofcontents
+% \tableofcontents[subsectionstyle=hide]
+\tableofcontents
 \end{frame}
 \end{noheadline}
 
@@ -60,7 +64,7 @@
 \begin{frame}
     \begin{adjustwidth}{-2em}{-1.5em}
         \begin{columns}
-            \column{0.4\linewidth}
+            \column{0.39\linewidth}
 
             \begin{clickerquestion}
                 \item Are green algae monophyletic? Are land plants monophyletic?
@@ -84,6 +88,43 @@
 \end{frame}
 }
 
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{columns}
+            \column{0.39\linewidth}
+
+            Are the following groups monophyletic?
+
+            \begin{itemize}
+                \item Non-vascular plants
+
+                    \nbox{No}
+
+                \item Seedless vascular plants
+
+                    \nbox{No}
+
+                \item Vascular plants
+
+                    \nbox{Yes}
+
+                \item Seed plants
+
+                    \nbox{Yes}
+
+                \item Gymnosperms
+
+                    \nbox{Yes}
+            \end{itemize}
+
+            \column{0.6\linewidth}
+
+            \includegraphics[height=\textheight]{plant-phylogeny.png}
+
+        \end{columns}
+    \end{adjustwidth}
+\end{frame}
+
 \clickerslide{
 \begin{frame}
     \begin{clickerquestion}
@@ -106,65 +147,115 @@
 
 \begin{frame}
     \begin{adjustwidth}{-2em}{-1.5em}
-        \begin{itemize}
-            \item How big are today's liverworts, mosses, and hornworts, and
-                what types of habitats do they occupy?
+
+        \vspace{-3mm}
+        \begin{columns}
+        
+        \column{0.45\linewidth}
+
+        {\small
+            How big are today's liverworts, mosses, and hornworts, and what
+            types of habitats do they occupy?
 
                 \nbox{Small and primarily in wet habitats}
 
-                \vspace{9mm}
-            \item How big are today's gymnosperms and angiosperms, and what
-                types of habitats do they occupy?
+                \vspace{4mm}
+            How big are today's gymnosperms and angiosperms, and what types of
+            habitats do they occupy?
 
                 \nbox{Large, and range from wet to dry habitats}
 
-                \vspace{9mm}
-            \item What do these observations suggest about trends in land plant
-                evolution?
+                \vspace{4mm}
+            What do these observations suggest about trends in land plant
+            evolution?
 
                 \nbox{Increased size and ability to grow and reproduce in dry
                     areas (also a trend in the nature of the life cycle, but
                     that will be covered in BIO 220).}
-        \end{itemize}
+        }
+
+        \column{0.54\linewidth}
+
+        \includegraphics[width=\columnwidth]{plant-phylogeny.png}
+
+        \end{columns}
     \end{adjustwidth}
 \end{frame}
 
-\section[What adaptations allowed plants to colonize land and
-    diversify?]{Adaptation and diversification of land plants}
+\section[Adaptation and diversification of land plants]{What adaptations
+    allowed plants to colonize land and diversify?}
 
-\begin{noheadline}
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Given the benefits and challenges of life on land, which
+            of the following is NOT true.
+            
+        \begin{clickeroptions}
+            \item Land plants must be able to avoid desiccation (drying out).
+            \item Transporting water throughout a plant's tissues is easier
+                in water than on land.
+            \item \clickeranswer{It is easier for plants to remain upright
+                    on land than in water.}
+            \item Sunlight and CO\sub{2} are more limited in water than on
+                land.
+            \item Transportation of gametes is more difficult on land than in
+                water.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\subsection{Living on land: cuticle, stomata, and vascular tissue}
+
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
         What adaptations allowed plants to colonize land and diversify?
+
+        \begin{columns}[t]
+
+        \column{0.5\linewidth}
 
         \begin{enumerate}
             \item Ability to avoid desiccation
             
             \begin{enumerate}
-                \item Cuticle
-
-                \begin{itemize}
-                    \item What is a cuticle?
-
-                        \nbox{Wax covering on surface (epidermal cells)}
-
-                        \vspace{8mm}
-                    \item Mark its origin on the tree
-
-                        \nbox{All land plants have cuticle---mark its origin
-                            along branch of the common ancestor of all land
-                            plants}
-
-                        \vspace{8mm}
-                    \item What is its adaptive significance?
-
-                        \nbox{Prevents water loss from tissues}
-                \end{itemize}
+                \item<2-> Cuticle
             \end{enumerate}
         \end{enumerate}
+
+        \vspace{-2mm}
+        \uncover<2->{
+        \begin{itemize}
+            \small
+            \item What is a cuticle?
+
+                \nbox{Wax covering on surface (epidermal cells)}
+
+                \vspace{6mm}
+            \item Mark its origin on the tree
+
+                \nbox{\scriptsize All land plants have cuticle---mark its
+                    origin along branch of the common ancestor of all land
+                    plants}
+
+                % \vspace{1mm}
+            \item What is its adaptive significance?
+
+                \nbox{Prevents water loss from tissues}
+        \end{itemize}
+        }
+
+        \column{0.5\linewidth}
+
+            \uncover<2->{
+            \includegraphics[width=\columnwidth]{plant-phylogeny.png}
+            }
+
+        \end{columns}
     \end{adjustwidth}
 \end{frame}
-\end{noheadline}
 
 \clickerslide{
 \begin{frame}
@@ -189,6 +280,7 @@
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
 
+        \vspace{-3mm}
         \begin{enumerate}
             \item Ability to avoid desiccation
             \begin{enumerate}
@@ -199,70 +291,112 @@
                     Pores are found in liverworts; all other land plants have
                     stomata.
 
+                    \uncover<2->{
                     \vspace{2mm}
                     Photosynthesis: $n \,\textrm{CO}_2 + n \,\textrm{H}_2\textrm{O} + \textrm{photons} \rightarrow (\textrm{CH}_2\textrm{O})_n + n \,\textrm{O}_2$
-                
-                \begin{itemize}
-                    \item What are pores? What are stomata?
-
-                        \nbox{Openings in the epidermis that allow gas exchange.  A
-                            stoma can open/close via guard cells, whereas pores
-                            cannot.}
-
-                    \vspace{5mm}
-                    \item Map their origin on the tree.
-
-                        \nbox{Mark origin of pore along branch of the common
-                            ancestor of all land plants; mark stomata along branch
-                            of ancestor leading to all land plants other than
-                            liverworts.}
-
-                    \vspace{5mm}
-                    \item What is the adaptive significance of pores and stomata?
-
-                        \nbox{Cuticle seals off gas exchange that is required for
-                            photosynthesis. Pores/cuticles allow this gas exchange}
-
-                \end{itemize}
+                    }
             \end{enumerate}
         \end{enumerate}
+
+        \begin{columns}[t]
+
+        \column{0.49\linewidth}
+
+        \uncover<3->{
+        \vspace{-4mm}
+        \begin{itemize}
+                \small
+            \item What are pores? What are stomata?
+
+                \nbox{\scriptsize Openings in the epidermis that allow gas
+                    exchange.  A stoma can open/close via guard cells, whereas
+                    pores cannot.}
+
+            \vspace{2mm}
+            \item Map their origin on the tree.
+
+                \nbox{\tiny Mark origin of pore along branch of the common
+                    ancestor of all land plants; mark stomata along branch of
+                    ancestor leading to all land plants other than liverworts.}
+
+            \item What is the adaptive significance of pores and stomata?
+
+                \nbox{\scriptsize Cuticle seals off gas exchange that is
+                    required for photosynthesis. Pores/cuticles allow this gas
+                    exchange}
+
+        \end{itemize}
+        }
+
+        \column{0.5\linewidth}
+
+            \uncover<3->{
+            \vspace{-4mm}
+            \includegraphics[width=0.9\columnwidth]{plant-phylogeny.png}
+            }
+
+        \end{columns}
     \end{adjustwidth}
 \end{frame}
+
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
 
+        \vspace{-3mm}
         \begin{enumerate}
             \addtocounter{enumi}{1}
             \item Transporting water and nutrients
             \begin{enumerate}
-                \item Vascular tissue consisting of tracheids or tracheids + vessels
-
-                \begin{itemize}
-                    \item What is vascular tissue?
-
-                        \nbox{Groups of cells that are specialized for
-                            transport of fluids}
-
-
-                    \vspace{5mm}
-                    \item Map their origin on the tree.
-
-                        \nbox{Along the branch of common ancestor of all
-                            vascular plants}
-
-                    \vspace{5mm}
-                    \item What is the adaptive significance of vascular tissue?
-
-                        \nbox{Replace water lost when stomata are open. Also,
-                            structural support---cell walls of water-conducting
-                            cells contain lignin.}
-
-                \end{itemize}
+                \item Vascular tissue consisting of tracheids or tracheids +
+                    vessels
             \end{enumerate}
         \end{enumerate}
+
+        \begin{columns}[t]
+
+        \column{0.49\linewidth}
+
+        \uncover<2->{
+        \vspace{-4mm}
+        \begin{itemize}
+            \small
+            \item What is vascular tissue?
+
+                \nbox{Groups of cells that are specialized for
+                    transport of fluids}
+
+
+            \vspace{4mm}
+            \item Map their origin on the tree.
+
+                \nbox{\tiny Tracheids: Along the branch of common ancestor of
+                    all vascular plants. Vessels: Evolved twice independently
+                    along branch leading to Angiosperms and along branch
+                    leading to Gnetophytes.}
+
+            \vspace{4mm}
+            \item What is the adaptive significance of vascular tissue?
+
+                \nbox{\scriptsize 1. Replace water lost when stomata are open.
+                    2.  Transport nutrients. 3.  Structural support---cell
+                    walls of water-conducting cells contain lignin.}
+
+        \end{itemize}
+        }
+
+        \column{0.5\linewidth}
+
+            \uncover<2->{
+            \vspace{-2mm}
+            \includegraphics[width=1.0\columnwidth]{plant-phylogeny.png}
+            }
+
+        \end{columns}
     \end{adjustwidth}
 \end{frame}
+
+\subsection{Reproducing on land: embryophyte condition, pollen, and seeds}
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
@@ -271,12 +405,17 @@
             \addtocounter{enumi}{2}
             \item The embryophyte condition
             \begin{enumerate}
-                \item Gametangia are structures that enclose gamete-producing cells. 
+                \item Gametangia are structures that enclose gamete-producing
+                    cells. 
 
+                    \uncover<2->{
                     \vspace{2mm}
-                    In land plants, the egg is retained on the parent and the embryo
-                    develops inside the gametangium (instead of releasing zygotes).
+                    In land plants, the egg is retained on the parent and the
+                    embryo develops inside the gametangium (instead of
+                    releasing zygotes).
+                    }
 
+                \uncover<3->{
                 \begin{itemize}
                     \item What is the adaptive significance of the embryophyte
                         condition?
@@ -285,6 +424,7 @@
                             cells. Embryo also is protected.}
 
                 \end{itemize}
+                }
             \end{enumerate}
         \end{enumerate}
     \end{adjustwidth}
@@ -306,6 +446,7 @@
 \end{frame}
 }
 
+
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
 
@@ -316,25 +457,31 @@
                 \item Cells that are encased in tough coat of sporopollenin;
                     some give rise to sperm cells.
 
+                    \uncover<2->{
                     \vspace{2mm}
                     Transported from one plant to another by wind, animals, or
                     water.
+                    }
 
+                \uncover<3->{
                 \begin{itemize}
                     \item What is the adaptive significance of pollen?  (HINT:
                         In ferns, mosses, and other plants that lack pollen,
-                        sperm have to swim to the egg and/or hitch a ride on
-                        legs of tiny insects.)
+                        sperm have to swim to the egg.)
+                        % and/or hitch a ride on
+                        % legs of tiny insects.)
 
                         \nbox{Sperm are protected from desiccating (drying
                             out)---can travel longer distances to fertilize and
                             have higher reproductive success.}
 
                 \end{itemize}
+                }
             \end{enumerate}
         \end{enumerate}
     \end{adjustwidth}
 \end{frame}
+
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
@@ -349,16 +496,19 @@
                     Transported away from the parent by wind, animals, or
                     water.
 
+                \uncover<2->{
                 \begin{itemize}
                     \item What is the adaptive significance of the seed?
                         (HINT: In ferns, mosses, and other plants that lack
                         seeds, the dispersal stage is a single-celled spore.)
 
                         \nbox{Offspring grow away from parent---less
-                            competition with parents. Embryo gets nutrients
-                            from mom, which gives seedlings a head start.}
+                            competition with parents. Embryo protected and gets
+                            nutrients from mom, which gives seedlings a head
+                            start.}
 
                 \end{itemize}
+                }
             \end{enumerate}
         \end{enumerate}
     \end{adjustwidth}
