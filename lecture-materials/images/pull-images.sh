@@ -34,3 +34,4 @@ curl -o hillis-tree.pdf http://www.zo.utexas.edu/faculty/antisense/tree.pdf
 wget -O honeycreeper-biogeography.jpg http://bioteaching.files.wordpress.com/2010/01/hawaii.jpg
 wget -O honeycreepers.jpg http://www.hdouglaspratt.com/Art_Gallery/HawaiianHoneycreepers/hawaiian_honeycreepers_evolution_radiation.jpg
 wget -O honeycreepers-labeled.jpg http://www.hoikecurriculum.org/wp-content/uploads/2012/07/AdRad-labels_eml-permission-Douglas-Pratt-and-Yale-U-Press.jpg
+wget -O red-deer.jpg http://upload.wikimedia.org/wikipedia/commons/d/df/Red_deer.jpg
