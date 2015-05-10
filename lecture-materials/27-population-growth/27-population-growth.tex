@@ -105,7 +105,294 @@
                 Conservation Society}
     \end{adjustwidth}
 \end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How fast is the whooping crane population growing?
+
+        \vspace{2mm}
+        Data from 3 wild populations:
+
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ L{4.7cm} C{2cm} C{2cm} }
+                & 2013 & 2014 \\
+                \cline{2-3}
+                Wood Buffalo-TX & 300 & 304 \\
+                Louisiana resident & 34 & 30 \\
+                Wisconsin-Florida & 110 & 114 \\
+            \end{tabular}
+        \end{table}
+
+        \vspace{3mm}
+        Growth rate over 1 year:
+
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ L{4.7cm} C{2cm} C{2cm} }
+                & rate & \% change \\
+                \cline{2-3}
+                Wood Buffalo--TX &
+                \cmask{\scriptsize $\frac{304}{300}=1.013$} &
+                \cmask{\scriptsize $1.3\%$ increase} \\[3ex]
+                Louisiana resident &
+                \cmask{\scriptsize $\frac{30}{34}=0.882$} &
+                \cmask{\scriptsize $11.8\%$ decrease} \\[3ex]
+                Wisconsin--Florida &
+                \cmask{\scriptsize $\frac{114}{110}=1.036$} &
+                \cmask{\scriptsize $3.6\%$ increase} \\
+            \end{tabular}
+        \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Generalizing these ideas \ldots
+
+        \vspace{2mm}
+        Let:
+        \begin{description}
+            \item[\popsize{0}] = population size at start
+            \item[\popsize{1}] = population size one breeding interval later
+        \end{description}
+
+        \uncover<2->{
+        \vspace{2mm}
+        Then,
+        \[
+            \frac{\popsize{1}}{\popsize{0}} = \popgrowthratediscrete{}
+        \]
+
+        \vspace{2mm}
+        \begin{center}
+        \popgrowthratediscrete{} is the finite rate of increase
+        \end{center}
+        }
+
+        \uncover<3->{
+        \vspace{2mm}
+        In the Wood Buffalo--TX population, from 2013--2014,
+        $\popgrowthratediscrete{} = \frac{304}{300} = 1.013$
+        }
+
+        \uncover<4->{
+        \vspace{2mm}
+        What is \popgrowthratediscrete{} if $\popsize{1} = 280$?
+
+        \nbox{$\popgrowthratediscrete{} = \frac{\popsize{1}}{\popsize{0}} =
+            \frac{280}{300} = 0.933$}
+
+        \vspace{2mm}
+        What is \popgrowthratediscrete{} if $\popsize{1} = 315$?
+
+        \nbox{$\popgrowthratediscrete{} = \frac{\popsize{1}}{\popsize{0}} =
+            \frac{315}{300} = 1.05$}
+        }
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-4mm}
+        \[
+            \frac{\popsize{1}}{\popsize{0}} = \popgrowthratediscrete{}
+        \]
+
+        \vspace{-3mm}
+        \[
+            \popsize{1} = \popsize{0} \popgrowthratediscrete{}
+        \]
+
+        \uncover<2->{
+        \begin{center}
+            In general,
+            $\popsize{\ptime} = \popsize{0} \popgrowthratediscrete{}^{\ptime}$
+        \end{center}
+        }
+
+        \uncover<3->{
+        \popgrowthratediscrete{} is an aggregate growth rate, computed
+        over discrete intervals. Why is \ptime an exponent?
+
+        \nbox{The population size changes by (is multiplied by)
+            \popgrowthratediscrete{} each interval (generation). Thus, you must
+            multiply by \popgrowthratediscrete{} for each generation.}
+        }
+
+        \uncover<4->{
+        How can we express population growth on a per capita (per individual)
+        basis, computed at any time (i.e., treating time as continuous)?
+        }
+
+        \begin{itemize}
+            \item<5-> Use \popgrowthrate{} to symbolize the per capita growth
+                rate
+
+            \vspace{3mm}
+            \item<6-> \popgrowthrate{} is the instantaneous rate of increase,
+                like interest compounded continuously.
+        \end{itemize}
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-4mm}
+        \[
+            \popgrowthratediscrete{} = e^{\popgrowthrate{}}
+        \]
+        (this is a fundamental relationship between finite rates and
+        instantaneous rates)
+        \uncover<2->{
+        \[
+            \ln(\popgrowthratediscrete{}) = \popgrowthrate{}
+        \]
+        }
+
+        \uncover<3->{
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ L{4.7cm} C{2cm} C{2.5cm} }
+                & \popgrowthratediscrete{} & \popgrowthrate{} \\
+                \cline{2-3}
+                Wood Buffalo--TX &
+                1.013 &
+                \cmask{\scriptsize $\ln(1.013) = 0.013$} \\[3ex]
+                Louisiana resident &
+                0.882 &
+                \cmask{\scriptsize $\ln(0.882) = -0.126$} \\[3ex]
+                Wisconsin--Florida &
+                1.036 &
+                \cmask{\scriptsize $\ln(1.036) =  0.035$} \\
+            \end{tabular}
+        \end{table}
+        }
+
+        \uncover<4->{
+        \vspace{2mm}
+        \popgrowthratediscrete{} describes discrete growth, \popgrowthrate{}
+        describes continuous growth
+
+        \vspace{2mm}
+        \popgrowthrate{} hurts my brain, so why?!?
+        
+        \nbox{Applicable to all populations at all times, and is independent of
+            generation time}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-4mm}
+        \[
+            \popsize{\ptime} = \popsize{0} \popgrowthratediscrete{}^{\ptime}
+        \]
+        \[
+            \popgrowthratediscrete{} = e^{\popgrowthrate{}}
+        \]
+        \uncover<2->{
+        \[
+            \popsize{\ptime} = \popsize{0} e^{\popgrowthrate{}\ptime}
+        \]
+        }
+
+        \uncover<3->{
+        Consider whooping cranes again \ldots
+
+        \vspace{2mm}
+        If 22 individuals were alive in 1942, and 600 in 2014, what is
+        \popgrowthrate{}?
+
+        \nbox{$600 = 22 e^{\popgrowthrate{}(72years)}$}
+        \nbox{$\frac{600}{22} = e^{\popgrowthrate{}(72years)}$}
+        \nbox{$\ln(\frac{600}{22}) = \popgrowthrate{}(72years)$}
+        \nbox{$\frac{\ln(\frac{600}{22})}{72} = \popgrowthrate{} = 0.0459$}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+    \item If this \popgrowthrate{} (0.0459) were sustained, how many MORE years
+        will it take to reach the goal of a world population of 1000 (HINT:
+        $\popsize{0} = 600$?
+
+        \begin{clickeroptions}
+            \item $\approx$108 years
+            \item $\approx$35 years
+            \item $\approx$24 years
+            \item \clickeranswer{$\approx$11 years}
+        \end{clickeroptions}
+    \end{clickerquestion}
+
+        \nbox{$1000 = 600 e^{0.0459\ptime}$}
+        \nbox{$\frac{1000}{600} = e^{0.0459\ptime}$}
+        \nbox{$\log(\frac{1000}{600}) = 0.0459\ptime$}
+        \nbox{$\frac{\log(\frac{1000}{600})}{0.0459} = \ptime = 11.13$}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Exponential versus logistic (density-dependent) growth
+
+        \begin{center}
+        \includegraphics[height=0.5\textheight]{exp-growth-curves.png}
+        \includegraphics[height=0.5\textheight]{seal-pop-growth.png}
+        \end{center}
+
+        What is the difference here?
+
+        \nbox{In exponential growth, \popgrowthrate{} does not change; i.e.,
+            \popgrowthrate{} is independent of population size (growth is
+            density-independent). In logistic growth, \popgrowthrate{} is
+            dependent (changes with) population size (growth is
+            density-dependent)}
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item The whooping crane population is growing exponentially. Which of
+            the following is NOT supported by this observation?
+
+        \begin{clickeroptions}
+            \item \clickeranswer{Disease or lack of food and space will limit
+                    \popgrowthrate{} once the population reaches 1000.}
+            \item They have not yet reached carrying capacity.
+            \item \popgrowthrate{} has been (relatively) constant.
+            \item Growth has been density independent.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
 \section{Case studies in population growth}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Case study: Density-dependent growth
+
+        \begin{center}
+            \includegraphics[width=0.73\linewidth]{daphnia-pop-growth.png}
+        \end{center}
+
+        What is wrong with this picture?
+
+        \nbox{The logistic curve is a poor fit to the data; there's a big
+            overshoot (hump) in population size beyond predicted carrying
+            capacity.}
+    \end{adjustwidth}
+\end{frame}
 
 \subsection{Density dependence}
 
