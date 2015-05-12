@@ -239,7 +239,7 @@
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
-        \vspace{-4mm}
+        \vspace{-6mm}
         \[
             \popgrowthratediscrete{} = e^{\popgrowthrate{}}
         \]
@@ -294,6 +294,7 @@
         \[
             \popgrowthratediscrete{} = e^{\popgrowthrate{}}
         \]
+        \vspace{-4mm}
         \uncover<2->{
         \[
             \popsize{\ptime} = \popsize{0} e^{\popgrowthrate{}\ptime}
@@ -377,6 +378,8 @@
 
 \section{Case studies in population growth}
 
+\subsection{Density dependence}
+
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
         \vspace{-3mm}
@@ -394,9 +397,95 @@
     \end{adjustwidth}
 \end{frame}
 
-\subsection{Density dependence}
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        What density-dependent factor(s) constrain growth?
+
+        \nbox{Competition for resources (food, nesting sites, space, etc.)}
+        \nbox{Predation rate---easier to capture at higher densities}
+        \nbox{Disease---higher transmission rates at higher densities}
+
+        \vspace{2.7cm}
+        How to test these hypotheses?
+
+        \nbox{Experimentally remove the hypothesized constraint from some
+            populatoins, and not in other populations. If it was constraining
+            population growth, you should see an increase in population growth
+            rate in the populations from which the constraint was removed.}
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item The \textit{Daphnia} in the experiment had a lifespan of about 85
+            days, and fed on a self-sustaining population of algae (none
+            added). Which of the following is the most likely hypothesis to
+            explain the ``overshoot'' in the growth curve of \textit{Daphnia
+                magna}? 
+ 
+        \begin{clickeroptions}
+            \item At their peak density, the \textit{Daphnia} ate up all the
+                algae. 
+            \item \clickeranswer{At high density, the \textit{Daphnia} changed
+                    the environment in a way that lowered resource-producing
+                    capacity.}
+            \item At densities above about 100 individuals/50mL,
+                \textit{Daphnia} stop reproducing. 
+            \item At high density, a disease outbreak killed about a third of
+                the \textit{Daphnia} in less than a week. 
+        \end{clickeroptions}
+    \end{clickerquestion}
+
+    \nbox{(1)---If so, population would go to zero (we don't see that).
+          (2)---Correct.
+          (3)---If no reproduction, the population would decline whenever
+          \popsize{} is above 100 individuals/50mL (we don't see that).
+          (4)---the decline took much longer than a week.}
+    \note[item]{What changed about the environment is unknown, but what about a
+        case like Kalbab Plateau deer, or elk in Yellowstone prior to the
+        introduction of wolves?}
+\end{frame}
+}
 
 \subsection{Population cycles}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Population cycles
+
+        \vspace{2mm}
+        E.g., Red grouse in England; 4-year cycles in abundance.
+
+        \uncover<2->{
+        \vspace{3mm}
+        Hypothesis: The population crashes every four years, because there is
+        rapid transmission of a parasitic nematode worm at high population
+        densities.
+        }
+
+        \uncover<3->{
+        \vspace{3mm}
+        Experiment: In ``crash years'' catch birds at the roost (at night)
+        and administer an anti-worm medication.
+        }
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Interpret these graphs:
+
+        \vspace{1mm}
+        \includegraphics[width=1.02\linewidth]{pop-cycles.png}
+
+        \vspace{1mm}
+        \nbox{Supports the parasite-transmission hypothesis; removing the worms
+            eliminated the cycling.}
+
+    \end{adjustwidth}
+\end{frame}
 
 \end{document}
 
