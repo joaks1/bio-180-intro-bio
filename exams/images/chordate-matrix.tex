@@ -1,0 +1,68 @@
+\documentclass[table]{beamer}
+\usepackage{beamerthemesplit}
+\usetheme{default}
+\usecolortheme{default}
+\usepackage{ifthen}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue}
+\usepackage{tikz}
+\usetikzlibrary{trees,calc}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% define formatting for footer
+\newcommand{\myfootline}{%
+    {\it
+    \insertshorttitle
+    \hspace*{\fill} 
+    \insertshortauthor, \insertshortinstitute
+    % \ifx\insertsubtitle\@empty\else, \insertshortsubtitle\fi
+    \hspace*{\fill}
+    \insertframenumber/\inserttotalframenumber}}
+
+% set up footer
+\setbeamertemplate{footline}{}
+
+% remove navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\newif\ifvone
+\vonetrue
+
+\ifvone%
+    \newcommand{\version}[2]{#1}%
+\else%
+    \newcommand{\version}[2]{#2}%
+\fi
+
+\begin{document}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \Large
+        \begin{tabular}{ L{2.4cm} | C{2.4cm} C{2cm} C{1.7cm} }
+            & Amniotic egg & Cranium & Limbs \\
+            \hline
+            \version{Frog}{Salamander} & no & yes & yes \\[0.8ex]
+            \version{Lamprey}{Hagfish} & no & yes & no \\[0.8ex]
+            \version{Lizard}{Turtle} & yes & yes & yes \\[0.8ex]
+            \version{Tunicate}{Lancelet} & no & no & no \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\end{document}
+
