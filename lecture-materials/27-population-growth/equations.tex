@@ -1,0 +1,71 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+\bibliography{../bib/references}
+\input{../utils/title-info.tex}
+
+\title[Population growth]{Population growth}
+% \date{\today}
+\date{May 13, 2015}
+
+
+% \setbeamertemplate{section in toc}[sections numbered]
+% \setbeamertemplate{subsection in toc}[subsections numbered]
+
+\begin{document}
+
+\begin{frame}[t,plain]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{columns}
+            \Huge
+
+            \column{0.5\linewidth}
+
+        \[
+            \popgrowthratediscrete{} = \frac{\popsize{1}}{\popsize{0}}
+        \]
+
+        \[
+            \popsize{\ptime} = \popsize{0} \popgrowthratediscrete{}^{\ptime}
+        \]
+
+            \column{0.5\linewidth}
+
+        \[
+            \popgrowthratediscrete{} = e^{\popgrowthrate{}}
+        \]
+
+        \[
+            \popsize{\ptime} = \popsize{0} e^{\popgrowthrate{}\ptime}
+        \]
+        \end{columns}
+    \end{adjustwidth}
+\end{frame}
+
+\end{document}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item 
+        \begin{clickeroptions}
+            \item 
+            \item 
+            \item 
+            \item 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerpost{
+{
+\usebackgroundtemplate{\includegraphics[page=17,width=\paperwidth]{./24-Radiation-extinction.pdf}}
+\begin{frame}[t,plain]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \cmask{Answer: 3}
+    \end{adjustwidth}
+\end{frame}
+}
+}
+
