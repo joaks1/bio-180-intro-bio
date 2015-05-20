@@ -1,0 +1,562 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+\bibliography{../bib/references}
+\input{../utils/title-info.tex}
+
+\title[Consumption]{Consumption}
+% \date{\today}
+\date{May 21, 2015}
+
+% \setbeamertemplate{section in toc}[sections numbered]
+% \setbeamertemplate{subsection in toc}[subsections numbered]
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-6mm}
+    \begin{center} 
+        \includegraphics[height=1.2\textheight]{../images/seating-chart-2.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\vspace{5mm}
+% \tableofcontents[subsectionstyle=hide]
+\tableofcontents
+\end{frame}
+\end{noheadline}
+
+\section{How does predation affect prey populations?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How does predation affect prey populations?
+
+        \vspace{2mm}
+        Question: Do predators reduce prey populations below the level that can
+        be supported by available resources?
+
+        \vspace{2mm}
+        \begin{uncoverenv}<2->
+        Predator removal experiments:
+        \begin{itemize}
+            \item Wolves and cougars removed from the Kaibab Plateau, 1907--1937
+
+            \vspace{5mm}
+            \item Start:
+                
+                \nbox{$\approx$4000 deer}
+
+            \vspace{5mm}
+            \item 1920:
+                
+                \nbox{$\approx$100,000 deer}
+
+        \end{itemize}
+        \end{uncoverenv}
+
+        \begin{uncoverenv}<3->
+        Does this support the hypothesis that predators control prey
+        populations?
+
+        \nbox{\scriptsize Yes, this rapid increase of deer after removing
+            predators is strong evidence of top-down control of prey
+            populations by predators}
+
+        What happened to habitat after deer density exploded?
+
+        \nbox{Deer browse shrubs and small trees---stripped all vegetation and
+            population crashed}
+
+        \end{uncoverenv}
+
+    \end{adjustwidth}
+    \note[item]{Kaibab Plateau, Arizona. Federal and state government paid
+        people to kill top predators}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Predator addition experiments: Restoring wolves to the Yellowstone
+        ecosystem
+
+        \begin{uncoverenv}<2->
+        \begin{columns}
+
+        \column{0.5\linewidth}
+
+        \vspace{2mm}
+        Wolves were extirpated in the 1920s and reintroduced in 1995; elk are
+        their main prey.
+
+        % \vspace{2mm}
+        \begin{enumerate}
+            \item What is the graph's take-home message?
+
+                \nbox{Elk reproduction PER FEMALE is reduced when wolves are
+                    present.}
+
+            \item Create a hypothesis to explain the data.
+
+                \nbox{\scriptsize Females are expending time and energy
+                    avoiding wolves, and have less energy to invest in
+                    reproduction.}
+        \end{enumerate}
+
+        \column{0.49\linewidth}
+
+        \includegraphics[width=\columnwidth]{elk.png}
+
+        \end{columns}
+        \end{uncoverenv}
+
+    \end{adjustwidth}
+    \note[item]{Note: Numbers at base of bars are the number of herds sampled}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{columns}
+
+            \column{0.5\linewidth}
+
+            \begin{clickerquestion}
+                \item Which of the following is the best interpretation of this graph?
+                \begin{clickeroptions}
+                    \item \clickeranswer{The proportion of elk that are
+                            vigilant is greatest when wolves are near.}
+                    \item Vigilance is a heritable trait that can evolve. 
+                    \item Females are more vigilant than males.
+                    \item Elk aren't vigilant unless wolves are near. 
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.5\linewidth}
+
+            \includegraphics[width=\columnwidth]{elk-vigilance.png}
+
+        \end{columns}
+
+        \vspace{2mm}
+        How does this connect to the observation in the previous graph?
+
+    \end{adjustwidth}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{columns}
+
+            \column{0.45\linewidth}
+
+            \begin{clickerquestion}
+                \item Which of the following is the best interpretation of this graph?
+                \begin{clickeroptions}
+                    \item Testosterone makes you stupid. 
+                    \item Elk vigilance varies with distance to wolves.
+                    \item Cows and bulls are equally vigilant when wolves are
+                        absent or present.
+                    \item \clickeranswer{Cows are more vigilant when wolves are
+                            present; males show no difference.} 
+                \end{clickeroptions}
+            \end{clickerquestion}
+
+            \column{0.55\linewidth}
+
+            \includegraphics[width=\columnwidth]{elk-vigilance-sex.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+\end{frame}
+}
+
+\section{How do prey respond to predators?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How do prey respond to predators?
+
+        \vspace{2mm}
+        \begin{enumerate}
+            \item \textbf{Standing defenses} are always present
+
+                \vspace{2mm}
+                Examples: porcupine quills, camouflage in moths,
+                chemical spray from skunks.
+        \end{enumerate}
+
+        \uncover<2->{
+        Design an experiment to test the hypothesis that THC is
+        an effective standing defense in \textit{Cannabis sativa}.
+
+        \nbox{Need with-without design. Expose two lines of \textit{C. sativa}
+            (one that lacks (or very low) THC and one with high levels of THC)
+            to herbivores and measure rate of herbivory/growth rate/number of
+            seeds produced.}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+        \vspace{-2mm}
+        \begin{enumerate}
+            \addtocounter{enumi}{1}
+            \item \textbf{Inducible defenses} are produced in response to
+                predation (or presence of predators).
+
+                \vspace{2mm}
+                \uncover<2->{
+                E.g., blue crabs (predator) and mussels (prey)
+                }
+        \end{enumerate}
+
+        \begin{columns}
+
+            \column{0.5\linewidth}
+
+            \uncover<2->{
+            Low predation of mussels in high tidal-flow areas; high predation
+            in low-tidal flow areas.
+            
+            \vspace{8mm}
+            Draw the bars you expect if shell thickness is an inducible defense
+            }
+
+            \column{0.5\linewidth}
+
+            \includegraphics<2->[width=\columnwidth]{mussel-shell-axes.png}
+
+        \end{columns}
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+        \vspace{-2mm}
+        \begin{enumerate}
+            \addtocounter{enumi}{1}
+            \item \textbf{Inducible defenses} are produced in response to
+                predation (or presence of predators).
+
+                \vspace{2mm}
+                E.g., blue crabs (predator) and mussels (prey)
+        \end{enumerate}
+
+        \vspace{4mm}
+        Predation rate is \textbf{correlated} with shell thickness. What are
+        other reasonable hypotheses for the \textbf{cause} of thicker shells
+        in high predation (low-tidal flow) areas?
+
+        \nbox{Age differences---individuals in low-flow areas are older}
+        \nbox{Selection---crabs have eaten thin-shelled individuals}
+        \nbox{Differences in shell thickness is caused by the flow
+            differences}
+        \nbox{Differences in shell thickness is caused by other differences
+            between low and high-flow areas (temperature, light, substrate,
+            etc.)}
+        \nbox{Genetic---mussels in low and high flow areas are genetically
+            divergent, independent populations}
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+
+        \vspace{-3mm}
+        Hypothesis: Mussels increase shell thickness in response to evidence of
+        predation.
+
+        \vspace{2mm}
+        Experimental test:
+
+        \vspace{1mm}
+        \nbox{In book (Figure 55.10); 2 treatments: (1) mussels downstream from
+            crabs that are fed fish (NOT mussels!), and (2) mussels downstream
+            from no crabs}
+
+        \vspace{2mm}
+        \nbox{If we want to test if mussels will increase shell thickness in
+            response to evidence of predation, we need to adjust this
+            experiment, so that the two treatments are (1) mussels downstream
+            from broken mussel shells, and (2) mussels not downstream from
+            broken mussel shells.}
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item What are the costs and benefits of having an inducible defense
+            against predators or herbivores?
+    \end{clickerquestion}
+
+    \begin{adjustwidth}{-2em}{-1.5em}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l | L{5.2cm} | L{5.2cm} | }
+            \multicolumn{1}{c}{} &
+            \multicolumn{1}{c}{Cost of inducible defense} &
+            \multicolumn{1}{c}{Benefit of inducible defense} \\
+            \cline{2-3}
+            \textcolor{red}{1)} &
+            Specialist consumers not deterred &
+            Eliminates threat of predation \\
+            \cline{2-3}
+            \textcolor{red}{2)} &
+            Generalist consumers not deterred &
+            Flexible---many different types of defense are possible \\
+            \cline{2-3}
+            \textcolor{red}{3)} &
+            Only effective for adults (not juveniles) &
+            Effective at all life stages \\
+            \cline{2-3}
+            \textcolor{red}{4)} &
+            \clickeranswer{Time lab---may be too late} &
+            \clickeranswer{Don't invest resources unless needed} \\
+            \cline{2-3}
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+}
+
+\section{How do predators affect communities of species?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How do predators affect communities of species?
+
+        \vspace{4mm}
+        A \textbf{keystone species} has an extraordinarily large impact on
+        the surrounding community, relative to its abundance.
+
+        \vspace{4mm}
+        \uncover<2->{
+        E.g. \spp{Pisaster} removal experiments
+
+        \centerline{
+        \includegraphics[height=0.5\textheight]{species-richness-axes.png}
+        }
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Which of the following is a valid conclusion to draw from
+            these data? 
+
+        \begin{clickeroptions}
+            \item Mussels show induced defenses in the presence of
+                \spp{Pisaster}. 
+            \item \clickeranswer{Species richness is higher in the presence of
+                    \spp{Pisaster} than in the absence of \spp{Pisaster}.}
+            \item Mussels eliminate competing species by secreting a toxin.
+                This toxin does not deter \spp{Pisaster}, however.  
+            \item Mussels crowd out other species because they are superior
+                competitors for space.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Trophic cascades in the Yellowstone Ecosystem
+
+        \centerline{
+        \includegraphics[height=0.7\textheight]{yellowstone-web.png}
+        }
+
+        \uncover<2->{
+        What's the impact of wolf reintroduction on birds of prey? Beaver?
+
+        \nbox{Birds of prey increase due to decreased competition for rodent
+            prey. Beaver increase due to decreased competition for resources}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\section{Why is the world green?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Why is the world green?
+
+        \begin{itemize}
+            \item[$H_1$:]<2-> Top-down control hypothesis
+
+                \nbox{Herbivore populations are limited by consumers (predators
+                    and parasites)}
+
+                \vspace{8mm}
+            \item[$H_2$:]<3-> Poor-nutrition hypothesis (N-limitation)---on a
+                per-gram basis, plants contain $<$10\% of N found in animals.
+
+                \nbox{Herbivore populations are limited by N available in plants}
+
+                \vspace{8mm}
+            \item[$H_3$:]<4-> Plant defense hypothesis 
+
+                \vspace{2mm}
+                E.g., Nicotine as an inducible defense
+        \end{itemize}
+    \end{adjustwidth}
+    \note[item]{Be able to design an experiment that would test the top-down
+        and poor-nutrition hypotheses}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Nicotine as an inducible defense
+        
+        \vspace{6mm}
+        Synthesized in roots in response to attack by herbivores and transported
+        to trichomes (``leaf hairs'')
+
+        \uncover<2->{
+        \vspace{6mm}
+        Experiment: Study 3 populations of wild tobacco. For many generations,
+        each has been exposed to different levels of herbivory (low, medium,
+        and high).
+        }
+
+        \uncover<3->{
+        \begin{enumerate}
+            \item Grow individuals from each population in the same environment
+
+                \vspace{2mm}
+            \item Induce nicotine production in each (same stimulus)
+
+                \vspace{2mm}
+            \item Measure nicotine production and the number of seeds produced
+        \end{enumerate}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Data on average number of seeds produced per plant:
+
+        % \vspace{2mm}
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ | L{3.5cm} | C{2cm} | C{2cm} | }
+                \multicolumn{1}{c}{Source population} &
+                \multicolumn{1}{c}{Induced} &
+                \multicolumn{1}{c}{Not induced} \\
+                \hline
+                Low herbivory & 4494 & 6047 \\[2ex]
+                Medium herbivory & 5314 & 7335 \\[2ex]
+                High herbivory & 4860 & 4705 \\
+                \hline
+            \end{tabular}
+        \end{table}
+
+        \vspace{2mm}
+        NOTE: Individuals from all three populations show about the same
+        response to induction (same nicotine production).
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Data on average number of seeds produced per plant:
+
+        % \vspace{2mm}
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ | L{3.5cm} | C{2cm} | C{2cm} | }
+                \multicolumn{1}{c}{Source population} &
+                \multicolumn{1}{c}{Induced} &
+                \multicolumn{1}{c}{Not induced} \\
+                \hline
+                Low herbivory & 4494 & 6047 \\[2ex]
+                Medium herbivory & 5314 & 7335 \\[2ex]
+                High herbivory & 4860 & 4705 \\
+                \hline
+            \end{tabular}
+        \end{table}
+
+        \begin{clickerquestion}
+            \item Which of the following is a valid conclusion to draw from
+                these data?
+            \begin{clickeroptions}
+                \item Whether induced or not, seed production is lower in
+                    populations that are normally exposed to herbivores.  
+                \item \clickeranswer{After induction, seed production is
+                        reduced in the low and medium herbivory populations,
+                        but not in the high herbivory population.}
+                \item There is a ``cost of defense'' in all three of these
+                    populations.   
+                \item There is no ``cost of defense'' in populations exposed to
+                    medium levels of herbivory (they produce the largest number
+                    of seeds).
+            \end{clickeroptions}
+        \end{clickerquestion}
+
+    \end{adjustwidth}
+\end{frame}
+}
+
+
+\end{document}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item 
+        \begin{clickeroptions}
+            \item 
+            \item 
+            \item 
+            \item 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerpost{
+{
+\usebackgroundtemplate{\includegraphics[page=17,width=\paperwidth]{./24-Radiation-extinction.pdf}}
+\begin{frame}[t,plain]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \cmask{Answer: 3}
+    \end{adjustwidth}
+\end{frame}
+}
+}
+
