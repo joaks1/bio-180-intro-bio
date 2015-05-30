@@ -70,41 +70,28 @@
 \end{frame}
 \end{noheadline}
 
-\section{How does energy flow through ecosystems?}
+\section{Global patterns of NPP}
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
         \vspace{-3mm}
-        How does energy flow through ecosystems?
-
-        \vspace{2mm}
         Patterns of net primary productivity I
 
         \includegraphics[width=\linewidth]{productivity-by-ecosystems.png}
 
-    \end{adjustwidth}
-\end{frame}
-
-\begin{frame}[t]
-    \begin{adjustwidth}{-2em}{-1.5em}
-        \vspace{-3mm}
-        \includegraphics[width=\linewidth]{productivity-by-ecosystems.png}
-
+        \vspace{-1mm}
         \begin{itemize}
-            \item Where is NPP/km\super{2} relatively high?
-
-                \nbox{\scriptsize Tropical rainforests, algal beds/coral reefs,
-                    wetlands}
+            \small
+            \item Where is NPP/km\super{2} relatively high? \cmask{\tiny
+                    Tropical rainforests, algal beds/coral reefs, wetlands}
 
             \item Why is NPP/km\super{2} in the open ocean so low, if lots of
-                light is available and the water is warm?
-
-                \nbox{No nutrients (non-living biomass sinks to bottom, where
-                    it's very cold and there's no light)}
+                light is available and the water is warm? \cmask{\tiny No
+                    nutrients (non-living biomass sinks to bottom, where it's
+                    very cold and there's no light)}
 
             \item Why does so much of the total NPP come from open ocean?
-
-                \nbox{It's HUGE!}
+                \cmask{\tiny It's HUGE!}
         \end{itemize}
 
     \end{adjustwidth}
@@ -117,6 +104,7 @@
 
         \includegraphics[width=\linewidth]{productivity-heat-map.png}
 
+        \vspace{-2mm}
         \begin{itemize}
             \item Compare and contrast where terrestrial vs.\ marine
                 productivity is high.
@@ -169,7 +157,7 @@
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
 
-        \vspace{-3mm}
+        % \vspace{-3mm}
         \begin{itemize}
             \item In the open ocean, what happens to nutrients available in
                 organisms living at the surface?
@@ -178,6 +166,7 @@
                     producers (PP) convert sunlight to biomass; uneaten PPs
                     sink to benthos when they die}
 
+                \vspace{5mm}
             \item In the open ocean, why aren't nutrients recycled from the
                 benthos?
 
@@ -185,6 +174,7 @@
                     productivity. Nutrients can't get to the surface where the
                     PPs are}
 
+                \vspace{5mm}
             \item Why are coastlines so productive?
 
                 \nbox{\scriptsize When deep currents hit the continental shelf,
@@ -195,25 +185,19 @@
     \end{adjustwidth}
 \end{frame}
 
-\begin{frame}[t]
-    \begin{adjustwidth}{-2em}{-1.5em}
-        What happens to energy (NPP) on land? (Data from Hubbard Brook)
-
-        \includegraphics[width=\linewidth]{energy-transfer-cascade.png}
-
-        In this ecosystem, what percentage of NPP gets eaten as living tissue?
-        
-        \nbox{\tiny $(1103/4514)100 = 24\%$}
-
-    \end{adjustwidth}
-    \note[item]{What number is GPP? What number is NPP?}
-\end{frame}
+\section{How does energy flow through ecosystems?}
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
-        Trophic levels in a Puget Sound food chain
+        \vspace{-3mm}
+        How does energy flow through ecosystems?
 
         \uncover<2->{
+        \vspace{2mm}
+        Trophic levels in a Puget Sound food chain
+        }
+
+        \uncover<3->{
         \begin{table}%[htbp]
             \centering
             \begin{tabular}{ c c c }
@@ -230,10 +214,18 @@
         \end{table}
         }
 
-        \uncover<3->{
+        \uncover<4->{
         \begin{itemize}
             \item What about orcas that eat seals (seals eat salmon)?
+                \nbox{\scriptsize Many consumers eat at multiple trophic
+                    levels}
+
             \item How would a Puget Sound food WEB be different?
+
+                \nbox{\tiny Rather than showing one pathway of energy
+                flow across trophic levels (like the food chain above), it
+                would show ALL the possible pathways; it would be a network of
+                all energy transfered among all species in the community}
         \end{itemize}
         }
     \end{adjustwidth}
@@ -242,34 +234,56 @@
     \note[item]{How would a Puget Sound food web be different?}
 \end{frame}
 
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Energy (NPP) data from Hubbard Brook Experimental Forest
+
+        \includegraphics[width=\linewidth]{energy-transfer-cascade.png}
+
+        In this ecosystem, what percentage of NPP gets eaten as living tissue?
+        
+        \nbox{\tiny $(1103/4514)100 = 24\%$}
+
+    \end{adjustwidth}
+    \note[item]{What number is GPP? What number is NPP?}
+\end{frame}
+
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
         \vspace{-3mm}
         Efficiency of energy transfer across trophic levels at Hubbard Brook
 
+        \vspace{-1mm}
         \begin{center}
         \begin{tikzpicture}[>=latex]%,xscale=0.3,yscale=0.3]
         
-            \tikzstyle{state} = [draw, fill=structure!20!, rectangle,
+            % \tikzstyle{state} = [draw, fill=structure!20!, rectangle,
+            \tikzstyle{state} = [fill=white, rectangle,
                 minimum height=2em,
                 minimum width=4em,
                 node distance=4em,
-                font={\sffamily\bfseries}]
+                font={\sffamily}]
             \tikzstyle{stateEdgePortion} = [black,ultra thick];
             \tikzstyle{stateEdge} = [stateEdgePortion,->];
             \tikzstyle{edgeLabel} = [pos=0.5, text centered, font={\sffamily\small}];
         
             % Reservoirs
-            \node[visible on=<6->, state, name=c3] {3 g/m\super{2}/year of
-                tertiary consumer biomass (10\% efficiency)};
-            \node[visible on=<5->, state, name=c2, below of=c3] {30 g/m\super{2}/year of
-                secondary consumer biomass (15\% efficiency)};
-            \node[visible on=<4->, state, name=c1, below of=c2] {200 g/m\super{2}/year of
-                primary consumer biomass (20\% efficiency)};
-            \node[visible on=<3->, state, name=pp, below of=c1] {1000 g/m\super{2}/year of
-                primary producer biomass (NPP)};
-            \node[visible on=<2->, state, name=sun, below of=pp] {$\approx$1\% of sunlight to
-                GPP};
+            \node[visible on=<6->, state, name=c3] {\textcolor{blue}{3
+                    g/m\super{2}/yr of tertiary consumer biomass (10\%
+                    efficiency)}};
+            \node[visible on=<5->, state, name=c2, below of=c3]
+            {\textcolor{blue}{30 g/m\super{2}/yr of secondary consumer biomass
+                    (15\% efficiency)}};
+            \node[visible on=<4->, state, name=c1, below of=c2]
+            {\textcolor{blue}{200 g/m\super{2}/yr of primary consumer biomass
+                    (20\% efficiency)}};
+            \node[visible on=<3->, state, name=pp, below of=c1]
+            {\textcolor{blue}{1000 g/m\super{2}/yr of primary producer biomass
+                    (NPP)}};
+            \node[visible on=<2->, state, name=sun, below of=pp]
+            {\textcolor{blue}{$\approx$1\% of sunlight to GPP}};
         
             % Connect States via edges
             \begin{uncoverenv}<3->
@@ -318,6 +332,139 @@
             \end{uncoverenv}
         \end{tikzpicture}
         \end{center}
+
+        \uncover<7->{
+        \vspace{-3mm}
+        {\small NOTE: Productivity pyramids represent maximum possible energy
+            transfer.  What does this mean? \cmask{\tiny Assumes all new
+                biomass at each level is eaten by next level}}
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{itemize}
+            \item Why is so much energy lost at each transfer?
+
+                \nbox{Some of what is eaten is not assimilated (lost in feces).
+                    A large proportion that is assimilated is used for cellular
+                    respiration (digestion, immune defense, repair/maintenance,
+                    movement, heat, etc.); NOT biomass.}
+
+                \vspace{4mm}
+            \item Which is more efficient as a primary consumer, a fish or a
+                cow? Why?
+
+                \nbox{Fish---it does not use energy to maintain body
+                    temperature (ectothermic)}
+
+                \vspace{8mm}
+            \item Clams and mussels eat detritus as well as small primary
+                producers and consumers. Would you consider them an efficient
+                consumer? Why or why not?
+
+                \nbox{Yes---they are consuming from both food chains (i.e.,
+                    living (grazing) and non-living (decomposing)). Also, they
+                    are ectothermic and move very little.}
+
+        \end{itemize}
+
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item At Hubbard Brook, why does the \highlight{efficiency} of energy
+            transfer decline as you go up each trophic level? 
+ 
+        \begin{clickeroptions}
+            \item There are fewer predators than prey.
+            \item All tertiary consumers are endotherms and lose a great deal
+                of energy as heat.
+            \item Species diversity is not as high at the upper trophic levels.
+            \item \clickeranswer{In order to find food, consumers at higher
+                    trophic levels have to move around a lot more than
+                    lower-level consumers.}
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item On a per-gram basis, large mammals have lower metabolic rates
+            than smaller mammals. Based on this observation, which mammals
+            should convert primary production to biomass more efficiently? 
+
+        \begin{clickeroptions}
+            \item \clickeranswer{Large mammals}
+            \item Small mammals
+            \item No difference, because the comparison was done on a per-gram
+                basis
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\section{How do nutrients flow through ecosystems?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How do nutrients flow through ecosystems? (biogeochemical cycles)
+
+        \begin{itemize}[<+->]
+            \item E.g., Nitrogen cycle, water cycle, carbon cycle, etc.
+
+                \vspace{8mm}
+            \item Atoms move through ecosystems, among organisms in food webs,
+                and between organisms and the abiotic environment. (They are
+                recycled)
+
+                \vspace{8mm}
+            \item Humans are altering most biogeochemical cycles in
+                massive ways.
+
+                \begin{itemize}
+                    \item E.g., the nitrogen cycle (We are doubling natural N
+                        inputs!).
+                \end{itemize}
+        \end{itemize}
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        The Dead Zone in the Gulf of Mexico
+
+        \begin{enumerate}
+            \item Lots of nitrates (from ammonia-based fertilizer) run
+                off farm fields into the Mississippi River and into
+                the Gulf.
+
+            \item In response, \wout{huge increase in primary production by
+                    photosynthetic algae and bacteria = eutrophication}
+
+            \vspace{6mm}
+            \item \wout{Primary producers die (short-lived; rapid turnover)}
+
+            \vspace{6mm}
+            \item \wout{\small Huge increase in primary decomposers (eating
+                    all the dead algae/bacteria)}
+
+            \vspace{6mm}
+            \item \wout{Oxygen depleted by decomposers}
+
+            \vspace{6mm}
+            \item \wout{Fish and other oxygen-dependent species die}
+        \end{enumerate}
+
+        \vspace{4mm}
+        \uncover<2->{This happens in Hood Canal, and many other places, too}
 
     \end{adjustwidth}
 \end{frame}
