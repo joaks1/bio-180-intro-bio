@@ -1,0 +1,554 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+\bibliography{../bib/references}
+\input{../utils/title-info.tex}
+
+\title{Conservation: Threats \& strategies}
+% \date{\today}
+\date{June 3, 2015}
+
+% \setbeamertemplate{section in toc}[sections numbered]
+% \setbeamertemplate{subsection in toc}[subsections numbered]
+
+\begin{document}
+
+\begin{noheadline}
+\maketitle
+\end{noheadline}
+
+\nopost{
+\begin{noheadline}
+\begin{frame}[c]
+    \vspace{-6mm}
+    \begin{center} 
+        \includegraphics[height=1.2\textheight]{../images/seating-chart-2.pdf}
+    \end{center}
+\end{frame}
+\end{noheadline}
+}
+
+% \clickerslide{
+% \begin{frame}
+%     \begin{clickerquestion}
+%         \item Which of the following is the clearest example of a positive
+%             feedback on global warming?  
+
+%         \begin{clickeroptions}
+%             \item \clickeranswer{In Borneo, rainforests are often underlain by
+%                     peat. As soils dry, the peat can begin to burn
+%                     underground.}
+%             \item Glaciers and the Antarctic icecap are melting, contributing
+%                 to a rise in sea levels. 
+%             \item The oceans are warming, causing seawater to expand,
+%                 contributing to a rise in sea levels. 
+%             \item Increased CO\sub{2} levels and temperatures are increasing
+%                 NPP on land. 
+%         \end{clickeroptions}
+%     \end{clickerquestion}
+% \end{frame}
+% }
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Which of the following is the clearest example of a positive
+            feedback on global warming?  
+
+        \begin{clickeroptions}
+            \item Germany and China have started major national initiatives to
+                encourage solar power. 
+            \item As oil supplies dwindle, gas prices are increasing. 
+            \item \clickeranswer{Across the arctic, permafrost is melting.
+                    Organic matter in these soils is starting to decay.}
+            \item Increased CO\sub{2} levels and temperatures are increasing
+                NPP on land. 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{noheadline}
+\begin{frame}
+\frametitle{Today's issues:}
+\vspace{5mm}
+% \tableofcontents[subsectionstyle=hide]
+\tableofcontents
+\end{frame}
+\end{noheadline}
+
+\section{Threats to biodiversity}
+
+\subsection{Is a mass extinction currently underway?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Is a mass extinction currently underway?
+
+        \uncover<2->{
+        \vspace{2mm}
+        Data on recent extinctions:
+        }
+
+        \begin{enumerate}
+            \item<3-> Since year 1000, $\approx$1000 bird species have gone
+                extinct; this is 100$\times$ the normal (background) rate.
+
+            \begin{itemize}
+                \item NOTE: this is a conservative estimate. 2000 species may
+                    have gone extinct in Polynesia alone, due to human
+                    colonization.
+            \end{itemize}
+
+            \vspace{8mm}
+            \item<4-> 122 amphibian species have gone extinct in the past 25
+                years.  This is 211$\times$ the background rate.
+        \end{enumerate}
+    \end{adjustwidth}
+    \note[item]{Tell the David Steadman story}
+    \note[item]{Introduction of mosquitoes and malaria to Hawaii; decimated
+        native bird species below 5000ft elevation (E.g., 43 of 65 honeycreepers extinct)}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        IUCN data on \% of known species threatened with extinction:
+
+        \uncover<2->{
+        \vspace{8mm}
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ l l }
+                Group       & \% \\
+                \hline
+                Mammals     & 25 \\
+                Amphibians  & 41 \\
+                Birds       & 13 \\
+                Gymnosperms & 41 \\
+            \end{tabular}
+        \end{table}
+
+        \vspace{4mm}
+        NOTE: These are the only groups that are well-studied enough that most
+        known species have been evaluated.
+        }
+
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        IUCN reported 10,553 eukaryotic species were threatened with extinction
+        in 1998, and 20,219 in 2012.
+
+        \uncover<2->{
+        \[
+            \popsize{\ptime} = \popsize{0} \popgrowthratediscrete{}^{\ptime} \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+            \popgrowthratediscrete{} = e^{\popgrowthrate{}} \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+            \popsize{\ptime} = \popsize{0} e^{\popgrowthrate{}\ptime}
+        \]
+        }
+
+        \vspace{5mm}
+        \uncover<3->{
+        What is the instantaneous rate of growth of the population of species
+        threatened with extinction?
+
+        \nbox{$20219 = 10553 e^{\popgrowthrate{}(14years)} \,\,\, \popgrowthrate{} = 0.046$}
+        }
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}[t]
+        \[
+            \popsize{\ptime} = \popsize{0} \popgrowthratediscrete{}^{\ptime} \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+            \popgrowthratediscrete{} = e^{\popgrowthrate{}} \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+            \popsize{\ptime} = \popsize{0} e^{\popgrowthrate{}\ptime}
+        \]
+
+        \begin{clickerquestion}
+            \item It is estimated that there are 8.7 million species of
+                eukaryotes on Earth. Assume the rate of extinction is what we
+                just calculated ($\popgrowthrate{} = 0.046$), and 5500
+                eukaryotic species have gone extinct due to human activity. How
+                long will it take a mass extinction event to occur, starting
+                from today?
+
+                \begin{clickeroptions}
+                    \item \clickeranswer{150 years}
+                    \item 252 years
+                    \item 1,018 years
+                    \item 8,998 years
+                    \item 210,014 years
+                \end{clickeroptions}
+        \end{clickerquestion}
+        \nbox{$8700000\times0.6 = 5500 e^{0.046t}$}
+
+    \note[item]{Mass extinction = 60\% of species go extinct in less than 1 million years}
+\end{frame}
+}
+
+\subsection{Why are species going extinct?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        Currently:
+        \begin{itemize}
+
+            \item What is the biggest threat for terrestrial species?
+
+                \nbox{Habitat loss}
+
+                \vspace{3cm}
+            \item What is the biggest threat for marine species?
+
+                \nbox{Overexploitation}
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Data on endangered species from Canada
+
+        \begin{center}
+            \includegraphics[width=0.8\linewidth]{endangered-threats.png}
+        \end{center}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        \begin{center}
+            \includegraphics[width=0.55\linewidth]{endangered-threats.png}
+        \end{center}
+
+        \begin{clickerquestion}
+            \item Why do the percentages for each color add up to more than
+                100?
+        \end{clickerquestion}
+
+        \begin{clickeroptions}
+            \item They represent different types of environments (terrestrial,
+                freshwater, marine).
+            \item The assessments are subjective.
+            \item The assessments are uncertain (need more data).
+            \item \clickeranswer{Many species are affected by more than one
+                    issue.}
+        \end{clickeroptions}
+    \end{adjustwidth}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        Data on forest loss (UN FAO):
+
+        \begin{table}%[htbp]
+            \centering
+            \begin{tabular}{ l c }
+                & Global net loss \\
+                \cline{2-2}
+                1990s & 4.1M ha/yr \\[2ex]
+                2000--2005 & 6.4M ha/yr \\
+            \end{tabular}
+        \end{table}
+
+        \vspace{2mm}
+        Total net losses over this interval = 72.9M ha ($\approx$4 WA states)
+
+        \begin{uncoverenv}<2->
+        \begin{enumerate}
+                \small
+            \item What is meant by ``net loss''?
+
+                \nbox{Accounts for re-planting/re-growth}
+
+            \item UN FAO defines ``forest'' as 10\% tree cover. Why might this
+                be problematic?
+
+                \nbox{Most people (and other species) would not consider 10\%
+                    cover as a functioning forest ecosystem}
+
+            \item The net rate of loss in the tropics is $\approx$70\% higher
+                than the global averages above. Why is this concerning?
+
+                \nbox{The tropics contain the most biodiversity, and have the
+                    highest NPP}
+
+            \item What is habitat destruction doing to species' distributions?
+
+                \nbox{They are being forced into small, geographically isolated
+                    fragments, with limited gene flow (metapopulations with
+                    limited migration).}
+
+        \end{enumerate}
+        \end{uncoverenv}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Small, isolated populations are more likely than large,
+            contiguous populations to go extinct for stochastic (chance)
+            reasons that are unrelated to genetics or selection. Why?   
+        \begin{clickeroptions}
+            \item They do not have alleles that allow them to adapt to changes
+                in the environment. 
+            \item Mutation rates increase due to small population size and
+                physical stress. 
+            \item \clickeranswer{They are less likely to survive disturbances.}
+            \item They are more likely to suffer from sex ratio or other mating
+                problems.
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        How do the following processes affect genetic diversity and fitness of
+        populations, as they become smaller and more isolated?
+
+        \begin{itemize}
+            \item Inbreeding depression
+            
+                \nbox{\scriptsize In small isolated populations, more
+                    deleterious recessive alleles are expressed as homozygosity
+                    increases. This lowers the average fitness of the
+                    population. Selection will remove such alleles at a higher
+                    rate, which will decrease genetic diversity.}
+
+            \item Genetic drift
+
+                \nbox{\scriptsize In small isolated populations, alleles will
+                    be lost or fixed at a higher rate do to larger random
+                    changes in allele frequencies each generation. Most
+                    mutations are deleterious, and more of them will fix due to
+                    chance, so the average fitness will decrease.}
+        \end{itemize}
+
+        How will changes in the environment affect the fitness of populations
+        as they become smaller and more isolated?
+
+        \nbox{\scriptsize As the environment changes, there will be less
+            genetic diversity due to the processes above. As genetic diversity
+            decreases, the probability that the population will contain alleles
+            with high fitness in the new environment decreases. So, the average
+            fitness will tend to decrease.}
+
+        How can this lead to an ``extinction vortex''?
+
+        \nbox{\scriptsize As populations become small and isolated, all the
+            mechanisms above will lead to decreasing genetic diversity and
+            fitness. Thus, the population will likely become even smaller,
+            which will increase the intensity of the above mechanisms, which
+            will make the population shrink even more, and so on and so on.
+            Also, as the population shrinks, random disturbances (fires,
+            floods, disease outbreaks, etc.) have a larger affect.}
+    \end{adjustwidth}
+\end{frame}
+
+
+\section{How can we reduce threats?}
+
+\subsection{How can we design effective protected areas?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \vspace{-3mm}
+        How can we design effective protected areas?
+
+        \vspace{2mm}
+        Establishing wildlife corridors
+
+        \uncover<2->{
+        \begin{itemize}
+            \item Experiment with connected vs.\ unconnected patches
+                in longleaf pine woodlands (Southeastern USA)
+        \end{itemize}
+
+        \begin{center}
+            \includegraphics[width=0.85\linewidth]{species-richness-by-time.png}
+        \end{center}
+        }
+
+        \uncover<3->{
+        \vspace{-2mm}
+        Why do corridors work?
+
+        \nbox{\tiny Gene flow among small, isolated populations mitigate all
+            the issues discussed on the previous slide. Also, allows for
+            recolonization if local populations do go extinct.}
+        }
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        New issue: How does research on wildlife corridors relate to climate
+        change?
+
+        \nbox{Many species will need to move to track their climate niche; they
+            will need corridors to do so. Need to predict which regions are
+            most likely to support species as climate changes, and plan
+            conserving areas and corridors accordingly.}
+
+        Is ``assisted migration'' a good or bad idea? E.g., \spp{Torreya
+            taxifolia} from Florida to North Carolina/Georgia.
+
+        \nbox{Most ecologists think this is a bad idea; potential for
+            disrupting existing communities. If done, it needs to be guided by
+            LOTS of research to avoid such problems.}
+    \end{adjustwidth}
+\end{frame}
+
+% \subsection{Controlling invasives}
+
+% \begin{frame}[t]
+%     Controlling invasives
+
+%     \begin{itemize}
+%         \item Purple loosestrife (imported from Europe) was taking over large
+%             expanses of marshes in North America
+
+%         \item A researcher found two species of beetle that feed ONLY on
+%             purple loosestrife
+
+%         \item Purple loosestrife is now largely controlled in areas where the
+%             beetles have been released
+%     \end{itemize}
+% \end{frame}
+
+% \clickerslide{
+% \begin{frame}
+%     \begin{clickerquestion}
+%         \item Why was it important to confirm that the beetles eat ONLY purple
+%             loosestrife? 
+
+%         \begin{clickeroptions}
+%             \item To make sure that they will actually eat the target species.  
+%             \item \clickeranswer{If they also fed on native vegetation, the
+%                     beetles could become an invasive.} 
+%             \item Research has shown that primary producers can only be
+%                 controlled by specialist consumers. 
+%             \item Otherwise, they might not have enough to eat and the
+%                 introductions would fail. 
+%         \end{clickeroptions}
+%     \end{clickerquestion}
+% \end{frame}
+% }
+    
+
+\section{What can we do locally to mitigate threats?}
+
+\subsection{Restoring damaged ecosystems?}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How can we restore damaged ecosystems?
+        
+        \begin{itemize}[<+->]
+            \item Wangari Maathai---the Green Belt movement
+
+                \begin{itemize}
+                    \item Started in 1977, this NGO has now organized
+                        the planting of over 51 million trees in Kenya
+
+                    \nbox{Ms.\ Maathai won the 2004 Nobel Peace Prize. Green
+                        Belt Movement has gone international; also focused on
+                        women's rights/education/political empowerment}
+                \end{itemize}
+
+            \item Local examples of restoration projects:
+
+                \nbox{GreenSeattle restoration along Burke Gilman trail, just
+                    north of campus}
+                \nbox{UW---native vegetation plantings in the Montlake Fill
+                    (Union Bay Natural Area}
+                \nbox{Seattle Parks and Rec---Urban Forest Restoration}
+                \nbox{GreenSeattle---forest restoration in Magnuson Park}
+
+        \end{itemize}
+
+    \end{adjustwidth}
+\end{frame}
+
+\subsection{Lowering our ``ecological footprints?''}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        How can we lower our ``ecological footprints?''
+
+        \vspace{2mm}
+        An ``ecological footprint'' is an estimate of how many hectares of
+        productive land it takes to support your lifestyle.
+
+        \begin{itemize}
+            \item Food:
+
+                \vspace{15mm}
+            \item Transportation:
+
+                \vspace{15mm}
+            \item Goods/services:
+
+        \end{itemize}
+    \end{adjustwidth}
+    \note[item]{Ask students to talk/think and fill in chart}
+\end{frame}
+
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Which of the following is the most important part of the
+            ``shelter'' footprint, in terms of minimizing it? 
+
+        \begin{clickeroptions}
+            \item Location: country and state/province
+            \item Design, type of air-conditioning/heating system and building
+                materials
+            \item \clickeranswer{Number of people per square foot (density)}
+            \item How far the home is from work/recreation/shopping
+            \item Age of the dwelling
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+
+\end{document}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item 
+        \begin{clickeroptions}
+            \item 
+            \item 
+            \item 
+            \item 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}
+}
+
+\clickerpost{
+{
+\usebackgroundtemplate{\includegraphics[page=17,width=\paperwidth]{./24-Radiation-extinction.pdf}}
+\begin{frame}[t,plain]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \cmask{Answer: 3}
+    \end{adjustwidth}
+\end{frame}
+}
+}
+
