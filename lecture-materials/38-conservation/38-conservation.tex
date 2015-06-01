@@ -58,7 +58,10 @@
         \begin{clickeroptions}
             \item Germany and China have started major national initiatives to
                 encourage solar power. 
-            \item As oil supplies dwindle, gas prices are increasing. 
+            % \item Glaciers and the Antarctic icecap are melting, contributing
+            %     to a rise in sea levels. 
+            \item The oceans are warming, causing seawater to expand,
+                contributing to a rise in sea levels. 
             \item \clickeranswer{Across the arctic, permafrost is melting.
                     Organic matter in these soils is starting to decay.}
             \item Increased CO\sub{2} levels and temperatures are increasing
@@ -71,7 +74,7 @@
 \begin{noheadline}
 \begin{frame}
 \frametitle{Today's issues:}
-\vspace{5mm}
+% \vspace{5mm}
 % \tableofcontents[subsectionstyle=hide]
 \tableofcontents
 \end{frame}
@@ -105,9 +108,14 @@
                 years.  This is 211$\times$ the background rate.
         \end{enumerate}
     \end{adjustwidth}
-    \note[item]{Tell the David Steadman story}
+    % \note[item]{Tell the David Steadman story}
+    \note[item]{Background extinction = extinction rates, due to normal rates
+        of environmental change}
+    \note[item]{Mass extinction = At least 60\% of species go extinct in less
+        than 1 million years; due to extreme rates of environmental change}
     \note[item]{Introduction of mosquitoes and malaria to Hawaii; decimated
-        native bird species below 5000ft elevation (E.g., 43 of 65 honeycreepers extinct)}
+        native bird species below 5000ft elevation (E.g., 43 of 65
+        honeycreepers extinct)}
 \end{frame}
 
 \begin{frame}[t]
@@ -121,10 +129,10 @@
             \begin{tabular}{ l l }
                 Group       & \% \\
                 \hline
-                Mammals     & 25 \\
+                Mammals     & 26 \\
                 Amphibians  & 41 \\
                 Birds       & 13 \\
-                Gymnosperms & 41 \\
+                Gymnosperms & 40 \\
             \end{tabular}
         \end{table}
 
@@ -134,12 +142,15 @@
         }
 
     \end{adjustwidth}
+    \note[item]{IUCN = International Union for Conservation of Nature; maintain
+        Red list of threatened species}
 \end{frame}
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
         IUCN reported 10,553 eukaryotic species were threatened with extinction
-        in 1998, and 20,219 in 2012.
+        in 1998 (based on objective, quantitative criteria), and 22,413 in
+        2014.
 
         \uncover<2->{
         \[
@@ -154,7 +165,7 @@
         What is the instantaneous rate of growth of the population of species
         threatened with extinction?
 
-        \nbox{$20219 = 10553 e^{\popgrowthrate{}(14years)} \,\,\, \popgrowthrate{} = 0.046$}
+        \nbox{$22413 = 10553 e^{\popgrowthrate{}(16years)} \,\,\, \popgrowthrate{} = 0.047$}
         }
     \end{adjustwidth}
 \end{frame}
@@ -170,52 +181,73 @@
         \begin{clickerquestion}
             \item It is estimated that there are 8.7 million species of
                 eukaryotes on Earth. Assume the rate of extinction is what we
-                just calculated ($\popgrowthrate{} = 0.046$), and 5500
+                just calculated ($\popgrowthrate{} = 0.047$), and 5500
                 eukaryotic species have gone extinct due to human activity. How
                 long will it take a mass extinction event to occur, starting
                 from today?
 
                 \begin{clickeroptions}
-                    \item \clickeranswer{150 years}
+                    \item \clickeranswer{146 years}
                     \item 252 years
                     \item 1,018 years
                     \item 8,998 years
                     \item 210,014 years
                 \end{clickeroptions}
         \end{clickerquestion}
-        \nbox{$8700000\times0.6 = 5500 e^{0.046t}$}
+        \nbox{$8700000\times0.6 = 5500 e^{0.047t}$}
 
-    \note[item]{Mass extinction = 60\% of species go extinct in less than 1 million years}
+    \note[item]{Mass extinction = 60\% of species go extinct in less than 1
+        million years}
 \end{frame}
 }
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-1.5em}
+        \begin{itemize}
+            \item Is the estimate of $\popgrowthrate{}$ that you calculated
+                inflated by ascertainment bias?
+
+                \nbox{Yes. IUCN's 2014 estimate of the number of threatened
+                    species is based on more data than the 1998 estimate. So,
+                    some of the species that were added to the threatened list
+                    between 1998 and 2014 were probably already threatened in
+                    1998, but IUCN did not know it.}
+
+                \vspace{4mm}
+            \item Given projections for human population growth, is the
+                estimate for $\popgrowthrate{}$ that you calculated likely to
+                be conservative or inflated?
+
+                \nbox{Conservative. 4 billion more people by the end of the
+                    century. This will likely greatly exacerbate habitat loss
+                    and overexploitation of species}
+        \end{itemize}
+    \end{adjustwidth}
+\end{frame}
 
 \subsection{Why are species going extinct?}
 
 \begin{frame}[t]
     \begin{adjustwidth}{-2em}{-1.5em}
-        Currently:
+        \vspace{-3mm}
+        Data on endangered species from Canada (reflect global trends)
+
+        \vspace{-1mm}
+        \begin{center}
+            \includegraphics[width=0.7\linewidth]{endangered-threats.png}
+        \end{center}
+
+        \vspace{-4mm}
         \begin{itemize}
 
             \item What is the biggest threat for terrestrial species?
 
                 \nbox{Habitat loss}
 
-                \vspace{3cm}
             \item What is the biggest threat for marine species?
 
                 \nbox{Overexploitation}
         \end{itemize}
-    \end{adjustwidth}
-\end{frame}
-
-\begin{frame}[t]
-    \begin{adjustwidth}{-2em}{-1.5em}
-        \vspace{-3mm}
-        Data on endangered species from Canada
-
-        \begin{center}
-            \includegraphics[width=0.8\linewidth]{endangered-threats.png}
-        \end{center}
     \end{adjustwidth}
 \end{frame}
 
@@ -267,29 +299,30 @@
                 \small
             \item What is meant by ``net loss''?
 
-                \nbox{Accounts for re-planting/re-growth}
+                \nbox{\scriptsize Accounts for re-planting/re-growth}
 
-            \item UN FAO defines ``forest'' as 10\% tree cover. Why might this
-                be problematic?
+            \item UN FAO defines ``forest'' as  $\geq$10\% tree cover. Why
+                might this be problematic?
 
-                \nbox{Most people (and other species) would not consider 10\%
-                    cover as a functioning forest ecosystem}
+                \nbox{\scriptsize Biologists (and other species) would not
+                    consider 10\% cover as a functioning forest ecosystem}
 
             \item The net rate of loss in the tropics is $\approx$70\% higher
                 than the global averages above. Why is this concerning?
 
-                \nbox{The tropics contain the most biodiversity, and have the
-                    highest NPP}
+                \nbox{\scriptsize The tropics contain the most biodiversity,
+                    and have the highest NPP}
 
             \item What is habitat destruction doing to species' distributions?
 
-                \nbox{They are being forced into small, geographically isolated
-                    fragments, with limited gene flow (metapopulations with
-                    limited migration).}
+                \nbox{\scriptsize They are being forced into small,
+                    geographically isolated fragments, with limited gene flow
+                    (metapopulations with limited migration).}
 
         \end{enumerate}
         \end{uncoverenv}
     \end{adjustwidth}
+    \note[item]{UN FAO = United Nations Food and Agriculture Organization}
 \end{frame}
 
 \clickerslide{
@@ -402,12 +435,16 @@
             conserving areas and corridors accordingly.}
 
         Is ``assisted migration'' a good or bad idea? E.g., \spp{Torreya
-            taxifolia} from Florida to North Carolina/Georgia.
+            taxifolia} from Florida to North Carolina.
 
         \nbox{Most ecologists think this is a bad idea; potential for
             disrupting existing communities. If done, it needs to be guided by
             LOTS of research to avoid such problems.}
     \end{adjustwidth}
+    \note[item]{Famous example of \spp{Torreya} tree going extinct in FL due to
+        changing environment. Suitable habitat in NC. People went out at night,
+        dug up some of remaining trees and planted them in NC (guerilla
+        conservation work).}
 \end{frame}
 
 % \subsection{Controlling invasives}
@@ -456,7 +493,7 @@
         How can we restore damaged ecosystems?
         
         \begin{itemize}[<+->]
-            \item Wangari Maathai---the Green Belt movement
+            \item Wangari Maathai---the Green Belt Movement
 
                 \begin{itemize}
                     \item Started in 1977, this NGO has now organized
@@ -494,6 +531,7 @@
         \begin{itemize}
             \item Food:
 
+                % \nbox{Eat at lower trophic levels. Eat local.}
                 \vspace{15mm}
             \item Transportation:
 
