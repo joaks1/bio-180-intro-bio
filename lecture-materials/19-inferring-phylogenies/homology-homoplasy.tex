@@ -1,0 +1,103 @@
+\begin{frame}
+    \frametitle{Homology or homoplasy?}
+    \begin{itemize}
+        \item<1-> Body shape in dolphins and ichthyosaurs
+        \item<1-> Vertebrae in dolphins and ichthyosaurs
+    \end{itemize}
+    \begin{figure}
+        \includegraphics[height=2.5cm]{../images/ichthyosaur-nobu-tamura-cc-by-25.jpg}
+        \caption{\tiny \href{http://creativecommons.org/licenses/by/2.5/}{CC BY 2.5} \href{http://spinops.blogspot.com/}{Nobu Tamura}}
+    \end{figure}
+    \vspace{-0.7cm}
+    \begin{figure}
+        \includegraphics[height=2.5cm]{../images/dolphin-noaa-cc-by-sa-30.jpg}
+        \caption{\tiny \href{http://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0} NOAA}
+    \end{figure}
+\end{frame}
+
+    
+\begin{frame}
+    \frametitle{Homology or homoplasy?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+    \begin{itemize}
+        \item Hair of chimps and humans
+
+            \nbox{Homology}
+
+            \vspace{3mm}
+        \item Hair loss in whales and humans
+
+            \nbox{Homoplasy}
+
+            \vspace{3mm}
+        \item Flippers in penguins, seals, and turtles
+
+            \nbox{Homoplasy}
+
+            \vspace{3mm}
+        \item Bones of the forelimb in penguins, seals, and turtles
+
+            \nbox{Homology}
+        % \item Camera eye in octopus and vertebrates
+
+            % \hidebox{Homoplasy}
+        % \item Multicellularity in octopus and vertebrates
+
+            % \hidebox{Homology}
+            \vspace{3mm}
+        \item What does the hypothesis of homoplasy predict about genetic and
+            developmental similarity?
+
+            \nbox{The shared traits are likely due to \highlight{different}
+                mutations in potentially different genes. Likely different
+                developmental pathways}
+    \end{itemize}
+    \end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What causes homoplasy?}
+    \begin{adjustwidth}{-1.5em}{-1.5em}
+    \begin{enumerate}
+        \item In morphological traits (e.g., wings), convergent evolution is
+            due to:
+
+            \nbox{Natural selection for similar traits in similar
+                environments}
+
+            \vspace{2mm}
+        \item Multiple mutations also cause homoplasy in DNA data
+            \vspace{-1.5cm}
+            \begin{center}
+            \begin{tikzpicture}
+            [xscale=0.6,yscale=0.3,auto=left,every node/.style={circle}]%,fill=blue!20}]
+              \node [tnode, align=left, right](a) at (7, 1) {AGCAT (human)};
+              \node [tnode, align=left, right](b) at (7, 3) {TGCAT (chimp)};
+              \node [tnode, align=left, right](c) at (7, 5) {TGCAT (gorilla)};
+              \node [tnode, align=left, right](d) at (7, 7) {AGCAT (orangutan)};
+              % \node [inode](ab) at (2, 5)  {};
+              % \node [inode](abc) at (3, 3)  {};
+              % \node [inode](r) at (4, 1)  {};
+            
+              \draw [very thick] (a) -- (5,1) -- (5,3) -- (b);
+              \draw [very thick] (5,2) -- (3,2) -- (3,5) -- (c);
+              \draw [very thick] (3,3.5) -- (1,3.5) -- (1, 7) -- (d);
+              \draw [very thick] (1,5.25) -- (0,5.25);
+            \end{tikzpicture}
+            \end{center}
+
+            \vspace{-1.3cm}
+        \item Why is homoplasy problematic?
+
+            \nbox{\scriptsize If we use convergent character states as if they
+                are shared due to ancestry, we will get the wrong tree}
+
+        \item How do we know if a particular trait is due to homology?
+
+            \nbox{\scriptsize Look at related extant taxa, fossils, development
+                pathways, or genes to see if the traits are shared due to
+                ancestry or convergence.}
+    \end{enumerate}
+    \end{adjustwidth}
+\end{frame}
+

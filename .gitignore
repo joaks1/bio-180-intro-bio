@@ -15,3 +15,12 @@
 *.snm
 *.toc
 *.bcf
+*.pdf
+class-lists/
+exams/exam-*/
+exams/examples/
+videos/
+worksheets/
+notes/
+course-manual/
+study-questions/
